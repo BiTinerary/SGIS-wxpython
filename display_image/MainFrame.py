@@ -237,10 +237,10 @@ class MainFrame(wx.Frame):
         
         self.rSizer = wx.BoxSizer(wx.HORIZONTAL)
         self.rSizer.Add(self.descriptionTextField, 0, wx.ALL, 5)
-        # Create Lbls/Text
-        self.saveDescriptionTextBtn = wx.Button(self.mainPanel, label='Save Current')
-        self.saveDescriptionTextBtn.Bind(wx.EVT_BUTTON,
-                                self.eventsHandler.onSaveCurrentTextBtn)
+        self.currentTitleLbl = wx.StaticText(self.mainPanel, label='Title')
+        self.currentTitleText = wx.TextCtrl(self.mainPanel, size=(300,60), style=wx.TE_MULTILINE)
+        self.currentTitleText.Bind(wx.EVT_TEXT, self.eventsHandler.onCurrentTitleText)
+        
         # self.currentBoxLbl = wx.StaticText(self.mainPanel, label='Current Box')
         # self.currentBoxText = wx.TextCtrl(self.mainPanel, size=(40,-1))
         # self.currentConditionLbl = wx.StaticText(self.mainPanel, label='Condition 1-5')
@@ -251,13 +251,15 @@ class MainFrame(wx.Frame):
         self.currentDateListedLbl = wx.StaticText(self.mainPanel, label='Date Listed')
         self.currentDateListedText = wx.TextCtrl(self.mainPanel, size=(60,-1))
         self.currentDateListedText.Bind(wx.EVT_TEXT, self.eventsHandler.onDateListedText)
-
-        self.currentTitleLbl = wx.StaticText(self.mainPanel, label='Title')
-        self.currentTitleText = wx.TextCtrl(self.mainPanel, size=(300,60), style=wx.TE_MULTILINE)
-        self.currentTitleText.Bind(wx.EVT_TEXT, self.eventsHandler.onCurrentTitleText)
+        # Create Lbls/Text
+        self.saveDescriptionTextBtn = wx.Button(self.mainPanel, label='Save Current')
+        self.saveDescriptionTextBtn.Bind(wx.EVT_BUTTON,
+                                self.eventsHandler.onSaveCurrentTextBtn)
+        
         # Create rSizerCurrentItemSizer add lbl/text
         self.rSizerCurrentItemSizer = wx.BoxSizer(wx.VERTICAL)
-        self.rSizerCurrentItemSizer.Add(self.saveDescriptionTextBtn, 0, wx.ALL, 5)
+        self.rSizerCurrentItemSizer.Add(self.currentTitleLbl, 0, wx.ALL, 5)
+        self.rSizerCurrentItemSizer.Add(self.currentTitleText, 0, wx.ALL, 5)
         # self.rSizerCurrentItemSizer.Add(self.currentBoxLbl, 0, wx.ALL, 5)
         # self.rSizerCurrentItemSizer.Add(self.currentBoxText, 0, wx.ALL, 5)
         # self.rSizerCurrentItemSizer.Add(self.currentConditionLbl, 0, wx.ALL, 5)
@@ -266,8 +268,7 @@ class MainFrame(wx.Frame):
         self.rSizerCurrentItemSizer.Add(self.currentConditionNotesText, 0, wx.ALL, 5)
         self.rSizerCurrentItemSizer.Add(self.currentDateListedLbl, 0, wx.ALL, 5)
         self.rSizerCurrentItemSizer.Add(self.currentDateListedText, 0, wx.ALL, 5)
-        self.rSizerCurrentItemSizer.Add(self.currentTitleLbl, 0, wx.ALL, 5)
-        self.rSizerCurrentItemSizer.Add(self.currentTitleText, 0, wx.ALL, 5)
+        self.rSizerCurrentItemSizer.Add(self.saveDescriptionTextBtn, 0, wx.ALL, 5)
         self.rSizer.Add(self.rSizerCurrentItemSizer)
         self.rSizer.Hide(self.rSizerCurrentItemSizer,recursive=True)
 
