@@ -739,11 +739,15 @@ class MainFrameEventHandler(object):
         self.MainFrame.beginShelfNumberText.Show()
         self.MainFrame.listerInitialsLbl.Show()
         self.MainFrame.listerInitialsText.Show()
+        
         self.MainFrame.newItemButton.Hide()
         self.MainFrame.upcNumberLbl.Hide()
         self.MainFrame.upcNumberText.Hide()
         self.MainFrame.scanNumberText.Hide()
         self.MainFrame.scanNumberLbl.Hide()
+        # issue #8
+        self.MainFrame.palletNumberText.Hide()
+        self.MainFrame.palletNumberLbl.Hide()
         self.MainFrame.mainSizer.Fit(self.MainFrame)
         self.MainFrame.mainPanel.Layout()
         self.MainFrame.mainPanel.Refresh()

@@ -58,9 +58,13 @@ class BuildAuction(object):
             images_tags += "<a href=\""+self.final_destination+"\"><img src=\""+self.final_destination+"\" height=\"400\" width=\"400\" ></a></br>"
         msrp_tags = "<div align=\"left\"><h4>Item normally retails for: "+self.currentItemInfo['msrp']+"</h4></div>"
         self.currentItemInfo['description'] = self.currentItemInfo['description'].split('<div class=\"panelDetail\" id=\"prod_description\">')[-1].split('<strong>Warranty:')[0].split('<p><strong>Additional Features:')[0].split('<!--googleoff: all-->')[0].split('<li><strong>Additional Information:')[0].split('</table>')[-1]
-
-        description_tags = '<div align=\"left\"<p>'+self.currentItemInfo['description'].replace('"','').replace('\t','').replace(',','').replace('\r','').replace('\n','').encode("ascii", 'ignore')+'</p></div>'
         
+        # resolves issue with UnicodeDecodeError: 'ascii' codec can't decode byte 0xe2 in position 699: ordinal not in range(128)
+        # issue #16
+        try:
+            description_tags = '<div align=\"left\"<p>'+self.currentItemInfo['description'].replace('"','').replace('\t','').replace(',','').replace('\r','').replace('\n','').encode("ascii", 'ignore')+'</p></div>'
+        except Exception, e:
+            description_tags = '<div align=\"left\"<p>'+self.currentItemInfo['description'].replace('"','').replace('\t','').replace(',','').replace('\r','').replace('\n','')+'</p></div>'
         
         
         
