@@ -106,7 +106,7 @@ class BuildAuction(object):
         only relevant for broken watches
         returns second category for broken watches
         '''
-        if '2' not in self.Mainframe.currentItemInfo['condition']:
+        if '2' not in self.MainFrame.currentItemInfo['condition']:
             self.infoLogger('category2 in build auction')
             return '165144'
         else:
