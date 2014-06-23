@@ -228,12 +228,8 @@ class MainFrame(wx.Frame):
         results = Check(self)
         description = results.description()
         self.descriptionTextField.AppendText(description)
-        
-        
-        ####work in progress####
-        self.descriptionTextField.Bind(wx.EVT_TEXT, self.eventsHandler.onDescriptionTextField)
 
-        
+        self.descriptionTextField.Bind(wx.EVT_TEXT, self.eventsHandler.onDescriptionTextField)
         
         self.rSizer = wx.BoxSizer(wx.HORIZONTAL)
         self.rSizer.Add(self.descriptionTextField, 0, wx.ALL, 5)
@@ -246,7 +242,9 @@ class MainFrame(wx.Frame):
         self.currentConditionLbl = wx.StaticText(self.mainPanel, label='Condition 1-5')
         self.currentConditionText = wx.TextCtrl(self.mainPanel, size=(40,-1))
         self.currentConditionText.Bind(wx.EVT_TEXT, self.eventsHandler.onCurrentConditionText)
-
+        # Issue #19
+        self.currentAuctionIncludesLbl = wx.StaticText(self.mainPanel, label='Auction Includes')
+        self.currentAuctionIncludesText = wx.TextCtrl(self.mainPanel, size=(120,40),style=wx.TE_MULTILINE)
         self.currentConditionNotesLbl = wx.StaticText(self.mainPanel, label='Condition Notes')
         self.currentConditionNotesText = wx.TextCtrl(self.mainPanel, size=(120,40), style=wx.TE_MULTILINE)
         self.currentDateListedLbl = wx.StaticText(self.mainPanel, label='Date Listed')
@@ -261,8 +259,8 @@ class MainFrame(wx.Frame):
         self.rSizerCurrentItemSizer = wx.BoxSizer(wx.VERTICAL)
         self.rSizerCurrentItemSizer.Add(self.currentTitleLbl, 0, wx.ALL, 5)
         self.rSizerCurrentItemSizer.Add(self.currentTitleText, 0, wx.ALL, 5)
-        # self.rSizerCurrentItemSizer.Add(self.currentBoxLbl, 0, wx.ALL, 5)
-        # self.rSizerCurrentItemSizer.Add(self.currentBoxText, 0, wx.ALL, 5)
+        self.rSizerCurrentItemSizer.Add(self.currentAuctionIncludesLbl, 0, wx.ALL, 5)
+        self.rSizerCurrentItemSizer.Add(self.currentAuctionIncludesText, 0, wx.ALL, 5)
         self.rSizerCurrentItemSizer.Add(self.currentConditionLbl, 0, wx.ALL, 5)
         self.rSizerCurrentItemSizer.Add(self.currentConditionText, 0, wx.ALL, 5)
         self.rSizerCurrentItemSizer.Add(self.currentConditionNotesLbl, 0, wx.ALL, 5)

@@ -1,52 +1,52 @@
 
---06-23 15:05:36 log_info display_image.Dialogs.ListingPreferencesDialog.check INFO     
+--06-23 15:55:03 log_info display_image.Dialogs.ListingPreferencesDialog.check INFO     
 
 # ListingPreferencesDialog.CheckListingPreferences.check() # check
 
---06-23 15:05:36 log_info display_image.Dialogs.ListingPreferencesDialog.check INFO     
+--06-23 15:55:03 log_info display_image.Dialogs.ListingPreferencesDialog.check INFO     
 ######################## Listing Preferences #############
 Type: <type 'dict'>
 {u'BuyItNowPrice': {u'percent of MSRP': False}, u'*Format': {u'Auction': True, u'FixedPrice': False}, u'ReservePrice': {u'percent of MSRP': False}, u'ShippingService-1:Cost': {u'Amount': u'12'}, u'ShippingService-1:Option': {u'FedExHomeDelivery': True, u'USPSPriority': False}, u'*StartPrice': {u'.99': u'.99', u'percent of MSRP': False}, u'*Duration': {u'10': False, u'GTC': False, u'30': False, u'3': False, u'5': True, u'7': False}} check
 
---06-23 15:05:36 log_info display_image.MainFrame.createWidgets INFO     
+--06-23 15:55:03 log_info display_image.MainFrame.createWidgets INFO     
 THIS IS A MESSAGE in CreateWidgets
 
---06-23 15:05:36 log_info display_image.MainFrame.lsizerCreate INFO     
+--06-23 15:55:03 log_info display_image.MainFrame.lsizerCreate INFO     
 THIS IS A MESSAGE IN lsizerCreate
 
---06-23 15:05:36 log_info display_image.EventsHandlers.MainFrameEventHandler.onbeginShelfNumberText INFO     
+--06-23 15:55:03 log_info display_image.EventsHandlers.MainFrameEventHandler.onbeginShelfNumberText INFO     
 Inside:  onbeginShelfNumberText
 
---06-23 15:05:36 log_info display_image.EventsHandlers.MainFrameEventHandler.onbeginShelfNumberText INFO     
+--06-23 15:55:03 log_info display_image.EventsHandlers.MainFrameEventHandler.onbeginShelfNumberText INFO     
 Inside:  onbeginShelfNumberText
 
---06-23 15:05:36 log_info display_image.EventsHandlers.MainFrameEventHandler.onListerInitialsText INFO     
+--06-23 15:55:03 log_info display_image.EventsHandlers.MainFrameEventHandler.onListerInitialsText INFO     
 Initials set:JM onListerInitialsText
 
---06-23 15:05:36 log_info display_image.EventsHandlers.MainFrameEventHandler.onListerInitialsText INFO     
+--06-23 15:55:03 log_info display_image.EventsHandlers.MainFrameEventHandler.onListerInitialsText INFO     
 Initials set:JM onListerInitialsText
 
---06-23 15:05:36 log_info display_image.MainFrame.csizerCreate INFO     
+--06-23 15:55:03 log_info display_image.MainFrame.csizerCreate INFO     
 THIS IS A MESSAGE in csizerCreate
 
---06-23 15:05:36 log_info display_image.MainFrame.rsizerCreate INFO     
+--06-23 15:55:04 log_info display_image.MainFrame.rsizerCreate INFO     
 THIS IS A MESSAGE in rsizerCreate
 
---06-23 15:05:36 log_info run.MainFrame INFO     
+--06-23 15:55:04 log_info run.MainFrame INFO     
 # main(): #
 MainFrame.__dict__:
-{'retailerLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3bf4370> >,
- 'help': <wx._core.Menu; proxy of <Swig Object of type 'wxMenu *' at 0x28c2280> >,
+{'retailerLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3b048a8> >,
+ 'help': <wx._core.Menu; proxy of <Swig Object of type 'wxMenu *' at 0x26461f0> >,
  'listingPreferencesResults': {u'BuyItNowPrice': {u'percent of MSRP': False}, u'*Format': {u'Auction': True, u'FixedPrice': False}, u'ReservePrice': {u'percent of MSRP': False}, u'ShippingService-1:Cost': {u'Amount': u'12'}, u'ShippingService-1:Option': {u'FedExHomeDelivery': True, u'USPSPriority': False}, u'*StartPrice': {u'.99': u'.99', u'percent of MSRP': False}, u'*Duration': {u'10': False, u'GTC': False, u'30': False, u'3': False, u'5': True, u'7': False}},
- 'buildAuctionButton': <wx._controls.Button; proxy of <Swig Object of type 'wxButton *' at 0x3bf5750> >,
+ 'buildAuctionButton': <wx._controls.Button; proxy of <Swig Object of type 'wxButton *' at 0x3b05c88> >,
  'defaultImgPath': 'display_image\\jPages\\QZ468\\default.JPEG',
- 'currentTitleText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3c03208> >,
- 'loadManifest': <wx._core.MenuItem; proxy of <Swig Object of type 'wxMenuItem *' at 0x28c2340> >,
- 'itemSpecificsFetcher': <display_image.sky_manifest.ManifestReader object at 0x03AF6D10>,
- 'emptyRadio': <wx._controls.RadioButton; proxy of <Swig Object of type 'wxRadioButton *' at 0x38804e0> >,
- 'reloadModules': <wx._core.MenuItem; proxy of <Swig Object of type 'wxMenuItem *' at 0x28c2880> >,
- 'logger': <logs.logger_example.log_this object at 0x03AF6A70>,
- 'upcNumberText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3bf6f88> >,
+ 'currentTitleText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3b23e98> >,
+ 'loadManifest': <wx._core.MenuItem; proxy of <Swig Object of type 'wxMenuItem *' at 0x26462b0> >,
+ 'itemSpecificsFetcher': <display_image.sky_manifest.ManifestReader object at 0x039FED30>,
+ 'emptyRadio': <wx._controls.RadioButton; proxy of <Swig Object of type 'wxRadioButton *' at 0x23233f8> >,
+ 'reloadModules': <wx._core.MenuItem; proxy of <Swig Object of type 'wxMenuItem *' at 0x26467f0> >,
+ 'logger': <logs.logger_example.log_this object at 0x039FEC30>,
+ 'upcNumberText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3b074c0> >,
  'ebayAuctionHeaders': ['*Action(SiteID=US|Country=US|Currency=USD|Version=745)',
  '*Category',
  'Category2',
@@ -124,17 +124,17 @@ MainFrame.__dict__:
  'C:MPN',
  'C:Serial Number',
  'C:Country/Region of Manufacture'],
- 'ssh': <display_image.Ssh_Put.Ssh object at 0x03BB1210>,
+ 'ssh': <display_image.Ssh_Put.Ssh object at 0x03ABE0D0>,
  'ebayHeadersFile': 'display_image\\archivedData\\ebay_auction_headers.csv',
  'instructions': 'Is this image correct?',
- 'browseBtn': <wx._controls.Button; proxy of <Swig Object of type 'wxButton *' at 0x3bfc660> >,
- 'currentTitleLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3bfc9b0> >,
- 'edit': <wx._core.Menu; proxy of <Swig Object of type 'wxMenu *' at 0x28c2100> >,
- 'fingerRadio': <wx._controls.RadioButton; proxy of <Swig Object of type 'wxRadioButton *' at 0x3bf4518> >,
- 'lookUpBySkuBtn': <wx._controls.Button; proxy of <Swig Object of type 'wxButton *' at 0x3bf4f08> >,
+ 'browseBtn': <wx._controls.Button; proxy of <Swig Object of type 'wxButton *' at 0x3b1d6f0> >,
+ 'currentTitleLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3b1da40> >,
+ 'currentAuctionIncludesLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3b1dd90> >,
+ 'fingerRadio': <wx._controls.RadioButton; proxy of <Swig Object of type 'wxRadioButton *' at 0x3b04a50> >,
+ 'lookUpBySkuBtn': <wx._controls.Button; proxy of <Swig Object of type 'wxButton *' at 0x3b05440> >,
  'threading': False,
  'uniqueCategoryArchive': 'display_image\\archivedData\\unique_category_4numbeer_sku.csv',
- 'resetSsh': <wx._core.MenuItem; proxy of <Swig Object of type 'wxMenuItem *' at 0x28c2580> >,
+ 'resetSsh': <wx._core.MenuItem; proxy of <Swig Object of type 'wxMenuItem *' at 0x26464f0> >,
  'defaults':
 
  {'username': 'root',
@@ -182,32 +182,32 @@ MainFrame.__dict__:
  'serverLocation': '192.168.0.170',
  'itemSpecifics': [],
  'defaultShelf': 'XXX'},
- 'palletNumberText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3b3c520> >,
+ 'palletNumberText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3a448b0> >,
  'jNumberFolderPath': 'display_image\\jPages\\QZ468',
- 'actionSeperator': <wx._controls.StaticLine; proxy of <Swig Object of type 'wxStaticLine *' at 0x3bf41c8> >,
- 'currentConditionNotesLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3bfcd00> >,
+ 'actionSeperator': <wx._controls.StaticLine; proxy of <Swig Object of type 'wxStaticLine *' at 0x3b04700> >,
+ 'currentConditionNotesLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3b1df38> >,
  'ssh_pass': None,
- 'beginShelfNumberLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3bf5258> >,
- 'currentConditionText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3c035c8> >,
- 'eventsHandler': <display_image.EventsHandlers.MainFrameEventHandler.MainFrameEventHandler object at 0x03AF6DB0>,
- 'lSizer': <wx._core.BoxSizer; proxy of <Swig Object of type 'wxBoxSizer *' at 0x37b6418> >,
- 'currentSkuText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3bf6bc8> >,
- 'listingPreferences': <wx._core.MenuItem; proxy of <Swig Object of type 'wxMenuItem *' at 0x28c2640> >,
- 'cSizer': <wx._core.BoxSizer; proxy of <Swig Object of type 'wxBoxSizer *' at 0x37b64d8> >,
- 'currentConditionNotesText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3c03988> >,
- 'currentConditionLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3bfcb58> >,
+ 'beginShelfNumberLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3b05790> >,
+ 'currentConditionText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3b24258> >,
+ 'eventsHandler': <display_image.EventsHandlers.MainFrameEventHandler.MainFrameEventHandler object at 0x039FEDD0>,
+ 'lSizer': <wx._core.BoxSizer; proxy of <Swig Object of type 'wxBoxSizer *' at 0x36d7b60> >,
+ 'currentSkuText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3b07100> >,
+ 'listingPreferences': <wx._core.MenuItem; proxy of <Swig Object of type 'wxMenuItem *' at 0x26465b0> >,
+ 'cSizer': <wx._core.BoxSizer; proxy of <Swig Object of type 'wxBoxSizer *' at 0x36d7c20> >,
+ 'currentConditionNotesText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3b249d8> >,
+ 'currentConditionLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3b1dbe8> >,
  'defaultJPagesFolder': 'display_image\\jPages',
  'sky_manifest': <module 'display_image.sky_manifest' from 'C:\Users\User\SGIS_CLONE\master-6-20\display_image\sky_manifest.pyc'>,
- 'scanNumberLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3bf4a10> >,
- 'browseText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3bfc288> >,
- 'newItemButton': <wx._controls.Button; proxy of <Swig Object of type 'wxButton *' at 0x3bf58f8> >,
+ 'scanNumberLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3b04f48> >,
+ 'browseText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3b0c9d0> >,
+ 'newItemButton': <wx._controls.Button; proxy of <Swig Object of type 'wxButton *' at 0x3b05e30> >,
  'currentImgPath': 'display_image\\jPages\\QZ468\\default.JPEG',
- 'this': <Swig Object of type 'wxFrame *' at 0x38278d8>,
- 'fetchManifestItemInfo': <wx._core.MenuItem; proxy of <Swig Object of type 'wxMenuItem *' at 0x28c2400> >,
- 'currentDateListedLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3bfcea8> >,
- 'scanNumberSeperator': <wx._controls.StaticLine; proxy of <Swig Object of type 'wxStaticLine *' at 0x3bf4bb8> >,
- 'ebayCategoryIdLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3bf5400> >,
- 'mainSizer': <wx._core.BoxSizer; proxy of <Swig Object of type 'wxBoxSizer *' at 0x37b65f8> >,
+ 'this': <Swig Object of type 'wxFrame *' at 0x231dfb8>,
+ 'fetchManifestItemInfo': <wx._core.MenuItem; proxy of <Swig Object of type 'wxMenuItem *' at 0x2646370> >,
+ 'currentDateListedLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3b1e0e0> >,
+ 'scanNumberSeperator': <wx._controls.StaticLine; proxy of <Swig Object of type 'wxStaticLine *' at 0x3b050f0> >,
+ 'ebayCategoryIdLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3b05938> >,
+ 'mainSizer': <wx._core.BoxSizer; proxy of <Swig Object of type 'wxBoxSizer *' at 0x36d7d40> >,
  'currentItemInfo':
 
  {'description': '\nJ176344  Description is empty\n4PK4260000010\n21492\n',
@@ -220,9 +220,9 @@ MainFrame.__dict__:
 
  {'key': ''},
  'specs': '\nJ176344  Description is empty\n4PK4260000010\n21492\n'},
- 'quit': <wx._core.MenuItem; proxy of <Swig Object of type 'wxMenuItem *' at 0x28c2700> >,
- 'rSizerCurrentItemSizer': <wx._core.BoxSizer; proxy of <Swig Object of type 'wxBoxSizer *' at 0x37b6598> >,
- 'SelectImageBtn': <wx._controls.Button; proxy of <Swig Object of type 'wxButton *' at 0x3bfc808> >,
+ 'quit': <wx._core.MenuItem; proxy of <Swig Object of type 'wxMenuItem *' at 0x2646670> >,
+ 'rSizerCurrentItemSizer': <wx._core.BoxSizer; proxy of <Swig Object of type 'wxBoxSizer *' at 0x36d7ce0> >,
+ 'SelectImageBtn': <wx._controls.Button; proxy of <Swig Object of type 'wxButton *' at 0x3b1d898> >,
  'jNumber': 'QZ468',
  'defaultJNumberInfo':
 
@@ -233,52 +233,54 @@ MainFrame.__dict__:
  '4NS3600000010_A_99'],
  'description': '\nJ176344  Description is empty\n4PK4260000010\n21492\n',
  'specs': '\nJ176344 is Empty\n4PK4260000010\n21492\n'},
- 'listerInitialsLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3bf55a8> >,
- 'instructLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3bf5df0> >,
- 'lookupManifestedRadio': <wx._controls.RadioButton; proxy of <Swig Object of type 'wxRadioButton *' at 0x3bf4020> >,
- 'descriptionTextField': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3bfee48> >,
+ 'listerInitialsLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3b05ae0> >,
+ 'instructLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3b06328> >,
+ 'edit': <wx._core.Menu; proxy of <Swig Object of type 'wxMenu *' at 0x2646070> >,
+ 'lookupManifestedRadio': <wx._controls.RadioButton; proxy of <Swig Object of type 'wxRadioButton *' at 0x3b04558> >,
+ 'descriptionTextField': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3b1f6d8> >,
  'archivedDataFolderPath': 'display_image\\archivedData',
  'defaultJNumberFolder': 'display_image\\jPages\\QZ468',
- 'imageCountLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3bf5c48> >,
- 'listerInitialsText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3bf82c8> >,
- 'imageCtrl': <wx._controls.StaticBitmap; proxy of <Swig Object of type 'wxStaticBitmap *' at 0x3bf5aa0> >,
- 'beginManifestingRadio': <wx._controls.RadioButton; proxy of <Swig Object of type 'wxRadioButton *' at 0x3880688> >,
- 'ebayCategoryIdText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3bf7f08> >,
- 'lookUpBySkuSizer': <wx._core.BoxSizer; proxy of <Swig Object of type 'wxBoxSizer *' at 0x37b6478> >,
- 'file': <wx._core.Menu; proxy of <Swig Object of type 'wxMenu *' at 0x28c21c0> >,
+ 'imageCountLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3b06180> >,
+ 'listerInitialsText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3b08800> >,
+ 'imageCtrl': <wx._controls.StaticBitmap; proxy of <Swig Object of type 'wxStaticBitmap *' at 0x3b05fd8> >,
+ 'beginManifestingRadio': <wx._controls.RadioButton; proxy of <Swig Object of type 'wxRadioButton *' at 0x23235a0> >,
+ 'ebayCategoryIdText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3b08440> >,
+ 'lookUpBySkuSizer': <wx._core.BoxSizer; proxy of <Swig Object of type 'wxBoxSizer *' at 0x36d7bc0> >,
+ 'file': <wx._core.Menu; proxy of <Swig Object of type 'wxMenu *' at 0x2646130> >,
  'defaultJNumber': 'QZ468',
- 'palletNumberLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3bf4868> >,
+ 'palletNumberLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3b04da0> >,
  'PhotoMaxSize': 400,
- 'mainPanel': <wx._windows.Panel; proxy of <Swig Object of type 'wxPanel *' at 0x38f8d50> >,
- 'startingSkuLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3bf4d60> >,
+ 'mainPanel': <wx._windows.Panel; proxy of <Swig Object of type 'wxPanel *' at 0x235e568> >,
+ 'startingSkuLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3b05298> >,
  'descriptionTextFieldInitialized': False,
- 'rSizer': <wx._core.BoxSizer; proxy of <Swig Object of type 'wxBoxSizer *' at 0x37b6538> >,
- 'saveDescriptionTextBtn': <wx._controls.Button; proxy of <Swig Object of type 'wxButton *' at 0x3bfd050> >,
- 'scanNumberText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3bf6808> >,
- 'pdbSetTrace': <wx._core.MenuItem; proxy of <Swig Object of type 'wxMenuItem *' at 0x28c27c0> >,
- 'statusbar': <wx._windows.StatusBar; proxy of <Swig Object of type 'wxStatusBar *' at 0x38713b8> >,
- 'upcNumberLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3bf50b0> >,
- 'currentDateListedText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3c03d48> >,
- 'shopHqRadio': <wx._controls.RadioButton; proxy of <Swig Object of type 'wxRadioButton *' at 0x3bf46c0> >,
+ 'rSizer': <wx._core.BoxSizer; proxy of <Swig Object of type 'wxBoxSizer *' at 0x36d7c80> >,
+ 'saveDescriptionTextBtn': <wx._controls.Button; proxy of <Swig Object of type 'wxButton *' at 0x3b1e288> >,
+ 'currentAuctionIncludesText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3b24618> >,
+ 'scanNumberText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3b06d40> >,
+ 'pdbSetTrace': <wx._core.MenuItem; proxy of <Swig Object of type 'wxMenuItem *' at 0x2646730> >,
+ 'statusbar': <wx._windows.StatusBar; proxy of <Swig Object of type 'wxStatusBar *' at 0x2362d98> >,
+ 'upcNumberLbl': <wx._controls.StaticText; proxy of <Swig Object of type 'wxStaticText *' at 0x3b055e8> >,
+ 'currentDateListedText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3b24d98> >,
+ 'shopHqRadio': <wx._controls.RadioButton; proxy of <Swig Object of type 'wxRadioButton *' at 0x3b04bf8> >,
  'scanNumberTextValue': None,
  'ListingPreferencesDialog': <class 'display_image.Dialogs.ListingPreferencesDialog.ListingPreferencesDialog'>,
- 'beginShelfNumberText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3bf7b48> >}
+ 'beginShelfNumberText': <wx._controls.TextCtrl; proxy of <Swig Object of type 'wxTextCtrl *' at 0x3b08080> >}
 
---06-23 15:05:37 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookupManifestedRadio INFO     
+--06-23 15:55:05 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookupManifestedRadio INFO     
 Inside:  onLookupManifestedRadio
 
---06-23 15:05:37 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookupManifestedRadio INFO     
+--06-23 15:55:05 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookupManifestedRadio INFO     
 Inside:  onLookupManifestedRadio
 
---06-23 15:05:37 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookupManifestedRadio INFO     
+--06-23 15:55:05 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookupManifestedRadio INFO     
 
 # PhotoCtrlEventsHandler: onLookupManifestedRadio # onLookupManifestedRadio
 
---06-23 15:05:37 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookupManifestedRadio INFO     
+--06-23 15:55:05 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookupManifestedRadio INFO     
 
 # PhotoCtrlEventsHandler: onLookupManifestedRadio # onLookupManifestedRadio
 
---06-23 15:05:37 log_debug display_image.EventsHandlers.MainFrameEventHandler.csvFileBrowse DEBUG    Inside:  csvFileBrowse
+--06-23 15:55:05 log_debug display_image.EventsHandlers.MainFrameEventHandler.csvFileBrowse DEBUG    Inside:  csvFileBrowse
 ARGS_KWARGS_STR:
 {'ARGS': ()
 , 'KWARGS': {}}
@@ -289,13 +291,13 @@ caller: ['        return _core_.PyApp_MainLoop(*args, **kwargs)\n']
 Exception:
 None
 
---06-23 15:05:37 log_info display_image.EventsHandlers.MainFrameEventHandler.csvFileBrowse INFO     
+--06-23 15:55:05 log_info display_image.EventsHandlers.MainFrameEventHandler.csvFileBrowse INFO     
 Inside:  csvFileBrowse
 
---06-23 15:05:37 log_info display_image.EventsHandlers.MainFrameEventHandler.csvFileBrowse INFO     
+--06-23 15:55:05 log_info display_image.EventsHandlers.MainFrameEventHandler.csvFileBrowse INFO     
 Inside:  csvFileBrowse
 
---06-23 15:05:39 log_debug display_image.EventsHandlers.MainFrameEventHandler.csvFileBrowse DEBUG    Filenames: csvFileBrowse
+--06-23 15:55:07 log_debug display_image.EventsHandlers.MainFrameEventHandler.csvFileBrowse DEBUG    Filenames: csvFileBrowse
 ARGS_KWARGS_STR:
 {'ARGS': ([u'C:\\Users\\User\\SGIS_CLONE\\master-6-20\\spreadsheets\\Watch SNBC#4 CR March 14-04 - SNBC4 no dupes.csv'],)
 , 'KWARGS': {}}
@@ -306,13 +308,27 @@ caller: ['        return _core_.PyApp_MainLoop(*args, **kwargs)\n']
 Exception:
 None
 
---06-23 15:05:42 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText INFO     
+--06-23 15:55:09 log_info display_image.EventsHandlers.MainFrameEventHandler.onRetailerRadio INFO     
+Inside:  onRetailerRadio
+
+--06-23 15:55:09 log_info display_image.EventsHandlers.MainFrameEventHandler.onRetailerRadio INFO     
+Inside:  onRetailerRadio
+
+--06-23 15:55:09 log_info display_image.EventsHandlers.MainFrameEventHandler.onRetailerRadio INFO     
+
+# PhotoCtrlEventsHandler.onRetailerRadio()  onRetailerRadio
+
+--06-23 15:55:09 log_info display_image.EventsHandlers.MainFrameEventHandler.onRetailerRadio INFO     
+
+# PhotoCtrlEventsHandler.onRetailerRadio()  onRetailerRadio
+
+--06-23 15:55:10 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText INFO     
 Inside:  onCurrentSkuText
 
---06-23 15:05:42 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText INFO     
+--06-23 15:55:10 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText INFO     
 Inside:  onCurrentSkuText
 
---06-23 15:05:42 log_debug display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText DEBUG    . self.MainFrame.startingSkuNumber Updated to:  onCurrentSkuText
+--06-23 15:55:10 log_debug display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText DEBUG    . self.MainFrame.startingSkuNumber Updated to:  onCurrentSkuText
 ARGS_KWARGS_STR:
 {'ARGS': ('1',)
 , 'KWARGS': {}}
@@ -323,13 +339,13 @@ caller: ['        wx.PyApp.MainLoop(self)\n']
 Exception:
 None
 
---06-23 15:05:42 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText INFO     
+--06-23 15:55:11 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText INFO     
 Inside:  onCurrentSkuText
 
---06-23 15:05:42 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText INFO     
+--06-23 15:55:11 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText INFO     
 Inside:  onCurrentSkuText
 
---06-23 15:05:42 log_debug display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText DEBUG    . self.MainFrame.startingSkuNumber Updated to:  onCurrentSkuText
+--06-23 15:55:11 log_debug display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText DEBUG    . self.MainFrame.startingSkuNumber Updated to:  onCurrentSkuText
 ARGS_KWARGS_STR:
 {'ARGS': ('11',)
 , 'KWARGS': {}}
@@ -340,13 +356,13 @@ caller: ['        wx.PyApp.MainLoop(self)\n']
 Exception:
 None
 
---06-23 15:05:42 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText INFO     
+--06-23 15:55:11 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText INFO     
 Inside:  onCurrentSkuText
 
---06-23 15:05:42 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText INFO     
+--06-23 15:55:11 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText INFO     
 Inside:  onCurrentSkuText
 
---06-23 15:05:42 log_debug display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText DEBUG    . self.MainFrame.startingSkuNumber Updated to:  onCurrentSkuText
+--06-23 15:55:11 log_debug display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText DEBUG    . self.MainFrame.startingSkuNumber Updated to:  onCurrentSkuText
 ARGS_KWARGS_STR:
 {'ARGS': ('113',)
 , 'KWARGS': {}}
@@ -357,13 +373,13 @@ caller: ['        wx.PyApp.MainLoop(self)\n']
 Exception:
 None
 
---06-23 15:05:42 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText INFO     
+--06-23 15:55:11 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText INFO     
 Inside:  onCurrentSkuText
 
---06-23 15:05:42 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText INFO     
+--06-23 15:55:11 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText INFO     
 Inside:  onCurrentSkuText
 
---06-23 15:05:42 log_debug display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText DEBUG    . self.MainFrame.startingSkuNumber Updated to:  onCurrentSkuText
+--06-23 15:55:11 log_debug display_image.EventsHandlers.MainFrameEventHandler.onCurrentSkuText DEBUG    . self.MainFrame.startingSkuNumber Updated to:  onCurrentSkuText
 ARGS_KWARGS_STR:
 {'ARGS': ('1132',)
 , 'KWARGS': {}}
@@ -374,473 +390,810 @@ caller: ['        wx.PyApp.MainLoop(self)\n']
 Exception:
 None
 
---06-23 15:05:43 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtn INFO     
+--06-23 15:55:11 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtn INFO     
 Inside:  onLookUpBySkuBtn
 
---06-23 15:05:43 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtn INFO     
+--06-23 15:55:11 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtn INFO     
 Inside:  onLookUpBySkuBtn
 
---06-23 15:05:43 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtn INFO     
+--06-23 15:55:11 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtn INFO     
 
 # PhotoCtrlEventsHandler.onLookUpBySkuBtn(): # onLookUpBySkuBtn
 
---06-23 15:05:43 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtn INFO     
+--06-23 15:55:11 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtn INFO     
 
 # PhotoCtrlEventsHandler.onLookUpBySkuBtn(): # onLookUpBySkuBtn
 
---06-23 15:05:45 log_info display_image.EventsHandlers.MainFrameEventHandler.onRetailerRadio INFO     
-Inside:  onRetailerRadio
-
---06-23 15:05:45 log_info display_image.EventsHandlers.MainFrameEventHandler.onRetailerRadio INFO     
-Inside:  onRetailerRadio
-
---06-23 15:05:45 log_info display_image.EventsHandlers.MainFrameEventHandler.onRetailerRadio INFO     
-
-# PhotoCtrlEventsHandler.onRetailerRadio()  onRetailerRadio
-
---06-23 15:05:45 log_info display_image.EventsHandlers.MainFrameEventHandler.onRetailerRadio INFO     
-
-# PhotoCtrlEventsHandler.onRetailerRadio()  onRetailerRadio
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtn INFO     
-Inside:  onLookUpBySkuBtn
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtn INFO     
-Inside:  onLookUpBySkuBtn
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtn INFO     
-
-# PhotoCtrlEventsHandler.onLookUpBySkuBtn(): # onLookUpBySkuBtn
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtn INFO     
-
-# PhotoCtrlEventsHandler.onLookUpBySkuBtn(): # onLookUpBySkuBtn
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtnShopHq INFO     
+--06-23 15:55:11 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtnShopHq INFO     
 Inside:  onLookUpBySkuBtnShopHq
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtnShopHq INFO     
+--06-23 15:55:11 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtnShopHq INFO     
 Inside:  onLookUpBySkuBtnShopHq
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtnShopHq INFO     
+--06-23 15:55:11 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtnShopHq INFO     
 [['retailer_code:1', 'Division', 'Brand', 'pallet_number', 'full_', 'jnumber', 'model_number', 'title', 'Qty', 'msrp', 'Total Cost', 'Retail', 'Total Retail', 'Margin %', 'Margin $', 'eBay Price', 'sku', 'box', 'condition', 'condition_notes', 'band_size', 'date_listed', 'repair', 'manifested', 'upc'], ['', 'Watches', 'Invicta', 'Watches4', 'J431184-00005-04168', 'J431184', '', 'INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS LMT ED QUARTZ CHRONO WATCH RED MENS', '1', '$645.00', '$645.00', '', '', '', '', '', '1132', '', '2', '', '7.5', '', '', 'X', '']] onLookUpBySkuBtnShopHq
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtnShopHq INFO     
+--06-23 15:55:11 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtnShopHq INFO     
 [['retailer_code:1', 'Division', 'Brand', 'pallet_number', 'full_', 'jnumber', 'model_number', 'title', 'Qty', 'msrp', 'Total Cost', 'Retail', 'Total Retail', 'Margin %', 'Margin $', 'eBay Price', 'sku', 'box', 'condition', 'condition_notes', 'band_size', 'date_listed', 'repair', 'manifested', 'upc'], ['', 'Watches', 'Invicta', 'Watches4', 'J431184-00005-04168', 'J431184', '', 'INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS LMT ED QUARTZ CHRONO WATCH RED MENS', '1', '$645.00', '$645.00', '', '', '', '', '', '1132', '', '2', '', '7.5', '', '', 'X', '']] onLookUpBySkuBtnShopHq
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onPalletNumberText INFO     
+--06-23 15:55:11 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtnShopHq INFO     
+A dialog giving a reason why we can't continue should appear. onLookUpBySkuBtnShopHq
+
+--06-23 15:55:11 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtnShopHq INFO     
+A dialog giving a reason why we can't continue should appear. onLookUpBySkuBtnShopHq
+
+--06-23 15:56:42 log_info display_image.EventsHandlers.MainFrameEventHandler.onBeginManifestingRadio INFO     
+Inside:  onBeginManifestingRadio
+
+--06-23 15:56:42 log_info display_image.EventsHandlers.MainFrameEventHandler.onBeginManifestingRadio INFO     
+Inside:  onBeginManifestingRadio
+
+--06-23 15:56:42 log_info display_image.EventsHandlers.MainFrameEventHandler.onBeginManifestingRadio INFO     
+
+# PhotoCtrlEventsHandler: onBeginManifestingRadio # onBeginManifestingRadio
+
+--06-23 15:56:42 log_info display_image.EventsHandlers.MainFrameEventHandler.onBeginManifestingRadio INFO     
+
+# PhotoCtrlEventsHandler: onBeginManifestingRadio # onBeginManifestingRadio
+
+--06-23 15:56:42 log_debug display_image.EventsHandlers.MainFrameEventHandler.csvFileBrowse DEBUG    Inside:  csvFileBrowse
+ARGS_KWARGS_STR:
+{'ARGS': ()
+, 'KWARGS': {}}
+call_fn: C:\Python27\lib\site-packages\wx-3.0-msw\wx\_core.py
+call_ln: 7952
+call_func: MainLoop
+caller: ['        return _core_.PyApp_MainLoop(*args, **kwargs)\n']
+Exception:
+None
+
+--06-23 15:56:42 log_info display_image.EventsHandlers.MainFrameEventHandler.csvFileBrowse INFO     
+Inside:  csvFileBrowse
+
+--06-23 15:56:42 log_info display_image.EventsHandlers.MainFrameEventHandler.csvFileBrowse INFO     
+Inside:  csvFileBrowse
+
+--06-23 15:56:44 log_debug display_image.EventsHandlers.MainFrameEventHandler.csvFileBrowse DEBUG    local variable 'filenames' referenced before assignment csvFileBrowse
+ARGS_KWARGS_STR:
+{'ARGS': ()
+, 'KWARGS': {}}
+call_fn: C:\Python27\lib\site-packages\wx-3.0-msw\wx\_core.py
+call_ln: 7952
+call_func: MainLoop
+caller: ['        return _core_.PyApp_MainLoop(*args, **kwargs)\n']
+Exception:
+Traceback (most recent call last):
+  File "C:\Users\User\SGIS_CLONE\master-6-20\display_image\EventsHandlers\MainFrameEventHandler.py", line 70, in csvFileBrowse
+    self.debugLogger("Filenames:",filenames)
+UnboundLocalError: local variable 'filenames' referenced before assignment
+
+--06-23 15:56:45 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookupManifestedRadio INFO     
+Inside:  onLookupManifestedRadio
+
+--06-23 15:56:45 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookupManifestedRadio INFO     
+Inside:  onLookupManifestedRadio
+
+--06-23 15:56:45 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookupManifestedRadio INFO     
+
+# PhotoCtrlEventsHandler: onLookupManifestedRadio # onLookupManifestedRadio
+
+--06-23 15:56:45 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookupManifestedRadio INFO     
+
+# PhotoCtrlEventsHandler: onLookupManifestedRadio # onLookupManifestedRadio
+
+--06-23 15:56:45 log_debug display_image.EventsHandlers.MainFrameEventHandler.csvFileBrowse DEBUG    Inside:  csvFileBrowse
+ARGS_KWARGS_STR:
+{'ARGS': ()
+, 'KWARGS': {}}
+call_fn: C:\Python27\lib\site-packages\wx-3.0-msw\wx\_core.py
+call_ln: 7952
+call_func: MainLoop
+caller: ['        return _core_.PyApp_MainLoop(*args, **kwargs)\n']
+Exception:
+None
+
+--06-23 15:56:45 log_info display_image.EventsHandlers.MainFrameEventHandler.csvFileBrowse INFO     
+Inside:  csvFileBrowse
+
+--06-23 15:56:45 log_info display_image.EventsHandlers.MainFrameEventHandler.csvFileBrowse INFO     
+Inside:  csvFileBrowse
+
+--06-23 15:56:50 log_debug display_image.EventsHandlers.MainFrameEventHandler.csvFileBrowse DEBUG    Filenames: csvFileBrowse
+ARGS_KWARGS_STR:
+{'ARGS': ([u'C:\\Users\\User\\SGIS_CLONE\\master-6-20\\spreadsheets\\Watch SNBC#4 CR March 14-04 - SNBC4 no dupes.csv'],)
+, 'KWARGS': {}}
+call_fn: C:\Python27\lib\site-packages\wx-3.0-msw\wx\_core.py
+call_ln: 7952
+call_func: MainLoop
+caller: ['        return _core_.PyApp_MainLoop(*args, **kwargs)\n']
+Exception:
+None
+
+--06-23 15:56:51 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtn INFO     
+Inside:  onLookUpBySkuBtn
+
+--06-23 15:56:51 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtn INFO     
+Inside:  onLookUpBySkuBtn
+
+--06-23 15:56:51 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtn INFO     
+
+# PhotoCtrlEventsHandler.onLookUpBySkuBtn(): # onLookUpBySkuBtn
+
+--06-23 15:56:51 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtn INFO     
+
+# PhotoCtrlEventsHandler.onLookUpBySkuBtn(): # onLookUpBySkuBtn
+
+--06-23 15:56:51 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtnShopHq INFO     
+Inside:  onLookUpBySkuBtnShopHq
+
+--06-23 15:56:51 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtnShopHq INFO     
+Inside:  onLookUpBySkuBtnShopHq
+
+--06-23 15:56:51 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtnShopHq INFO     
+[['retailer_code:1', 'Division', 'Brand', 'pallet_number', 'full_', 'jnumber', 'model_number', 'title', 'Qty', 'msrp', 'Total Cost', 'Retail', 'Total Retail', 'Margin %', 'Margin $', 'eBay Price', 'sku', 'box', 'condition', 'condition_notes', 'band_size', 'date_listed', 'repair', 'manifested', 'upc', 'auction_includes'], ['', 'Watches', 'Invicta', 'Watches4', 'J431184-00005-04168', 'J431184', '', 'INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS LMT ED QUARTZ CHRONO WATCH RED MENS', '1', '$645.00', '$645.00', '', '', '', '', '', '1132', '', '2', '', '7.5', '', '', 'X', '', 'auction_includes|stuff1|stuff2']] onLookUpBySkuBtnShopHq
+
+--06-23 15:56:51 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtnShopHq INFO     
+[['retailer_code:1', 'Division', 'Brand', 'pallet_number', 'full_', 'jnumber', 'model_number', 'title', 'Qty', 'msrp', 'Total Cost', 'Retail', 'Total Retail', 'Margin %', 'Margin $', 'eBay Price', 'sku', 'box', 'condition', 'condition_notes', 'band_size', 'date_listed', 'repair', 'manifested', 'upc', 'auction_includes'], ['', 'Watches', 'Invicta', 'Watches4', 'J431184-00005-04168', 'J431184', '', 'INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS LMT ED QUARTZ CHRONO WATCH RED MENS', '1', '$645.00', '$645.00', '', '', '', '', '', '1132', '', '2', '', '7.5', '', '', 'X', '', 'auction_includes|stuff1|stuff2']] onLookUpBySkuBtnShopHq
+
+--06-23 15:56:51 log_info display_image.EventsHandlers.MainFrameEventHandler.onPalletNumberText INFO     
 Inside:  onPalletNumberText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onPalletNumberText INFO     
+--06-23 15:56:51 log_info display_image.EventsHandlers.MainFrameEventHandler.onPalletNumberText INFO     
 Inside:  onPalletNumberText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onPalletNumberText INFO     
+--06-23 15:56:51 log_info display_image.EventsHandlers.MainFrameEventHandler.onPalletNumberText INFO     
 
 # PhotoCtrlEventHandler.onPalletNumberText(): # onPalletNumberText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onPalletNumberText INFO     
+--06-23 15:56:51 log_info display_image.EventsHandlers.MainFrameEventHandler.onPalletNumberText INFO     
 
 # PhotoCtrlEventHandler.onPalletNumberText(): # onPalletNumberText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
+--06-23 15:56:51 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
 Inside:  onScanNumberText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
+--06-23 15:56:51 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
 Inside:  onScanNumberText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
+--06-23 15:56:51 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
 
 # PhotoCtrlEventHandler.scanNumberText() # onScanNumberText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
+--06-23 15:56:51 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
 
 # PhotoCtrlEventHandler.scanNumberText() # onScanNumberText
 
---06-23 15:05:46 log_info display_image.sky_manifest.checkIfManifested INFO     
+--06-23 15:56:51 log_info display_image.sky_manifest.checkIfManifested INFO     
 
 # sky_manifest.ManifestReader.checkIfManifested(jnumber) # checkIfManifested
 
---06-23 15:05:46 log_info display_image.sky_manifest.checkIfManifested INFO     
+--06-23 15:56:51 log_info display_image.sky_manifest.checkIfManifested INFO     
 . jnumber:J431184 checkIfManifested
 
---06-23 15:05:46 log_info display_image.sky_manifest.returnColumn INFO     
+--06-23 15:56:51 log_info display_image.sky_manifest.returnColumn INFO     
 
 # sky_manifest.ManifestReader.returnColumn: ERROR appending returnColumn
 
---06-23 15:05:46 log_info display_image.sky_manifest.returnColumn INFO     
+--06-23 15:56:51 log_info display_image.sky_manifest.returnColumn INFO     
 list index out of range returnColumn
 
---06-23 15:05:46 log_info display_image.sky_manifest.returnColumn INFO     
+--06-23 15:56:51 log_info display_image.sky_manifest.returnColumn INFO     
 
 # sky_manifest.ManifestReader.returnColumn: ERROR appending returnColumn
 
---06-23 15:05:46 log_info display_image.sky_manifest.returnColumn INFO     
+--06-23 15:56:51 log_info display_image.sky_manifest.returnColumn INFO     
 list index out of range returnColumn
 
---06-23 15:05:46 log_info display_image.sky_manifest.returnColumn INFO     
+--06-23 15:56:51 log_info display_image.sky_manifest.returnColumn INFO     
 
 # sky_manifest.ManifestReader.returnColumn: ERROR appending returnColumn
 
---06-23 15:05:46 log_info display_image.sky_manifest.returnColumn INFO     
+--06-23 15:56:51 log_info display_image.sky_manifest.returnColumn INFO     
 list index out of range returnColumn
 
---06-23 15:05:46 log_info display_image.sky_manifest.returnColumn INFO     
+--06-23 15:56:51 log_info display_image.sky_manifest.returnColumn INFO     
 
 # sky_manifest.ManifestReader.returnColumn: ERROR appending returnColumn
 
---06-23 15:05:46 log_info display_image.sky_manifest.returnColumn INFO     
+--06-23 15:56:51 log_info display_image.sky_manifest.returnColumn INFO     
 list index out of range returnColumn
 
---06-23 15:05:46 log_info display_image.sky_manifest.returnColumn INFO     
+--06-23 15:56:51 log_info display_image.sky_manifest.returnColumn INFO     
 
 # sky_manifest.ManifestReader.returnColumn: ERROR appending returnColumn
 
---06-23 15:05:46 log_info display_image.sky_manifest.returnColumn INFO     
+--06-23 15:56:51 log_info display_image.sky_manifest.returnColumn INFO     
 list index out of range returnColumn
 
---06-23 15:05:46 log_info display_image.sky_manifest.checkIfManifested INFO     
+--06-23 15:56:51 log_info display_image.sky_manifest.checkIfManifested INFO     
 . jc_len:561 mc_len:561 sc_len:561 checkIfManifested
 
---06-23 15:05:46 log_info display_image.sky_manifest.checkIfManifested INFO     
+--06-23 15:56:51 log_info display_image.sky_manifest.checkIfManifested INFO     
 . Found Match on row_index:132 checkIfManifested
 
---06-23 15:05:46 log_info display_image.sky_manifest.checkIfManifested INFO     
+--06-23 15:56:51 log_info display_image.sky_manifest.checkIfManifested INFO     
 . Line Number: 133 checkIfManifested
 
---06-23 15:05:46 log_info display_image.sky_manifest.checkIfManifested INFO     
+--06-23 15:56:51 log_info display_image.sky_manifest.checkIfManifested INFO     
 . Found sku Number: 1132 checkIfManifested
 
---06-23 15:05:46 log_info display_image.sky_manifest.checkIfManifested INFO     
+--06-23 15:56:51 log_info display_image.sky_manifest.checkIfManifested INFO     
 . Manifested: X checkIfManifested
 
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
+--06-23 15:56:51 log_info display_image.Check.loadMainFrameJson INFO     
 
 # Check.loadself.MainFrameJson(): # loadMainFrameJson
 
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
+--06-23 15:56:51 log_info display_image.Check.loadMainFrameJson INFO     
 display_image\jPages\J431184\J431184.json loadMainFrameJson
 
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. repair loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. ebay_category loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. image_list loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. jnumber loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. pallet_number loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. specs loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. eBay Price loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. sku loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. Division loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. Margin $ loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. title loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. Brand loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. model_number loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. jNumber loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. itemSelectedImages loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. condition loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. condition_notes loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. retailer_code loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. *ConditionID loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. Total Cost loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. retailer_code:1 loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. description loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. full_ loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. palletNumber loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. Retail loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. manifested loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. Total Retail loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. box loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. image_sources loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. date_listed loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. Margin % loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. upc loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. Qty loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. listerInitials loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. band_size loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. jNumberFolderPath loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. *Category loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-. msrp loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-Updating currentItemInfo in loadMainFrameJson{u'repair': u'', u'ebay_category': u'31387', u'image_list': [u'622-343?DefaultImage=1&$472x472_jpg$', u'622-343_00_swatch?DefaultImage=1&$40x40_jpg$', u'622-343_01_swatch?DefaultImage=1&$40x40_jpg$', u'622-343?DefaultImage=1&$80x80_jpg$', u'622-343_00_detail?DefaultImage=1&$80x80_jpg$', u'622-343_01_detail?DefaultImage=1&$80x80_jpg$', u'622-343_02_detail?DefaultImage=1&$80x80_jpg$', u'622-343_03_detail?DefaultImage=1&$80x80_jpg$', u'622-343?DefaultImage=1&$120x120_jpg$', u'622-343?DefaultImage=1&$120x120_jpg$'], u'jnumber': u'J431184', u'pallet_number': u'Watches4', u'specs': u"['tt_productRightCol', 'entity.id=622-343', 'entity.categoryId=product', 'entity.name=Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case', 'entity.pageUrl=http://www.shophq.com/product/622-343.aspx?\\\\u0026familyid=J431184', 'entity.thumbnailUrl=http://images.shophq.com/is/image/ShopHQ/622-343?DefaultImage=1&$120x120_jpg$', 'entity.message=INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS QUARTZ CHRONO BRACELET', 'entity.value=645.0000', '']", u'eBay Price': u'', u'sku': u'1132', u'Division': u'Watches', u'Margin $': u'', u'title': u'Invicta Reserve Mens Jason Taylor Excursion Quartz Chrono Watch Red Mens', u'Brand': u'Invicta', u'model_number': u'', u'jNumber': u'J431184', u'itemSelectedImages': {u'display_image\\jPages\\J431184\\622-343.JPEG': u'True'}, u'condition': u'2', u'condition_notes': u'', u'retailer_code': u'1', u'*ConditionID': u'3000', u'Total Cost': u'$645.00', u'retailer_code:1': u'', u'description': u'\r\n                \r\n                <p><strong>Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case</strong></p>\r\n\r\n<p><strong>Choices: </strong>Red or Yellow dial accent</p>\r\n\r\n<p> Ingenious architecture and design blends with formidable capabilities on this Invicta Reserve Jason Taylor Excursion! </p>\r\n                Take a stylish step forward with the round black stainless steel case. Measuring 50mm wide the case presents its imposing stature with two black pedal-style function pushers on either side of a texture edged screw down crown. A black bezel tops the case with Arabic numerals etched at five minute increments and four white arrow accents at the cardinal points. \u201cLimited Edition\u201d appears on the case back with your number out of 999 while \u201cJT\u201d caps the crown. This Excursion expertly executes the time on a Swiss Made Ronda 5040.D Quartz Chronograph movement. </p>\r\n\r\n<p> A Flame Fusion crystal hovers above the round black carbon fiber dial and its standout accents in red or yellow. A 60-seconds subdial sits near 2:00 a date window finds its place near 4:00 a 1/10th-seconds subdial resides above 6:00 and a 30-minute subdial lands near 10:00. The red accented dial features round luminous Tritnite index markers with red trim at all hour positions except 12:00 Tritnite and red trim hour and minute hands and solid red subdial and chronograph hands. The yellow accented dial boasts Tritnite index markers and hour and minute hands with yellow trim and solid yellow subdial and chronograph hands. \u201cJT\u201d and \u201cInvicta Reserve\u201d share the space below 12:00 for the final detail. </p>\r\n\r\n<p> Cool black links come together for the stainless steel bracelet. The three link design secures with a deployant clasp and a safety catch etched \u201cJT\u201d. A timepiece uniquely styled with you in mind make this Invicta Reserve Jason Taylor Excursion the newest addition to your timepiece collection today! </p> \r\n\r\n<p><li><strong>Bracelet: </strong>Stainless Steel\r\n<li><strong>Movement: </strong>Swiss Made Ronda 5040.D Quartz Chronograph \r\n<li><strong>Crystal: </strong>Flame Fusion\r\n<li><strong>Crown: </strong>Screw Down w/ Function Pushers\r\n<li><strong>Clasp: </strong>Deployant\r\n<li><strong>Bracelet Measurements: </strong>9 L x 26mm W\r\n<li><strong>Case Measurements: </strong>50mm\r\n<li><strong>Case Thickness: </strong>14mm\r\n<li><strong>Weight: </strong>13 oz.\r\n<li><strong>Water Resistance: </strong>20 ATM - 200 meters - 660 feet\r\n<li><strong>Model Numbers: </strong>\r\n<br>Red: 14452-3WHT \r\n<br>Yellow: 14453-3WHT \r\n\r\n<li><strong>UPC: </strong>\r\n<br>Red: 886678150946 \r\n<br>Yellow: 886678150953 \r\n\r\n<p>', u'full_': u'J431184-00005-04168', u'palletNumber': u'Watches4', u'Retail': u'', u'manifested': u'X', u'Total Retail': u'', u'box': u'', u'image_sources': {u'key': u''}, u'date_listed': u'', u'Margin %': u'', u'upc': u'', u'Qty': u'1', u'listerInitials': u'JM', u'band_size': u'7.5', u'jNumberFolderPath': u'display_image\\jPages\\J431184', u'*Category': u'31387', u'msrp': u'$645.00'} loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.Check.loadMainFrameJson INFO     
-self.MainFrame.currentItemInfo Updated loadMainFrameJson
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
-Post json_exists: {'repair': u'', u'ebay_category': u'31387', 'image_list': [u'622-343?DefaultImage=1&$472x472_jpg$', u'622-343_00_swatch?DefaultImage=1&$40x40_jpg$', u'622-343_01_swatch?DefaultImage=1&$40x40_jpg$', u'622-343?DefaultImage=1&$80x80_jpg$', u'622-343_00_detail?DefaultImage=1&$80x80_jpg$', u'622-343_01_detail?DefaultImage=1&$80x80_jpg$', u'622-343_02_detail?DefaultImage=1&$80x80_jpg$', u'622-343_03_detail?DefaultImage=1&$80x80_jpg$', u'622-343?DefaultImage=1&$120x120_jpg$', u'622-343?DefaultImage=1&$120x120_jpg$'], 'sku': u'1132', 'Margin $': u'', 'title': u'Invicta Reserve Mens Jason Taylor Excursion Quartz Chrono Watch Red Mens', 'Brand': u'Invicta', 'model_number': u'', 'jNumber': u'J431184', 'Total Cost': u'$645.00', 'full_': u'J431184-00005-04168', 'Retail': u'', 'condition': u'2', 'upc': u'', 'Qty': u'1', 'listerInitials': u'JM', 'jNumberFolderPath': u'display_image\\jPages\\J431184', 'msrp': u'$645.00', 'jnumber': u'J431184', 'pallet_number': u'Watches4', 'specs': u"['tt_productRightCol', 'entity.id=622-343', 'entity.categoryId=product', 'entity.name=Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case', 'entity.pageUrl=http://www.shophq.com/product/622-343.aspx?\\\\u0026familyid=J431184', 'entity.thumbnailUrl=http://images.shophq.com/is/image/ShopHQ/622-343?DefaultImage=1&$120x120_jpg$', 'entity.message=INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS QUARTZ CHRONO BRACELET', 'entity.value=645.0000', '']", 'eBay Price': u'', 'Division': u'Watches', 'itemSelectedImages': {u'display_image\\jPages\\J431184\\622-343.JPEG': u'True'}, 'condition_notes': u'', 'retailer_code': u'1', u'*ConditionID': u'3000', 'retailer_code:1': u'', 'description': u'\r\n                \r\n                <p><strong>Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case</strong></p>\r\n\r\n<p><strong>Choices: </strong>Red or Yellow dial accent</p>\r\n\r\n<p> Ingenious architecture and design blends with formidable capabilities on this Invicta Reserve Jason Taylor Excursion! </p>\r\n                Take a stylish step forward with the round black stainless steel case. Measuring 50mm wide the case presents its imposing stature with two black pedal-style function pushers on either side of a texture edged screw down crown. A black bezel tops the case with Arabic numerals etched at five minute increments and four white arrow accents at the cardinal points. \u201cLimited Edition\u201d appears on the case back with your number out of 999 while \u201cJT\u201d caps the crown. This Excursion expertly executes the time on a Swiss Made Ronda 5040.D Quartz Chronograph movement. </p>\r\n\r\n<p> A Flame Fusion crystal hovers above the round black carbon fiber dial and its standout accents in red or yellow. A 60-seconds subdial sits near 2:00 a date window finds its place near 4:00 a 1/10th-seconds subdial resides above 6:00 and a 30-minute subdial lands near 10:00. The red accented dial features round luminous Tritnite index markers with red trim at all hour positions except 12:00 Tritnite and red trim hour and minute hands and solid red subdial and chronograph hands. The yellow accented dial boasts Tritnite index markers and hour and minute hands with yellow trim and solid yellow subdial and chronograph hands. \u201cJT\u201d and \u201cInvicta Reserve\u201d share the space below 12:00 for the final detail. </p>\r\n\r\n<p> Cool black links come together for the stainless steel bracelet. The three link design secures with a deployant clasp and a safety catch etched \u201cJT\u201d. A timepiece uniquely styled with you in mind make this Invicta Reserve Jason Taylor Excursion the newest addition to your timepiece collection today! </p> \r\n\r\n<p><li><strong>Bracelet: </strong>Stainless Steel\r\n<li><strong>Movement: </strong>Swiss Made Ronda 5040.D Quartz Chronograph \r\n<li><strong>Crystal: </strong>Flame Fusion\r\n<li><strong>Crown: </strong>Screw Down w/ Function Pushers\r\n<li><strong>Clasp: </strong>Deployant\r\n<li><strong>Bracelet Measurements: </strong>9 L x 26mm W\r\n<li><strong>Case Measurements: </strong>50mm\r\n<li><strong>Case Thickness: </strong>14mm\r\n<li><strong>Weight: </strong>13 oz.\r\n<li><strong>Water Resistance: </strong>20 ATM - 200 meters - 660 feet\r\n<li><strong>Model Numbers: </strong>\r\n<br>Red: 14452-3WHT \r\n<br>Yellow: 14453-3WHT \r\n\r\n<li><strong>UPC: </strong>\r\n<br>Red: 886678150946 \r\n<br>Yellow: 886678150953 \r\n\r\n<p>', 'palletNumber': u'Watches4', 'manifested': u'X', 'Total Retail': u'', 'box': u'', u'image_sources': {u'key': u''}, 'date_listed': u'', 'Margin %': u'', 'band_size': u'7.5', u'*Category': u'31387'} updateMainFrameCurrentItemInfo
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
-Post json_exists: {'repair': u'', u'ebay_category': u'31387', 'image_list': [u'622-343?DefaultImage=1&$472x472_jpg$', u'622-343_00_swatch?DefaultImage=1&$40x40_jpg$', u'622-343_01_swatch?DefaultImage=1&$40x40_jpg$', u'622-343?DefaultImage=1&$80x80_jpg$', u'622-343_00_detail?DefaultImage=1&$80x80_jpg$', u'622-343_01_detail?DefaultImage=1&$80x80_jpg$', u'622-343_02_detail?DefaultImage=1&$80x80_jpg$', u'622-343_03_detail?DefaultImage=1&$80x80_jpg$', u'622-343?DefaultImage=1&$120x120_jpg$', u'622-343?DefaultImage=1&$120x120_jpg$'], 'sku': u'1132', 'Margin $': u'', 'title': u'Invicta Reserve Mens Jason Taylor Excursion Quartz Chrono Watch Red Mens', 'Brand': u'Invicta', 'model_number': u'', 'jNumber': u'J431184', 'Total Cost': u'$645.00', 'full_': u'J431184-00005-04168', 'Retail': u'', 'condition': u'2', 'upc': u'', 'Qty': u'1', 'listerInitials': u'JM', 'jNumberFolderPath': u'display_image\\jPages\\J431184', 'msrp': u'$645.00', 'jnumber': u'J431184', 'pallet_number': u'Watches4', 'specs': u"['tt_productRightCol', 'entity.id=622-343', 'entity.categoryId=product', 'entity.name=Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case', 'entity.pageUrl=http://www.shophq.com/product/622-343.aspx?\\\\u0026familyid=J431184', 'entity.thumbnailUrl=http://images.shophq.com/is/image/ShopHQ/622-343?DefaultImage=1&$120x120_jpg$', 'entity.message=INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS QUARTZ CHRONO BRACELET', 'entity.value=645.0000', '']", 'eBay Price': u'', 'Division': u'Watches', 'itemSelectedImages': {u'display_image\\jPages\\J431184\\622-343.JPEG': u'True'}, 'condition_notes': u'', 'retailer_code': u'1', u'*ConditionID': u'3000', 'retailer_code:1': u'', 'description': u'\r\n                \r\n                <p><strong>Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case</strong></p>\r\n\r\n<p><strong>Choices: </strong>Red or Yellow dial accent</p>\r\n\r\n<p> Ingenious architecture and design blends with formidable capabilities on this Invicta Reserve Jason Taylor Excursion! </p>\r\n                Take a stylish step forward with the round black stainless steel case. Measuring 50mm wide the case presents its imposing stature with two black pedal-style function pushers on either side of a texture edged screw down crown. A black bezel tops the case with Arabic numerals etched at five minute increments and four white arrow accents at the cardinal points. \u201cLimited Edition\u201d appears on the case back with your number out of 999 while \u201cJT\u201d caps the crown. This Excursion expertly executes the time on a Swiss Made Ronda 5040.D Quartz Chronograph movement. </p>\r\n\r\n<p> A Flame Fusion crystal hovers above the round black carbon fiber dial and its standout accents in red or yellow. A 60-seconds subdial sits near 2:00 a date window finds its place near 4:00 a 1/10th-seconds subdial resides above 6:00 and a 30-minute subdial lands near 10:00. The red accented dial features round luminous Tritnite index markers with red trim at all hour positions except 12:00 Tritnite and red trim hour and minute hands and solid red subdial and chronograph hands. The yellow accented dial boasts Tritnite index markers and hour and minute hands with yellow trim and solid yellow subdial and chronograph hands. \u201cJT\u201d and \u201cInvicta Reserve\u201d share the space below 12:00 for the final detail. </p>\r\n\r\n<p> Cool black links come together for the stainless steel bracelet. The three link design secures with a deployant clasp and a safety catch etched \u201cJT\u201d. A timepiece uniquely styled with you in mind make this Invicta Reserve Jason Taylor Excursion the newest addition to your timepiece collection today! </p> \r\n\r\n<p><li><strong>Bracelet: </strong>Stainless Steel\r\n<li><strong>Movement: </strong>Swiss Made Ronda 5040.D Quartz Chronograph \r\n<li><strong>Crystal: </strong>Flame Fusion\r\n<li><strong>Crown: </strong>Screw Down w/ Function Pushers\r\n<li><strong>Clasp: </strong>Deployant\r\n<li><strong>Bracelet Measurements: </strong>9 L x 26mm W\r\n<li><strong>Case Measurements: </strong>50mm\r\n<li><strong>Case Thickness: </strong>14mm\r\n<li><strong>Weight: </strong>13 oz.\r\n<li><strong>Water Resistance: </strong>20 ATM - 200 meters - 660 feet\r\n<li><strong>Model Numbers: </strong>\r\n<br>Red: 14452-3WHT \r\n<br>Yellow: 14453-3WHT \r\n\r\n<li><strong>UPC: </strong>\r\n<br>Red: 886678150946 \r\n<br>Yellow: 886678150953 \r\n\r\n<p>', 'palletNumber': u'Watches4', 'manifested': u'X', 'Total Retail': u'', 'box': u'', u'image_sources': {u'key': u''}, 'date_listed': u'', 'Margin %': u'', 'band_size': u'7.5', u'*Category': u'31387'} updateMainFrameCurrentItemInfo
-
---06-23 15:05:46 log_info display_image.Check.defaultImageSelections INFO     
-
-# Check.defaultImageSelections(): # defaultImageSelections
-
---06-23 15:05:46 log_info display_image.Check.defaultImageSelections INFO     
-prev_selected:{u'display_image\\jPages\\J431184\\622-343.JPEG': u'True'} defaultImageSelections
-
---06-23 15:05:46 log_info display_image.Check.defaultImageSelections INFO     
-display_image\jPages\J431184\622-343.JPEG defaultImageSelections
-
---06-23 15:05:46 log_info display_image.Check.defaultImageSelections INFO     
-# Check.defaultImageSelections: display_image\jPages\J431184\622-343.JPEG defaultImageSelections
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
-
-# PhotoCtrlEventHandler.onScanNumberText(): self.prev_image # updateMainFrameCurrentItemInfo
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
-
-# PhotoCtrlEventHandler.onScanNumberText(): self.prev_image # updateMainFrameCurrentItemInfo
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
-. Previous Images:  updateMainFrameCurrentItemInfo
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
-. Previous Images:  updateMainFrameCurrentItemInfo
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
-. {u'display_image\\jPages\\J431184\\622-343.JPEG': u'True'} updateMainFrameCurrentItemInfo
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
-. {u'display_image\\jPages\\J431184\\622-343.JPEG': u'True'} updateMainFrameCurrentItemInfo
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
-. display_image\jPages\J431184\622-343.JPEG updateMainFrameCurrentItemInfo
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
-. display_image\jPages\J431184\622-343.JPEG updateMainFrameCurrentItemInfo
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
-. Found Previous Image Selection: display_image\jPages\J431184\622-343.JPEG updateMainFrameCurrentItemInfo
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
-. Found Previous Image Selection: display_image\jPages\J431184\622-343.JPEG updateMainFrameCurrentItemInfo
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
-Before updateMainFrameCurrentItemInfo Return: {'repair': u'', u'ebay_category': u'31387', 'image_list': [u'622-343?DefaultImage=1&$472x472_jpg$', u'622-343_00_swatch?DefaultImage=1&$40x40_jpg$', u'622-343_01_swatch?DefaultImage=1&$40x40_jpg$', u'622-343?DefaultImage=1&$80x80_jpg$', u'622-343_00_detail?DefaultImage=1&$80x80_jpg$', u'622-343_01_detail?DefaultImage=1&$80x80_jpg$', u'622-343_02_detail?DefaultImage=1&$80x80_jpg$', u'622-343_03_detail?DefaultImage=1&$80x80_jpg$', u'622-343?DefaultImage=1&$120x120_jpg$', u'622-343?DefaultImage=1&$120x120_jpg$'], 'sku': u'1132', 'Margin $': u'', 'title': u'Invicta Reserve Mens Jason Taylor Excursion Quartz Chrono Watch Red Mens', 'Brand': u'Invicta', 'model_number': u'', 'jNumber': u'J431184', 'Total Cost': u'$645.00', 'full_': u'J431184-00005-04168', 'Retail': u'', 'condition': u'2', 'upc': u'', 'Qty': u'1', 'listerInitials': u'JM', 'jNumberFolderPath': u'display_image\\jPages\\J431184', 'msrp': u'$645.00', 'jnumber': u'J431184', 'pallet_number': u'Watches4', 'specs': u"['tt_productRightCol', 'entity.id=622-343', 'entity.categoryId=product', 'entity.name=Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case', 'entity.pageUrl=http://www.shophq.com/product/622-343.aspx?\\\\u0026familyid=J431184', 'entity.thumbnailUrl=http://images.shophq.com/is/image/ShopHQ/622-343?DefaultImage=1&$120x120_jpg$', 'entity.message=INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS QUARTZ CHRONO BRACELET', 'entity.value=645.0000', '']", 'eBay Price': u'', 'Division': u'Watches', 'itemSelectedImages': {u'display_image\\jPages\\J431184\\622-343.JPEG': u'True'}, 'condition_notes': u'', 'retailer_code': u'1', u'*ConditionID': u'3000', 'retailer_code:1': u'', 'description': u'\r\n                \r\n                <p><strong>Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case</strong></p>\r\n\r\n<p><strong>Choices: </strong>Red or Yellow dial accent</p>\r\n\r\n<p> Ingenious architecture and design blends with formidable capabilities on this Invicta Reserve Jason Taylor Excursion! </p>\r\n                Take a stylish step forward with the round black stainless steel case. Measuring 50mm wide the case presents its imposing stature with two black pedal-style function pushers on either side of a texture edged screw down crown. A black bezel tops the case with Arabic numerals etched at five minute increments and four white arrow accents at the cardinal points. \u201cLimited Edition\u201d appears on the case back with your number out of 999 while \u201cJT\u201d caps the crown. This Excursion expertly executes the time on a Swiss Made Ronda 5040.D Quartz Chronograph movement. </p>\r\n\r\n<p> A Flame Fusion crystal hovers above the round black carbon fiber dial and its standout accents in red or yellow. A 60-seconds subdial sits near 2:00 a date window finds its place near 4:00 a 1/10th-seconds subdial resides above 6:00 and a 30-minute subdial lands near 10:00. The red accented dial features round luminous Tritnite index markers with red trim at all hour positions except 12:00 Tritnite and red trim hour and minute hands and solid red subdial and chronograph hands. The yellow accented dial boasts Tritnite index markers and hour and minute hands with yellow trim and solid yellow subdial and chronograph hands. \u201cJT\u201d and \u201cInvicta Reserve\u201d share the space below 12:00 for the final detail. </p>\r\n\r\n<p> Cool black links come together for the stainless steel bracelet. The three link design secures with a deployant clasp and a safety catch etched \u201cJT\u201d. A timepiece uniquely styled with you in mind make this Invicta Reserve Jason Taylor Excursion the newest addition to your timepiece collection today! </p> \r\n\r\n<p><li><strong>Bracelet: </strong>Stainless Steel\r\n<li><strong>Movement: </strong>Swiss Made Ronda 5040.D Quartz Chronograph \r\n<li><strong>Crystal: </strong>Flame Fusion\r\n<li><strong>Crown: </strong>Screw Down w/ Function Pushers\r\n<li><strong>Clasp: </strong>Deployant\r\n<li><strong>Bracelet Measurements: </strong>9 L x 26mm W\r\n<li><strong>Case Measurements: </strong>50mm\r\n<li><strong>Case Thickness: </strong>14mm\r\n<li><strong>Weight: </strong>13 oz.\r\n<li><strong>Water Resistance: </strong>20 ATM - 200 meters - 660 feet\r\n<li><strong>Model Numbers: </strong>\r\n<br>Red: 14452-3WHT \r\n<br>Yellow: 14453-3WHT \r\n\r\n<li><strong>UPC: </strong>\r\n<br>Red: 886678150946 \r\n<br>Yellow: 886678150953 \r\n\r\n<p>', 'palletNumber': u'Watches4', 'manifested': u'X', 'Total Retail': u'', 'box': u'', u'image_sources': {u'key': u''}, 'date_listed': u'', 'Margin %': u'', 'band_size': u'7.5', u'*Category': u'31387'} updateMainFrameCurrentItemInfo
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
-Before updateMainFrameCurrentItemInfo Return: {'repair': u'', u'ebay_category': u'31387', 'image_list': [u'622-343?DefaultImage=1&$472x472_jpg$', u'622-343_00_swatch?DefaultImage=1&$40x40_jpg$', u'622-343_01_swatch?DefaultImage=1&$40x40_jpg$', u'622-343?DefaultImage=1&$80x80_jpg$', u'622-343_00_detail?DefaultImage=1&$80x80_jpg$', u'622-343_01_detail?DefaultImage=1&$80x80_jpg$', u'622-343_02_detail?DefaultImage=1&$80x80_jpg$', u'622-343_03_detail?DefaultImage=1&$80x80_jpg$', u'622-343?DefaultImage=1&$120x120_jpg$', u'622-343?DefaultImage=1&$120x120_jpg$'], 'sku': u'1132', 'Margin $': u'', 'title': u'Invicta Reserve Mens Jason Taylor Excursion Quartz Chrono Watch Red Mens', 'Brand': u'Invicta', 'model_number': u'', 'jNumber': u'J431184', 'Total Cost': u'$645.00', 'full_': u'J431184-00005-04168', 'Retail': u'', 'condition': u'2', 'upc': u'', 'Qty': u'1', 'listerInitials': u'JM', 'jNumberFolderPath': u'display_image\\jPages\\J431184', 'msrp': u'$645.00', 'jnumber': u'J431184', 'pallet_number': u'Watches4', 'specs': u"['tt_productRightCol', 'entity.id=622-343', 'entity.categoryId=product', 'entity.name=Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case', 'entity.pageUrl=http://www.shophq.com/product/622-343.aspx?\\\\u0026familyid=J431184', 'entity.thumbnailUrl=http://images.shophq.com/is/image/ShopHQ/622-343?DefaultImage=1&$120x120_jpg$', 'entity.message=INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS QUARTZ CHRONO BRACELET', 'entity.value=645.0000', '']", 'eBay Price': u'', 'Division': u'Watches', 'itemSelectedImages': {u'display_image\\jPages\\J431184\\622-343.JPEG': u'True'}, 'condition_notes': u'', 'retailer_code': u'1', u'*ConditionID': u'3000', 'retailer_code:1': u'', 'description': u'\r\n                \r\n                <p><strong>Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case</strong></p>\r\n\r\n<p><strong>Choices: </strong>Red or Yellow dial accent</p>\r\n\r\n<p> Ingenious architecture and design blends with formidable capabilities on this Invicta Reserve Jason Taylor Excursion! </p>\r\n                Take a stylish step forward with the round black stainless steel case. Measuring 50mm wide the case presents its imposing stature with two black pedal-style function pushers on either side of a texture edged screw down crown. A black bezel tops the case with Arabic numerals etched at five minute increments and four white arrow accents at the cardinal points. \u201cLimited Edition\u201d appears on the case back with your number out of 999 while \u201cJT\u201d caps the crown. This Excursion expertly executes the time on a Swiss Made Ronda 5040.D Quartz Chronograph movement. </p>\r\n\r\n<p> A Flame Fusion crystal hovers above the round black carbon fiber dial and its standout accents in red or yellow. A 60-seconds subdial sits near 2:00 a date window finds its place near 4:00 a 1/10th-seconds subdial resides above 6:00 and a 30-minute subdial lands near 10:00. The red accented dial features round luminous Tritnite index markers with red trim at all hour positions except 12:00 Tritnite and red trim hour and minute hands and solid red subdial and chronograph hands. The yellow accented dial boasts Tritnite index markers and hour and minute hands with yellow trim and solid yellow subdial and chronograph hands. \u201cJT\u201d and \u201cInvicta Reserve\u201d share the space below 12:00 for the final detail. </p>\r\n\r\n<p> Cool black links come together for the stainless steel bracelet. The three link design secures with a deployant clasp and a safety catch etched \u201cJT\u201d. A timepiece uniquely styled with you in mind make this Invicta Reserve Jason Taylor Excursion the newest addition to your timepiece collection today! </p> \r\n\r\n<p><li><strong>Bracelet: </strong>Stainless Steel\r\n<li><strong>Movement: </strong>Swiss Made Ronda 5040.D Quartz Chronograph \r\n<li><strong>Crystal: </strong>Flame Fusion\r\n<li><strong>Crown: </strong>Screw Down w/ Function Pushers\r\n<li><strong>Clasp: </strong>Deployant\r\n<li><strong>Bracelet Measurements: </strong>9 L x 26mm W\r\n<li><strong>Case Measurements: </strong>50mm\r\n<li><strong>Case Thickness: </strong>14mm\r\n<li><strong>Weight: </strong>13 oz.\r\n<li><strong>Water Resistance: </strong>20 ATM - 200 meters - 660 feet\r\n<li><strong>Model Numbers: </strong>\r\n<br>Red: 14452-3WHT \r\n<br>Yellow: 14453-3WHT \r\n\r\n<li><strong>UPC: </strong>\r\n<br>Red: 886678150946 \r\n<br>Yellow: 886678150953 \r\n\r\n<p>', 'palletNumber': u'Watches4', 'manifested': u'X', 'Total Retail': u'', 'box': u'', u'image_sources': {u'key': u''}, 'date_listed': u'', 'Margin %': u'', 'band_size': u'7.5', u'*Category': u'31387'} updateMainFrameCurrentItemInfo
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
-updateMainFrameCurrentItemInfo results:True onScanNumberText
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
-updateMainFrameCurrentItemInfo results:True onScanNumberText
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
-onScanNumberText currentItemInfo: {'repair': u'', u'ebay_category': u'31387', 'image_list': [u'622-343?DefaultImage=1&$472x472_jpg$', u'622-343_00_swatch?DefaultImage=1&$40x40_jpg$', u'622-343_01_swatch?DefaultImage=1&$40x40_jpg$', u'622-343?DefaultImage=1&$80x80_jpg$', u'622-343_00_detail?DefaultImage=1&$80x80_jpg$', u'622-343_01_detail?DefaultImage=1&$80x80_jpg$', u'622-343_02_detail?DefaultImage=1&$80x80_jpg$', u'622-343_03_detail?DefaultImage=1&$80x80_jpg$', u'622-343?DefaultImage=1&$120x120_jpg$', u'622-343?DefaultImage=1&$120x120_jpg$'], 'sku': u'1132', 'Margin $': u'', 'title': u'Invicta Reserve Mens Jason Taylor Excursion Quartz Chrono Watch Red Mens', 'Brand': u'Invicta', 'model_number': u'', 'jNumber': u'J431184', 'Total Cost': u'$645.00', 'full_': u'J431184-00005-04168', 'Retail': u'', 'condition': u'2', 'upc': u'', 'Qty': u'1', 'listerInitials': u'JM', 'jNumberFolderPath': u'display_image\\jPages\\J431184', 'msrp': u'$645.00', 'jnumber': u'J431184', 'pallet_number': u'Watches4', 'specs': u"['tt_productRightCol', 'entity.id=622-343', 'entity.categoryId=product', 'entity.name=Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case', 'entity.pageUrl=http://www.shophq.com/product/622-343.aspx?\\\\u0026familyid=J431184', 'entity.thumbnailUrl=http://images.shophq.com/is/image/ShopHQ/622-343?DefaultImage=1&$120x120_jpg$', 'entity.message=INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS QUARTZ CHRONO BRACELET', 'entity.value=645.0000', '']", 'eBay Price': u'', 'Division': u'Watches', 'itemSelectedImages': {u'display_image\\jPages\\J431184\\622-343.JPEG': u'True'}, 'condition_notes': u'', 'retailer_code': u'1', u'*ConditionID': u'3000', 'retailer_code:1': u'', 'description': u'\r\n                \r\n                <p><strong>Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case</strong></p>\r\n\r\n<p><strong>Choices: </strong>Red or Yellow dial accent</p>\r\n\r\n<p> Ingenious architecture and design blends with formidable capabilities on this Invicta Reserve Jason Taylor Excursion! </p>\r\n                Take a stylish step forward with the round black stainless steel case. Measuring 50mm wide the case presents its imposing stature with two black pedal-style function pushers on either side of a texture edged screw down crown. A black bezel tops the case with Arabic numerals etched at five minute increments and four white arrow accents at the cardinal points. \u201cLimited Edition\u201d appears on the case back with your number out of 999 while \u201cJT\u201d caps the crown. This Excursion expertly executes the time on a Swiss Made Ronda 5040.D Quartz Chronograph movement. </p>\r\n\r\n<p> A Flame Fusion crystal hovers above the round black carbon fiber dial and its standout accents in red or yellow. A 60-seconds subdial sits near 2:00 a date window finds its place near 4:00 a 1/10th-seconds subdial resides above 6:00 and a 30-minute subdial lands near 10:00. The red accented dial features round luminous Tritnite index markers with red trim at all hour positions except 12:00 Tritnite and red trim hour and minute hands and solid red subdial and chronograph hands. The yellow accented dial boasts Tritnite index markers and hour and minute hands with yellow trim and solid yellow subdial and chronograph hands. \u201cJT\u201d and \u201cInvicta Reserve\u201d share the space below 12:00 for the final detail. </p>\r\n\r\n<p> Cool black links come together for the stainless steel bracelet. The three link design secures with a deployant clasp and a safety catch etched \u201cJT\u201d. A timepiece uniquely styled with you in mind make this Invicta Reserve Jason Taylor Excursion the newest addition to your timepiece collection today! </p> \r\n\r\n<p><li><strong>Bracelet: </strong>Stainless Steel\r\n<li><strong>Movement: </strong>Swiss Made Ronda 5040.D Quartz Chronograph \r\n<li><strong>Crystal: </strong>Flame Fusion\r\n<li><strong>Crown: </strong>Screw Down w/ Function Pushers\r\n<li><strong>Clasp: </strong>Deployant\r\n<li><strong>Bracelet Measurements: </strong>9 L x 26mm W\r\n<li><strong>Case Measurements: </strong>50mm\r\n<li><strong>Case Thickness: </strong>14mm\r\n<li><strong>Weight: </strong>13 oz.\r\n<li><strong>Water Resistance: </strong>20 ATM - 200 meters - 660 feet\r\n<li><strong>Model Numbers: </strong>\r\n<br>Red: 14452-3WHT \r\n<br>Yellow: 14453-3WHT \r\n\r\n<li><strong>UPC: </strong>\r\n<br>Red: 886678150946 \r\n<br>Yellow: 886678150953 \r\n\r\n<p>', 'palletNumber': u'Watches4', 'manifested': u'X', 'Total Retail': u'', 'box': u'', u'image_sources': {u'key': u''}, 'date_listed': u'', 'Margin %': u'', 'band_size': u'7.5', u'*Category': u'31387'} onScanNumberText
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
-onScanNumberText currentItemInfo: {'repair': u'', u'ebay_category': u'31387', 'image_list': [u'622-343?DefaultImage=1&$472x472_jpg$', u'622-343_00_swatch?DefaultImage=1&$40x40_jpg$', u'622-343_01_swatch?DefaultImage=1&$40x40_jpg$', u'622-343?DefaultImage=1&$80x80_jpg$', u'622-343_00_detail?DefaultImage=1&$80x80_jpg$', u'622-343_01_detail?DefaultImage=1&$80x80_jpg$', u'622-343_02_detail?DefaultImage=1&$80x80_jpg$', u'622-343_03_detail?DefaultImage=1&$80x80_jpg$', u'622-343?DefaultImage=1&$120x120_jpg$', u'622-343?DefaultImage=1&$120x120_jpg$'], 'sku': u'1132', 'Margin $': u'', 'title': u'Invicta Reserve Mens Jason Taylor Excursion Quartz Chrono Watch Red Mens', 'Brand': u'Invicta', 'model_number': u'', 'jNumber': u'J431184', 'Total Cost': u'$645.00', 'full_': u'J431184-00005-04168', 'Retail': u'', 'condition': u'2', 'upc': u'', 'Qty': u'1', 'listerInitials': u'JM', 'jNumberFolderPath': u'display_image\\jPages\\J431184', 'msrp': u'$645.00', 'jnumber': u'J431184', 'pallet_number': u'Watches4', 'specs': u"['tt_productRightCol', 'entity.id=622-343', 'entity.categoryId=product', 'entity.name=Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case', 'entity.pageUrl=http://www.shophq.com/product/622-343.aspx?\\\\u0026familyid=J431184', 'entity.thumbnailUrl=http://images.shophq.com/is/image/ShopHQ/622-343?DefaultImage=1&$120x120_jpg$', 'entity.message=INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS QUARTZ CHRONO BRACELET', 'entity.value=645.0000', '']", 'eBay Price': u'', 'Division': u'Watches', 'itemSelectedImages': {u'display_image\\jPages\\J431184\\622-343.JPEG': u'True'}, 'condition_notes': u'', 'retailer_code': u'1', u'*ConditionID': u'3000', 'retailer_code:1': u'', 'description': u'\r\n                \r\n                <p><strong>Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case</strong></p>\r\n\r\n<p><strong>Choices: </strong>Red or Yellow dial accent</p>\r\n\r\n<p> Ingenious architecture and design blends with formidable capabilities on this Invicta Reserve Jason Taylor Excursion! </p>\r\n                Take a stylish step forward with the round black stainless steel case. Measuring 50mm wide the case presents its imposing stature with two black pedal-style function pushers on either side of a texture edged screw down crown. A black bezel tops the case with Arabic numerals etched at five minute increments and four white arrow accents at the cardinal points. \u201cLimited Edition\u201d appears on the case back with your number out of 999 while \u201cJT\u201d caps the crown. This Excursion expertly executes the time on a Swiss Made Ronda 5040.D Quartz Chronograph movement. </p>\r\n\r\n<p> A Flame Fusion crystal hovers above the round black carbon fiber dial and its standout accents in red or yellow. A 60-seconds subdial sits near 2:00 a date window finds its place near 4:00 a 1/10th-seconds subdial resides above 6:00 and a 30-minute subdial lands near 10:00. The red accented dial features round luminous Tritnite index markers with red trim at all hour positions except 12:00 Tritnite and red trim hour and minute hands and solid red subdial and chronograph hands. The yellow accented dial boasts Tritnite index markers and hour and minute hands with yellow trim and solid yellow subdial and chronograph hands. \u201cJT\u201d and \u201cInvicta Reserve\u201d share the space below 12:00 for the final detail. </p>\r\n\r\n<p> Cool black links come together for the stainless steel bracelet. The three link design secures with a deployant clasp and a safety catch etched \u201cJT\u201d. A timepiece uniquely styled with you in mind make this Invicta Reserve Jason Taylor Excursion the newest addition to your timepiece collection today! </p> \r\n\r\n<p><li><strong>Bracelet: </strong>Stainless Steel\r\n<li><strong>Movement: </strong>Swiss Made Ronda 5040.D Quartz Chronograph \r\n<li><strong>Crystal: </strong>Flame Fusion\r\n<li><strong>Crown: </strong>Screw Down w/ Function Pushers\r\n<li><strong>Clasp: </strong>Deployant\r\n<li><strong>Bracelet Measurements: </strong>9 L x 26mm W\r\n<li><strong>Case Measurements: </strong>50mm\r\n<li><strong>Case Thickness: </strong>14mm\r\n<li><strong>Weight: </strong>13 oz.\r\n<li><strong>Water Resistance: </strong>20 ATM - 200 meters - 660 feet\r\n<li><strong>Model Numbers: </strong>\r\n<br>Red: 14452-3WHT \r\n<br>Yellow: 14453-3WHT \r\n\r\n<li><strong>UPC: </strong>\r\n<br>Red: 886678150946 \r\n<br>Yellow: 886678150953 \r\n\r\n<p>', 'palletNumber': u'Watches4', 'manifested': u'X', 'Total Retail': u'', 'box': u'', u'image_sources': {u'key': u''}, 'date_listed': u'', 'Margin %': u'', 'band_size': u'7.5', u'*Category': u'31387'} onScanNumberText
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
-Trying to open: display_image\jPages\J431184\622-343.JPEG onScanNumberText
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
-Trying to open: display_image\jPages\J431184\622-343.JPEG onScanNumberText
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onDescriptionTextField INFO     
-inside: onDescriptionTextField
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onDescriptionTextField INFO     
-inside: onDescriptionTextField
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onDescriptionTextField INFO     
-inside: onDescriptionTextField
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onDescriptionTextField INFO     
-inside: onDescriptionTextField
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onUpcNumberText INFO     
-Inside:  onUpcNumberText
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onUpcNumberText INFO     
-Inside:  onUpcNumberText
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onUpcNumberText INFO     
-upc entered, and updated. onUpcNumberText
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onUpcNumberText INFO     
-upc entered, and updated. onUpcNumberText
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onEbayCategoryIdText INFO     
-Inside:  onEbayCategoryIdText
-
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onEbayCategoryIdText INFO     
-Inside:  onEbayCategoryIdText
-
---06-23 15:05:46 log_debug display_image.EventsHandlers.MainFrameEventHandler.onEbayCategoryIdText DEBUG    31387 onEbayCategoryIdText
+--06-23 15:56:51 log_debug display_image.Check.loadMainFrameJson DEBUG    Json jNumber not foundloadMainFrameJson
 ARGS_KWARGS_STR:
-{'ARGS': ()
+{'ARGS': (u'display_image\\jPages\\J431184\\J431184.json',)
 , 'KWARGS': {}}
 call_fn: C:\Users\User\SGIS_CLONE\master-6-20\display_image\EventsHandlers\MainFrameEventHandler.py
-call_ln: 1155
+call_ln: 1098
 call_func: onScanNumberText
-caller: ["                self.MainFrame.ebayCategoryIdText.SetValue(self.MainFrame.currentItemInfo['ebay_category'])\n"]
+caller: ['            results = self.updateMainFrameCurrentItemInfo(retailer_code) \n']
+Exception:
+None
+
+--06-23 15:56:51 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
+Post json_exists: {'retailer_code:1': '', 'box': '', 'description': '\nJ176344  Description is empty\n4PK4260000010\n21492\n', 'repair': '', 'band_size': '7.5', 'image_list': ['default', '4QZ4680000010_VA_999', 'default'], 'jnumber': 'J431184', 'pallet_number': 'Watches4', 'auction_includes': 'auction_includes|stuff1|stuff2', 'jNumberFolderPath': u'display_image\\jPages\\J431184', 'full_': 'J431184-00005-04168', 'Retail': '', 'specs': '\nJ176344  Description is empty\n4PK4260000010\n21492\n', 'eBay Price': '', 'Total Retail': '', 'sku': '1132', 'Division': 'Watches', 'Margin $': '', 'title': 'INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS LMT ED QUARTZ CHRONO WATCH RED MENS', 'manifested': 'X', 'Brand': 'Invicta', 'Margin %': '', 'model_number': '', 'jNumber': 'J431184', 'Qty': '1', 'listerInitials': u'JM', 'itemSelectedImages': {'key': ''}, 'condition': '2', 'condition_notes': '', 'date_listed': '', 'palletNumber': u'Watches4', 'upc': '', 'retailer_code': '1', 'msrp': '$645.00', 'Total Cost': '$645.00'} updateMainFrameCurrentItemInfo
+
+--06-23 15:56:51 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
+Post json_exists: {'retailer_code:1': '', 'box': '', 'description': '\nJ176344  Description is empty\n4PK4260000010\n21492\n', 'repair': '', 'band_size': '7.5', 'image_list': ['default', '4QZ4680000010_VA_999', 'default'], 'jnumber': 'J431184', 'pallet_number': 'Watches4', 'auction_includes': 'auction_includes|stuff1|stuff2', 'jNumberFolderPath': u'display_image\\jPages\\J431184', 'full_': 'J431184-00005-04168', 'Retail': '', 'specs': '\nJ176344  Description is empty\n4PK4260000010\n21492\n', 'eBay Price': '', 'Total Retail': '', 'sku': '1132', 'Division': 'Watches', 'Margin $': '', 'title': 'INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS LMT ED QUARTZ CHRONO WATCH RED MENS', 'manifested': 'X', 'Brand': 'Invicta', 'Margin %': '', 'model_number': '', 'jNumber': 'J431184', 'Qty': '1', 'listerInitials': u'JM', 'itemSelectedImages': {'key': ''}, 'condition': '2', 'condition_notes': '', 'date_listed': '', 'palletNumber': u'Watches4', 'upc': '', 'retailer_code': '1', 'msrp': '$645.00', 'Total Cost': '$645.00'} updateMainFrameCurrentItemInfo
+
+--06-23 15:56:51 log_debug display_image.sky_scraper.fetchPage DEBUG    retailer_code,jNumberfetchPage
+ARGS_KWARGS_STR:
+{'ARGS': ('1', u'J431184')
+, 'KWARGS': {}}
+call_fn: C:\Users\User\SGIS_CLONE\master-6-20\display_image\EventsHandlers\MainFrameEventHandler.py
+call_ln: 930
+call_func: updateMainFrameCurrentItemInfo
+caller: ["                    results = FetchPage(self.MainFrame).results     # results = {image_list:[],description:''}\n"]
+Exception:
+None
+
+--06-23 15:56:51 log_info display_image.sky_scraper.fetchPage INFO     
+starting getShopHqProductInfo fetchPage
+
+--06-23 15:56:51 log_info display_image.sky_scraper.getShopHqProductInfo INFO     
+folder:display_image\jPages getShopHqProductInfo
+
+--06-23 15:56:51 log_info display_image.sky_scraper.getShopHqProductInfo INFO     
+itemFolder:display_image\jPages\J431184 getShopHqProductInfo
+
+--06-23 15:56:51 log_info display_image.sky_scraper.getShopHqProductInfo INFO     
+html_file_path:display_image\jPages\J431184\J431184_html getShopHqProductInfo
+
+--06-23 15:56:51 log_info display_image.sky_scraper.getShopHqProductInfo INFO     
+[Error 183] Cannot create a file when that file already exists: 'display_image\\jPages' getShopHqProductInfo
+
+--06-23 15:56:51 log_debug display_image.sky_scraper.download_page_info DEBUG    itemJnumberdownload_page_info
+ARGS_KWARGS_STR:
+{'ARGS': (u'J431184',)
+, 'KWARGS': {}}
+call_fn: C:\Users\User\SGIS_CLONE\master-6-20\display_image\sky_scraper.py
+call_ln: 65
+call_func: fetchPage
+caller: ['            results = self.getShopHqProductInfo(jNumber)\n']
 Exception:
 Traceback (most recent call last):
-  File "C:\Users\User\SGIS_CLONE\master-6-20\display_image\EventsHandlers\MainFrameEventHandler.py", line 1131, in onScanNumberText
-    self.MainFrame.descriptionTextField.AppendText(self.description.decode('utf8'))
-  File "C:\Python27\Lib\encodings\utf_8.py", line 16, in decode
-    return codecs.utf_8_decode(input, errors, True)
-UnicodeEncodeError: 'ascii' codec can't encode character u'\u201c' in position 713: ordinal not in range(128)
+  File "C:\Users\User\SGIS_CLONE\master-6-20\display_image\sky_scraper.py", line 318, in getShopHqProductInfo
+    os.mkdir(folder)
+WindowsError: [Error 183] Cannot create a file when that file already exists: 'display_image\\jPages'
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtnShopHq INFO     
-Added MainFrame.itemRow to currentItemInfo[['retailer_code:1', 'Division', 'Brand', 'pallet_number', 'full_', 'jnumber', 'model_number', 'title', 'Qty', 'msrp', 'Total Cost', 'Retail', 'Total Retail', 'Margin %', 'Margin $', 'eBay Price', 'sku', 'box', 'condition', 'condition_notes', 'band_size', 'date_listed', 'repair', 'manifested', 'upc'], ['', 'Watches', 'Invicta', 'Watches4', 'J431184-00005-04168', 'J431184', '', 'INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS LMT ED QUARTZ CHRONO WATCH RED MENS', '1', '$645.00', '$645.00', '', '', '', '', '', '1132', '', '2', '', '7.5', '', '', 'X', '']] onLookUpBySkuBtnShopHq
+--06-23 15:56:51 log_info display_image.sky_scraper.download_page_info INFO     
+get: download_page_info(): Fetching:display_image\jPages\J431184\J431184_html  download_page_info
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtnShopHq INFO     
-Added MainFrame.itemRow to currentItemInfo[['retailer_code:1', 'Division', 'Brand', 'pallet_number', 'full_', 'jnumber', 'model_number', 'title', 'Qty', 'msrp', 'Total Cost', 'Retail', 'Total Retail', 'Margin %', 'Margin $', 'eBay Price', 'sku', 'box', 'condition', 'condition_notes', 'band_size', 'date_listed', 'repair', 'manifested', 'upc'], ['', 'Watches', 'Invicta', 'Watches4', 'J431184-00005-04168', 'J431184', '', 'INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS LMT ED QUARTZ CHRONO WATCH RED MENS', '1', '$645.00', '$645.00', '', '', '', '', '', '1132', '', '2', '', '7.5', '', '', 'X', '']] onLookUpBySkuBtnShopHq
+--06-23 15:56:53 log_info display_image.sky_scraper.download_page_info INFO     
+Fetched. download_page_info
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentConditionText INFO     
+--06-23 15:56:53 log_info display_image.sky_scraper.extract_product_info INFO     
+
+                
+                <p><strong>Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case</strong></p>
+
+<p><strong>Choices: </strong>Red or Yellow dial accent</p>
+
+<p> Ingenious architecture and design blends with formidable capabilities on this Invicta Reserve Jason Taylor Excursion! </p>
+                Take a stylish step forward with the round black stainless steel case. Measuring 50mm wide, the case presents its imposing stature with two black pedal-style function pushers on either side of a texture edged screw down crown. A black bezel tops the case with Arabic numerals etched at five minute increments and four white arrow accents at the cardinal points. “Limited Edition” appears on the case back with your number out of 999 while “JT” caps the crown. This Excursion expertly executes the time on a Swiss Made Ronda 5040.D Quartz Chronograph movement. </p>
+
+<p> A Flame Fusion crystal hovers above the round black carbon fiber dial and its standout accents in red or yellow. A 60-seconds subdial sits near 2:00, a date window finds its place near 4:00, a 1/10th-seconds subdial resides above 6:00 and a 30-minute subdial lands near 10:00. The red accented dial features round luminous Tritnite index markers with red trim at all hour positions except 12:00, Tritnite and red trim hour and minute hands and solid red subdial and chronograph hands. The yellow accented dial boasts Tritnite index markers and hour and minute hands with yellow trim and solid yellow subdial and chronograph hands. “JT” and “Invicta Reserve” share the space below 12:00 for the final detail. </p>
+
+<p> Cool black links come together for the stainless steel bracelet. The three link design secures with a deployant clasp and a safety catch etched “JT”. A timepiece uniquely styled with you in mind, make this Invicta Reserve Jason Taylor Excursion the newest addition to your timepiece collection today! </p> 
+
+<p><li><strong>Bracelet: </strong>Stainless Steel
+<li><strong>Movement: </strong>Swiss Made Ronda 5040.D Quartz Chronograph 
+<li><strong>Crystal: </strong>Flame Fusion
+<li><strong>Crown: </strong>Screw Down w/ Function Pushers
+<li><strong>Clasp: </strong>Deployant
+<li><strong>Bracelet Measurements: </strong>9 L x 26mm W
+<li><strong>Case Measurements: </strong>50mm
+<li><strong>Case Thickness: </strong>14mm
+<li><strong>Weight: </strong>13 oz.
+<li><strong>Water Resistance: </strong>20 ATM - 200 meters - 660 feet
+<li><strong>Model Numbers: </strong>
+<br>Red: 14452-3WHT 
+<br>Yellow: 14453-3WHT 
+
+<li><strong>UPC: </strong>
+<br>Red: 886678150946 
+<br>Yellow: 886678150953 
+
+<p> extract_product_info
+
+--06-23 15:56:53 log_info display_image.sky_scraper.getShopHqProductInfo INFO     
+{'image_list': ['622-343?DefaultImage=1&$472x472_jpg$', '622-343_00_swatch?DefaultImage=1&$40x40_jpg$', '622-343_01_swatch?DefaultImage=1&$40x40_jpg$', '622-343?DefaultImage=1&$80x80_jpg$', '622-343_00_detail?DefaultImage=1&$80x80_jpg$', '622-343_01_detail?DefaultImage=1&$80x80_jpg$', '622-343_02_detail?DefaultImage=1&$80x80_jpg$', '622-343_03_detail?DefaultImage=1&$80x80_jpg$', '622-343?DefaultImage=1&$120x120_jpg$', '622-343?DefaultImage=1&$120x120_jpg$'], 'description': '\r\n                \r\n                <p><strong>Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case</strong></p>\r\n\r\n<p><strong>Choices: </strong>Red or Yellow dial accent</p>\r\n\r\n<p> Ingenious architecture and design blends with formidable capabilities on this Invicta Reserve Jason Taylor Excursion! </p>\r\n                Take a stylish step forward with the round black stainless steel case. Measuring 50mm wide, the case presents its imposing stature with two black pedal-style function pushers on either side of a texture edged screw down crown. A black bezel tops the case with Arabic numerals etched at five minute increments and four white arrow accents at the cardinal points. \xe2\x80\x9cLimited Edition\xe2\x80\x9d appears on the case back with your number out of 999 while \xe2\x80\x9cJT\xe2\x80\x9d caps the crown. This Excursion expertly executes the time on a Swiss Made Ronda 5040.D Quartz Chronograph movement. </p>\r\n\r\n<p> A Flame Fusion crystal hovers above the round black carbon fiber dial and its standout accents in red or yellow. A 60-seconds subdial sits near 2:00, a date window finds its place near 4:00, a 1/10th-seconds subdial resides above 6:00 and a 30-minute subdial lands near 10:00. The red accented dial features round luminous Tritnite index markers with red trim at all hour positions except 12:00, Tritnite and red trim hour and minute hands and solid red subdial and chronograph hands. The yellow accented dial boasts Tritnite index markers and hour and minute hands with yellow trim and solid yellow subdial and chronograph hands. \xe2\x80\x9cJT\xe2\x80\x9d and \xe2\x80\x9cInvicta Reserve\xe2\x80\x9d share the space below 12:00 for the final detail. </p>\r\n\r\n<p> Cool black links come together for the stainless steel bracelet. The three link design secures with a deployant clasp and a safety catch etched \xe2\x80\x9cJT\xe2\x80\x9d. A timepiece uniquely styled with you in mind, make this Invicta Reserve Jason Taylor Excursion the newest addition to your timepiece collection today! </p> \r\n\r\n<p><li><strong>Bracelet: </strong>Stainless Steel\r\n<li><strong>Movement: </strong>Swiss Made Ronda 5040.D Quartz Chronograph \r\n<li><strong>Crystal: </strong>Flame Fusion\r\n<li><strong>Crown: </strong>Screw Down w/ Function Pushers\r\n<li><strong>Clasp: </strong>Deployant\r\n<li><strong>Bracelet Measurements: </strong>9 L x 26mm W\r\n<li><strong>Case Measurements: </strong>50mm\r\n<li><strong>Case Thickness: </strong>14mm\r\n<li><strong>Weight: </strong>13 oz.\r\n<li><strong>Water Resistance: </strong>20 ATM - 200 meters - 660 feet\r\n<li><strong>Model Numbers: </strong>\r\n<br>Red: 14452-3WHT \r\n<br>Yellow: 14453-3WHT \r\n\r\n<li><strong>UPC: </strong>\r\n<br>Red: 886678150946 \r\n<br>Yellow: 886678150953 \r\n\r\n<p>', 'specs': "['tt_productRightCol', 'entity.id=622-343', 'entity.categoryId=product', 'entity.name=Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case', 'entity.pageUrl=http://www.shophq.com/product/622-343.aspx?\\\\u0026familyid=J431184', 'entity.thumbnailUrl=http://images.shophq.com/is/image/ShopHQ/622-343?DefaultImage=1&$120x120_jpg$', 'entity.message=INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS QUARTZ CHRONO BRACELET', 'entity.value=645.0000', '']"} getShopHqProductInfo
+
+--06-23 15:56:53 log_info display_image.sky_scraper.fetchPage INFO     
+Updating currentItemInfo in FetchPage fetchPage
+
+--06-23 15:56:53 log_debug display_image.sky_scraper.fetchPage DEBUG    getShopHqProductInfo(jNumber) fetchPage results:fetchPage
+ARGS_KWARGS_STR:
+{'ARGS': ({'retailer_code:1': ''
+, 'box': ''
+, 'description': '\r\n                \r\n                <p><strong>Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case</strong></p>\r\n\r\n<p><strong>Choices: </strong>Red or Yellow dial accent</p>\r\n\r\n<p> Ingenious architecture and design blends with formidable capabilities on this Invicta Reserve Jason Taylor Excursion! </p>\r\n                Take a stylish step forward with the round black stainless steel case. Measuring 50mm wide, the case presents its imposing stature with two black pedal-style function pushers on either side of a texture edged screw down crown. A black bezel tops the case with Arabic numerals etched at five minute increments and four white arrow accents at the cardinal points. \xe2\x80\x9cLimited Edition\xe2\x80\x9d appears on the case back with your number out of 999 while \xe2\x80\x9cJT\xe2\x80\x9d caps the crown. This Excursion expertly executes the time on a Swiss Made Ronda 5040.D Quartz Chronograph movement. </p>\r\n\r\n<p> A Flame Fusion crystal hovers above the round black carbon fiber dial and its standout accents in red or yellow. A 60-seconds subdial sits near 2:00, a date window finds its place near 4:00, a 1/10th-seconds subdial resides above 6:00 and a 30-minute subdial lands near 10:00. The red accented dial features round luminous Tritnite index markers with red trim at all hour positions except 12:00, Tritnite and red trim hour and minute hands and solid red subdial and chronograph hands. The yellow accented dial boasts Tritnite index markers and hour and minute hands with yellow trim and solid yellow subdial and chronograph hands. \xe2\x80\x9cJT\xe2\x80\x9d and \xe2\x80\x9cInvicta Reserve\xe2\x80\x9d share the space below 12:00 for the final detail. </p>\r\n\r\n<p> Cool black links come together for the stainless steel bracelet. The three link design secures with a deployant clasp and a safety catch etched \xe2\x80\x9cJT\xe2\x80\x9d. A timepiece uniquely styled with you in mind, make this Invicta Reserve Jason Taylor Excursion the newest addition to your timepiece collection today! </p> \r\n\r\n<p><li><strong>Bracelet: </strong>Stainless Steel\r\n<li><strong>Movement: </strong>Swiss Made Ronda 5040.D Quartz Chronograph \r\n<li><strong>Crystal: </strong>Flame Fusion\r\n<li><strong>Crown: </strong>Screw Down w/ Function Pushers\r\n<li><strong>Clasp: </strong>Deployant\r\n<li><strong>Bracelet Measurements: </strong>9 L x 26mm W\r\n<li><strong>Case Measurements: </strong>50mm\r\n<li><strong>Case Thickness: </strong>14mm\r\n<li><strong>Weight: </strong>13 oz.\r\n<li><strong>Water Resistance: </strong>20 ATM - 200 meters - 660 feet\r\n<li><strong>Model Numbers: </strong>\r\n<br>Red: 14452-3WHT \r\n<br>Yellow: 14453-3WHT \r\n\r\n<li><strong>UPC: </strong>\r\n<br>Red: 886678150946 \r\n<br>Yellow: 886678150953 \r\n\r\n<p>'
+, 'repair': ''
+, 'band_size': '7.5'
+, 'image_list': ['622-343?DefaultImage=1&$472x472_jpg$'
+, '622-343_00_swatch?DefaultImage=1&$40x40_jpg$'
+, '622-343_01_swatch?DefaultImage=1&$40x40_jpg$'
+, '622-343?DefaultImage=1&$80x80_jpg$'
+, '622-343_00_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343_01_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343_02_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343_03_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343?DefaultImage=1&$120x120_jpg$'
+, '622-343?DefaultImage=1&$120x120_jpg$']
+, 'jnumber': 'J431184'
+, 'pallet_number': 'Watches4'
+, 'auction_includes': 'auction_includes|stuff1|stuff2'
+, 'jNumberFolderPath': u'display_image\\jPages\\J431184'
+, 'full_': 'J431184-00005-04168'
+, 'Retail': ''
+, 'specs': "['tt_productRightCol'
+, 'entity.id=622-343'
+, 'entity.categoryId=product'
+, 'entity.name=Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case'
+, 'entity.pageUrl=http://www.shophq.com/product/622-343.aspx?\\\\u0026familyid=J431184'
+, 'entity.thumbnailUrl=http://images.shophq.com/is/image/ShopHQ/622-343?DefaultImage=1&$120x120_jpg$'
+, 'entity.message=INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS QUARTZ CHRONO BRACELET'
+, 'entity.value=645.0000'
+, '']"
+, 'eBay Price': ''
+, 'Total Retail': ''
+, 'sku': '1132'
+, 'Division': 'Watches'
+, 'Margin $': ''
+, 'title': 'INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS LMT ED QUARTZ CHRONO WATCH RED MENS'
+, 'manifested': 'X'
+, 'Brand': 'Invicta'
+, 'Margin %': ''
+, 'model_number': ''
+, 'jNumber': 'J431184'
+, 'Qty': '1'
+, 'listerInitials': u'JM'
+, 'itemSelectedImages': {'key': ''}
+, 'condition': '2'
+, 'condition_notes': ''
+, 'date_listed': ''
+, 'palletNumber': u'Watches4'
+, 'upc': ''
+, 'retailer_code': '1'
+, 'msrp': '$645.00'
+, 'Total Cost': '$645.00'}, u'J431184', u'J431184')
+, 'KWARGS': {}}
+call_fn: C:\Users\User\SGIS_CLONE\master-6-20\display_image\EventsHandlers\MainFrameEventHandler.py
+call_ln: 930
+call_func: updateMainFrameCurrentItemInfo
+caller: ["                    results = FetchPage(self.MainFrame).results     # results = {image_list:[],description:''}\n"]
+Exception:
+None
+
+--06-23 15:56:53 log_debug display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo DEBUG    MainFrameEventHandler.updateMainFrameCurrentItemInfo updateMainFrameCurrentItemInfo
+ARGS_KWARGS_STR:
+{'ARGS': ({'retailer_code:1': ''
+, 'box': ''
+, 'description': '\r\n                \r\n                <p><strong>Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case</strong></p>\r\n\r\n<p><strong>Choices: </strong>Red or Yellow dial accent</p>\r\n\r\n<p> Ingenious architecture and design blends with formidable capabilities on this Invicta Reserve Jason Taylor Excursion! </p>\r\n                Take a stylish step forward with the round black stainless steel case. Measuring 50mm wide, the case presents its imposing stature with two black pedal-style function pushers on either side of a texture edged screw down crown. A black bezel tops the case with Arabic numerals etched at five minute increments and four white arrow accents at the cardinal points. \xe2\x80\x9cLimited Edition\xe2\x80\x9d appears on the case back with your number out of 999 while \xe2\x80\x9cJT\xe2\x80\x9d caps the crown. This Excursion expertly executes the time on a Swiss Made Ronda 5040.D Quartz Chronograph movement. </p>\r\n\r\n<p> A Flame Fusion crystal hovers above the round black carbon fiber dial and its standout accents in red or yellow. A 60-seconds subdial sits near 2:00, a date window finds its place near 4:00, a 1/10th-seconds subdial resides above 6:00 and a 30-minute subdial lands near 10:00. The red accented dial features round luminous Tritnite index markers with red trim at all hour positions except 12:00, Tritnite and red trim hour and minute hands and solid red subdial and chronograph hands. The yellow accented dial boasts Tritnite index markers and hour and minute hands with yellow trim and solid yellow subdial and chronograph hands. \xe2\x80\x9cJT\xe2\x80\x9d and \xe2\x80\x9cInvicta Reserve\xe2\x80\x9d share the space below 12:00 for the final detail. </p>\r\n\r\n<p> Cool black links come together for the stainless steel bracelet. The three link design secures with a deployant clasp and a safety catch etched \xe2\x80\x9cJT\xe2\x80\x9d. A timepiece uniquely styled with you in mind, make this Invicta Reserve Jason Taylor Excursion the newest addition to your timepiece collection today! </p> \r\n\r\n<p><li><strong>Bracelet: </strong>Stainless Steel\r\n<li><strong>Movement: </strong>Swiss Made Ronda 5040.D Quartz Chronograph \r\n<li><strong>Crystal: </strong>Flame Fusion\r\n<li><strong>Crown: </strong>Screw Down w/ Function Pushers\r\n<li><strong>Clasp: </strong>Deployant\r\n<li><strong>Bracelet Measurements: </strong>9 L x 26mm W\r\n<li><strong>Case Measurements: </strong>50mm\r\n<li><strong>Case Thickness: </strong>14mm\r\n<li><strong>Weight: </strong>13 oz.\r\n<li><strong>Water Resistance: </strong>20 ATM - 200 meters - 660 feet\r\n<li><strong>Model Numbers: </strong>\r\n<br>Red: 14452-3WHT \r\n<br>Yellow: 14453-3WHT \r\n\r\n<li><strong>UPC: </strong>\r\n<br>Red: 886678150946 \r\n<br>Yellow: 886678150953 \r\n\r\n<p>'
+, 'repair': ''
+, 'band_size': '7.5'
+, 'image_list': ['622-343?DefaultImage=1&$472x472_jpg$'
+, '622-343_00_swatch?DefaultImage=1&$40x40_jpg$'
+, '622-343_01_swatch?DefaultImage=1&$40x40_jpg$'
+, '622-343?DefaultImage=1&$80x80_jpg$'
+, '622-343_00_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343_01_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343_02_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343_03_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343?DefaultImage=1&$120x120_jpg$'
+, '622-343?DefaultImage=1&$120x120_jpg$']
+, 'jnumber': 'J431184'
+, 'pallet_number': 'Watches4'
+, 'auction_includes': 'auction_includes|stuff1|stuff2'
+, 'jNumberFolderPath': u'display_image\\jPages\\J431184'
+, 'full_': 'J431184-00005-04168'
+, 'Retail': ''
+, 'specs': "['tt_productRightCol'
+, 'entity.id=622-343'
+, 'entity.categoryId=product'
+, 'entity.name=Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case'
+, 'entity.pageUrl=http://www.shophq.com/product/622-343.aspx?\\\\u0026familyid=J431184'
+, 'entity.thumbnailUrl=http://images.shophq.com/is/image/ShopHQ/622-343?DefaultImage=1&$120x120_jpg$'
+, 'entity.message=INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS QUARTZ CHRONO BRACELET'
+, 'entity.value=645.0000'
+, '']"
+, 'eBay Price': ''
+, 'Total Retail': ''
+, 'sku': '1132'
+, 'Division': 'Watches'
+, 'Margin $': ''
+, 'title': 'INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS LMT ED QUARTZ CHRONO WATCH RED MENS'
+, 'manifested': 'X'
+, 'Brand': 'Invicta'
+, 'Margin %': ''
+, 'model_number': ''
+, 'jNumber': 'J431184'
+, 'Qty': '1'
+, 'listerInitials': u'JM'
+, 'itemSelectedImages': {'key': ''}
+, 'condition': '2'
+, 'condition_notes': ''
+, 'date_listed': ''
+, 'palletNumber': u'Watches4'
+, 'upc': ''
+, 'retailer_code': '1'
+, 'msrp': '$645.00'
+, 'Total Cost': '$645.00'},)
+, 'KWARGS': {}}
+call_fn: C:\Users\User\SGIS_CLONE\master-6-20\display_image\EventsHandlers\MainFrameEventHandler.py
+call_ln: 254
+call_func: onLookUpBySkuBtnShopHq
+caller: ['        self.onScanNumberText(self)\n']
+Exception:
+None
+
+--06-23 15:56:53 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
+############### Begin download images ############## updateMainFrameCurrentItemInfo
+
+--06-23 15:56:53 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
+############### Begin download images ############## updateMainFrameCurrentItemInfo
+
+--06-23 15:56:53 log_info display_image.Check.downloadImages INFO     
+###Downloading Images####
+ downloadImages
+
+--06-23 15:56:53 log_debug display_image.Check.downloadImages DEBUG    WHAT IS IN THE itemInfo IMAGE LISTdownloadImages
+ARGS_KWARGS_STR:
+{'ARGS': (['622-343?DefaultImage=1&$472x472_jpg$'
+, '622-343_00_swatch?DefaultImage=1&$40x40_jpg$'
+, '622-343_01_swatch?DefaultImage=1&$40x40_jpg$'
+, '622-343?DefaultImage=1&$80x80_jpg$'
+, '622-343_00_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343_01_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343_02_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343_03_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343?DefaultImage=1&$120x120_jpg$'
+, '622-343?DefaultImage=1&$120x120_jpg$'],)
+, 'KWARGS': {}}
+call_fn: C:\Users\User\SGIS_CLONE\master-6-20\display_image\EventsHandlers\MainFrameEventHandler.py
+call_ln: 1098
+call_func: onScanNumberText
+caller: ['            results = self.updateMainFrameCurrentItemInfo(retailer_code) \n']
+Exception:
+None
+
+--06-23 15:56:53 log_debug display_image.Check.downloadImages DEBUG    WHAT IS IN THE currentItemInfo IMAGE LISTdownloadImages
+ARGS_KWARGS_STR:
+{'ARGS': (['622-343?DefaultImage=1&$472x472_jpg$'
+, '622-343_00_swatch?DefaultImage=1&$40x40_jpg$'
+, '622-343_01_swatch?DefaultImage=1&$40x40_jpg$'
+, '622-343?DefaultImage=1&$80x80_jpg$'
+, '622-343_00_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343_01_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343_02_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343_03_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343?DefaultImage=1&$120x120_jpg$'
+, '622-343?DefaultImage=1&$120x120_jpg$'],)
+, 'KWARGS': {}}
+call_fn: C:\Users\User\SGIS_CLONE\master-6-20\display_image\EventsHandlers\MainFrameEventHandler.py
+call_ln: 1098
+call_func: onScanNumberText
+caller: ['            results = self.updateMainFrameCurrentItemInfo(retailer_code) \n']
+Exception:
+None
+
+--06-23 15:56:53 log_info display_image.Check.downloadImages INFO     
+. Check.downloadImages(): Fetching Image: http://images.shophq.com/is/image/ShopHQ/622-343?DefaultImage=1&$472x472_jpg$ downloadImages
+
+--06-23 15:56:54 log_info display_image.Check.downloadImages INFO     
+. Check.downloadImages(): Fetching Image: http://images.shophq.com/is/image/ShopHQ/622-343_00_swatch?DefaultImage=1&$40x40_jpg$ downloadImages
+
+--06-23 15:56:55 log_info display_image.Check.downloadImages INFO     
+. Check.downloadImages(): Fetching Image: http://images.shophq.com/is/image/ShopHQ/622-343_01_swatch?DefaultImage=1&$40x40_jpg$ downloadImages
+
+--06-23 15:56:56 log_info display_image.Check.downloadImages INFO     
+. Check.downloadImages(): Fetching Image: http://images.shophq.com/is/image/ShopHQ/622-343_00_detail?DefaultImage=1&$80x80_jpg$ downloadImages
+
+--06-23 15:56:56 log_info display_image.Check.downloadImages INFO     
+. Check.downloadImages(): Fetching Image: http://images.shophq.com/is/image/ShopHQ/622-343_01_detail?DefaultImage=1&$80x80_jpg$ downloadImages
+
+--06-23 15:56:57 log_info display_image.Check.downloadImages INFO     
+. Check.downloadImages(): Fetching Image: http://images.shophq.com/is/image/ShopHQ/622-343_02_detail?DefaultImage=1&$80x80_jpg$ downloadImages
+
+--06-23 15:56:57 log_info display_image.Check.downloadImages INFO     
+. Check.downloadImages(): Fetching Image: http://images.shophq.com/is/image/ShopHQ/622-343_03_detail?DefaultImage=1&$80x80_jpg$ downloadImages
+
+--06-23 15:56:58 log_debug display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo DEBUG    json results updateMainFrameCurrentItemInfo
+ARGS_KWARGS_STR:
+{'ARGS': ({'retailer_code:1': ''
+, 'box': ''
+, 'description': '\r\n                \r\n                <p><strong>Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case</strong></p>\r\n\r\n<p><strong>Choices: </strong>Red or Yellow dial accent</p>\r\n\r\n<p> Ingenious architecture and design blends with formidable capabilities on this Invicta Reserve Jason Taylor Excursion! </p>\r\n                Take a stylish step forward with the round black stainless steel case. Measuring 50mm wide, the case presents its imposing stature with two black pedal-style function pushers on either side of a texture edged screw down crown. A black bezel tops the case with Arabic numerals etched at five minute increments and four white arrow accents at the cardinal points. \xe2\x80\x9cLimited Edition\xe2\x80\x9d appears on the case back with your number out of 999 while \xe2\x80\x9cJT\xe2\x80\x9d caps the crown. This Excursion expertly executes the time on a Swiss Made Ronda 5040.D Quartz Chronograph movement. </p>\r\n\r\n<p> A Flame Fusion crystal hovers above the round black carbon fiber dial and its standout accents in red or yellow. A 60-seconds subdial sits near 2:00, a date window finds its place near 4:00, a 1/10th-seconds subdial resides above 6:00 and a 30-minute subdial lands near 10:00. The red accented dial features round luminous Tritnite index markers with red trim at all hour positions except 12:00, Tritnite and red trim hour and minute hands and solid red subdial and chronograph hands. The yellow accented dial boasts Tritnite index markers and hour and minute hands with yellow trim and solid yellow subdial and chronograph hands. \xe2\x80\x9cJT\xe2\x80\x9d and \xe2\x80\x9cInvicta Reserve\xe2\x80\x9d share the space below 12:00 for the final detail. </p>\r\n\r\n<p> Cool black links come together for the stainless steel bracelet. The three link design secures with a deployant clasp and a safety catch etched \xe2\x80\x9cJT\xe2\x80\x9d. A timepiece uniquely styled with you in mind, make this Invicta Reserve Jason Taylor Excursion the newest addition to your timepiece collection today! </p> \r\n\r\n<p><li><strong>Bracelet: </strong>Stainless Steel\r\n<li><strong>Movement: </strong>Swiss Made Ronda 5040.D Quartz Chronograph \r\n<li><strong>Crystal: </strong>Flame Fusion\r\n<li><strong>Crown: </strong>Screw Down w/ Function Pushers\r\n<li><strong>Clasp: </strong>Deployant\r\n<li><strong>Bracelet Measurements: </strong>9 L x 26mm W\r\n<li><strong>Case Measurements: </strong>50mm\r\n<li><strong>Case Thickness: </strong>14mm\r\n<li><strong>Weight: </strong>13 oz.\r\n<li><strong>Water Resistance: </strong>20 ATM - 200 meters - 660 feet\r\n<li><strong>Model Numbers: </strong>\r\n<br>Red: 14452-3WHT \r\n<br>Yellow: 14453-3WHT \r\n\r\n<li><strong>UPC: </strong>\r\n<br>Red: 886678150946 \r\n<br>Yellow: 886678150953 \r\n\r\n<p>'
+, 'repair': ''
+, 'band_size': '7.5'
+, 'image_list': ['622-343?DefaultImage=1&$472x472_jpg$'
+, '622-343_00_swatch?DefaultImage=1&$40x40_jpg$'
+, '622-343_01_swatch?DefaultImage=1&$40x40_jpg$'
+, '622-343?DefaultImage=1&$80x80_jpg$'
+, '622-343_00_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343_01_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343_02_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343_03_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343?DefaultImage=1&$120x120_jpg$'
+, '622-343?DefaultImage=1&$120x120_jpg$']
+, 'jnumber': 'J431184'
+, 'pallet_number': 'Watches4'
+, 'auction_includes': 'auction_includes|stuff1|stuff2'
+, 'jNumberFolderPath': u'display_image\\jPages\\J431184'
+, 'full_': 'J431184-00005-04168'
+, 'Retail': ''
+, 'specs': "['tt_productRightCol'
+, 'entity.id=622-343'
+, 'entity.categoryId=product'
+, 'entity.name=Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case'
+, 'entity.pageUrl=http://www.shophq.com/product/622-343.aspx?\\\\u0026familyid=J431184'
+, 'entity.thumbnailUrl=http://images.shophq.com/is/image/ShopHQ/622-343?DefaultImage=1&$120x120_jpg$'
+, 'entity.message=INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS QUARTZ CHRONO BRACELET'
+, 'entity.value=645.0000'
+, '']"
+, 'eBay Price': ''
+, 'Total Retail': ''
+, 'sku': '1132'
+, 'Division': 'Watches'
+, 'Margin $': ''
+, 'title': 'INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS LMT ED QUARTZ CHRONO WATCH RED MENS'
+, 'manifested': 'X'
+, 'Brand': 'Invicta'
+, 'Margin %': ''
+, 'model_number': ''
+, 'jNumber': 'J431184'
+, 'Qty': '1'
+, 'listerInitials': u'JM'
+, 'itemSelectedImages': {'key': ''}
+, 'condition': '2'
+, 'condition_notes': ''
+, 'date_listed': ''
+, 'palletNumber': u'Watches4'
+, 'upc': ''
+, 'retailer_code': '1'
+, 'msrp': '$645.00'
+, 'Total Cost': '$645.00'},)
+, 'KWARGS': {}}
+call_fn: C:\Users\User\SGIS_CLONE\master-6-20\display_image\EventsHandlers\MainFrameEventHandler.py
+call_ln: 254
+call_func: onLookUpBySkuBtnShopHq
+caller: ['        self.onScanNumberText(self)\n']
+Exception:
+None
+
+--06-23 15:56:58 log_debug display_image.Check.guessImageName DEBUG    currentItemInfo:guessImageName
+ARGS_KWARGS_STR:
+{'ARGS': ({'retailer_code:1': ''
+, 'box': ''
+, 'description': '\r\n                \r\n                <p><strong>Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case</strong></p>\r\n\r\n<p><strong>Choices: </strong>Red or Yellow dial accent</p>\r\n\r\n<p> Ingenious architecture and design blends with formidable capabilities on this Invicta Reserve Jason Taylor Excursion! </p>\r\n                Take a stylish step forward with the round black stainless steel case. Measuring 50mm wide, the case presents its imposing stature with two black pedal-style function pushers on either side of a texture edged screw down crown. A black bezel tops the case with Arabic numerals etched at five minute increments and four white arrow accents at the cardinal points. \xe2\x80\x9cLimited Edition\xe2\x80\x9d appears on the case back with your number out of 999 while \xe2\x80\x9cJT\xe2\x80\x9d caps the crown. This Excursion expertly executes the time on a Swiss Made Ronda 5040.D Quartz Chronograph movement. </p>\r\n\r\n<p> A Flame Fusion crystal hovers above the round black carbon fiber dial and its standout accents in red or yellow. A 60-seconds subdial sits near 2:00, a date window finds its place near 4:00, a 1/10th-seconds subdial resides above 6:00 and a 30-minute subdial lands near 10:00. The red accented dial features round luminous Tritnite index markers with red trim at all hour positions except 12:00, Tritnite and red trim hour and minute hands and solid red subdial and chronograph hands. The yellow accented dial boasts Tritnite index markers and hour and minute hands with yellow trim and solid yellow subdial and chronograph hands. \xe2\x80\x9cJT\xe2\x80\x9d and \xe2\x80\x9cInvicta Reserve\xe2\x80\x9d share the space below 12:00 for the final detail. </p>\r\n\r\n<p> Cool black links come together for the stainless steel bracelet. The three link design secures with a deployant clasp and a safety catch etched \xe2\x80\x9cJT\xe2\x80\x9d. A timepiece uniquely styled with you in mind, make this Invicta Reserve Jason Taylor Excursion the newest addition to your timepiece collection today! </p> \r\n\r\n<p><li><strong>Bracelet: </strong>Stainless Steel\r\n<li><strong>Movement: </strong>Swiss Made Ronda 5040.D Quartz Chronograph \r\n<li><strong>Crystal: </strong>Flame Fusion\r\n<li><strong>Crown: </strong>Screw Down w/ Function Pushers\r\n<li><strong>Clasp: </strong>Deployant\r\n<li><strong>Bracelet Measurements: </strong>9 L x 26mm W\r\n<li><strong>Case Measurements: </strong>50mm\r\n<li><strong>Case Thickness: </strong>14mm\r\n<li><strong>Weight: </strong>13 oz.\r\n<li><strong>Water Resistance: </strong>20 ATM - 200 meters - 660 feet\r\n<li><strong>Model Numbers: </strong>\r\n<br>Red: 14452-3WHT \r\n<br>Yellow: 14453-3WHT \r\n\r\n<li><strong>UPC: </strong>\r\n<br>Red: 886678150946 \r\n<br>Yellow: 886678150953 \r\n\r\n<p>'
+, 'repair': ''
+, 'band_size': '7.5'
+, 'image_list': ['622-343?DefaultImage=1&$472x472_jpg$'
+, '622-343_00_swatch?DefaultImage=1&$40x40_jpg$'
+, '622-343_01_swatch?DefaultImage=1&$40x40_jpg$'
+, '622-343?DefaultImage=1&$80x80_jpg$'
+, '622-343_00_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343_01_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343_02_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343_03_detail?DefaultImage=1&$80x80_jpg$'
+, '622-343?DefaultImage=1&$120x120_jpg$'
+, '622-343?DefaultImage=1&$120x120_jpg$']
+, 'jnumber': 'J431184'
+, 'pallet_number': 'Watches4'
+, 'auction_includes': 'auction_includes|stuff1|stuff2'
+, 'jNumberFolderPath': u'display_image\\jPages\\J431184'
+, 'full_': 'J431184-00005-04168'
+, 'Retail': ''
+, 'specs': "['tt_productRightCol'
+, 'entity.id=622-343'
+, 'entity.categoryId=product'
+, 'entity.name=Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case'
+, 'entity.pageUrl=http://www.shophq.com/product/622-343.aspx?\\\\u0026familyid=J431184'
+, 'entity.thumbnailUrl=http://images.shophq.com/is/image/ShopHQ/622-343?DefaultImage=1&$120x120_jpg$'
+, 'entity.message=INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS QUARTZ CHRONO BRACELET'
+, 'entity.value=645.0000'
+, '']"
+, 'eBay Price': ''
+, 'Total Retail': ''
+, 'sku': '1132'
+, 'Division': 'Watches'
+, 'Margin $': ''
+, 'title': 'INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS LMT ED QUARTZ CHRONO WATCH RED MENS'
+, 'manifested': 'X'
+, 'Brand': 'Invicta'
+, 'Margin %': ''
+, 'model_number': ''
+, 'jNumber': 'J431184'
+, 'Qty': '1'
+, 'listerInitials': u'JM'
+, 'itemSelectedImages': {'key': ''}
+, 'condition': '2'
+, 'condition_notes': ''
+, 'date_listed': ''
+, 'palletNumber': u'Watches4'
+, 'upc': ''
+, 'retailer_code': '1'
+, 'msrp': '$645.00'
+, 'Total Cost': '$645.00'},)
+, 'KWARGS': {}}
+call_fn: C:\Users\User\SGIS_CLONE\master-6-20\display_image\EventsHandlers\MainFrameEventHandler.py
+call_ln: 1098
+call_func: onScanNumberText
+caller: ['            results = self.updateMainFrameCurrentItemInfo(retailer_code) \n']
+Exception:
+None
+
+--06-23 15:56:58 log_debug display_image.Check.guessImageName DEBUG    image name guess: guessImageName
+ARGS_KWARGS_STR:
+{'ARGS': ('622-343_00_swatch?DefaultImage=1&$40x40_jpg$',)
+, 'KWARGS': {}}
+call_fn: C:\Users\User\SGIS_CLONE\master-6-20\display_image\EventsHandlers\MainFrameEventHandler.py
+call_ln: 1098
+call_func: onScanNumberText
+caller: ['            results = self.updateMainFrameCurrentItemInfo(retailer_code) \n']
+Exception:
+None
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
+MainFrameEventHandler.updateMainFrameCurrentItemInfo.img_name622-343_00_swatch.JPEG updateMainFrameCurrentItemInfo
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.updateMainFrameCurrentItemInfo INFO     
+MainFrameEventHandler.updateMainFrameCurrentItemInfo.img_name622-343_00_swatch.JPEG updateMainFrameCurrentItemInfo
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
+updateMainFrameCurrentItemInfo results:None onScanNumberText
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
+updateMainFrameCurrentItemInfo results:None onScanNumberText
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
+onScanNumberText currentItemInfo: {'retailer_code:1': '', 'box': '', 'description': '\r\n                \r\n                <p><strong>Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case</strong></p>\r\n\r\n<p><strong>Choices: </strong>Red or Yellow dial accent</p>\r\n\r\n<p> Ingenious architecture and design blends with formidable capabilities on this Invicta Reserve Jason Taylor Excursion! </p>\r\n                Take a stylish step forward with the round black stainless steel case. Measuring 50mm wide, the case presents its imposing stature with two black pedal-style function pushers on either side of a texture edged screw down crown. A black bezel tops the case with Arabic numerals etched at five minute increments and four white arrow accents at the cardinal points. \xe2\x80\x9cLimited Edition\xe2\x80\x9d appears on the case back with your number out of 999 while \xe2\x80\x9cJT\xe2\x80\x9d caps the crown. This Excursion expertly executes the time on a Swiss Made Ronda 5040.D Quartz Chronograph movement. </p>\r\n\r\n<p> A Flame Fusion crystal hovers above the round black carbon fiber dial and its standout accents in red or yellow. A 60-seconds subdial sits near 2:00, a date window finds its place near 4:00, a 1/10th-seconds subdial resides above 6:00 and a 30-minute subdial lands near 10:00. The red accented dial features round luminous Tritnite index markers with red trim at all hour positions except 12:00, Tritnite and red trim hour and minute hands and solid red subdial and chronograph hands. The yellow accented dial boasts Tritnite index markers and hour and minute hands with yellow trim and solid yellow subdial and chronograph hands. \xe2\x80\x9cJT\xe2\x80\x9d and \xe2\x80\x9cInvicta Reserve\xe2\x80\x9d share the space below 12:00 for the final detail. </p>\r\n\r\n<p> Cool black links come together for the stainless steel bracelet. The three link design secures with a deployant clasp and a safety catch etched \xe2\x80\x9cJT\xe2\x80\x9d. A timepiece uniquely styled with you in mind, make this Invicta Reserve Jason Taylor Excursion the newest addition to your timepiece collection today! </p> \r\n\r\n<p><li><strong>Bracelet: </strong>Stainless Steel\r\n<li><strong>Movement: </strong>Swiss Made Ronda 5040.D Quartz Chronograph \r\n<li><strong>Crystal: </strong>Flame Fusion\r\n<li><strong>Crown: </strong>Screw Down w/ Function Pushers\r\n<li><strong>Clasp: </strong>Deployant\r\n<li><strong>Bracelet Measurements: </strong>9 L x 26mm W\r\n<li><strong>Case Measurements: </strong>50mm\r\n<li><strong>Case Thickness: </strong>14mm\r\n<li><strong>Weight: </strong>13 oz.\r\n<li><strong>Water Resistance: </strong>20 ATM - 200 meters - 660 feet\r\n<li><strong>Model Numbers: </strong>\r\n<br>Red: 14452-3WHT \r\n<br>Yellow: 14453-3WHT \r\n\r\n<li><strong>UPC: </strong>\r\n<br>Red: 886678150946 \r\n<br>Yellow: 886678150953 \r\n\r\n<p>', 'repair': '', 'band_size': '7.5', 'image_list': ['622-343?DefaultImage=1&$472x472_jpg$', '622-343_00_swatch?DefaultImage=1&$40x40_jpg$', '622-343_01_swatch?DefaultImage=1&$40x40_jpg$', '622-343?DefaultImage=1&$80x80_jpg$', '622-343_00_detail?DefaultImage=1&$80x80_jpg$', '622-343_01_detail?DefaultImage=1&$80x80_jpg$', '622-343_02_detail?DefaultImage=1&$80x80_jpg$', '622-343_03_detail?DefaultImage=1&$80x80_jpg$', '622-343?DefaultImage=1&$120x120_jpg$', '622-343?DefaultImage=1&$120x120_jpg$'], 'jnumber': 'J431184', 'pallet_number': 'Watches4', 'auction_includes': 'auction_includes|stuff1|stuff2', 'jNumberFolderPath': u'display_image\\jPages\\J431184', 'full_': 'J431184-00005-04168', 'Retail': '', 'specs': "['tt_productRightCol', 'entity.id=622-343', 'entity.categoryId=product', 'entity.name=Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case', 'entity.pageUrl=http://www.shophq.com/product/622-343.aspx?\\\\u0026familyid=J431184', 'entity.thumbnailUrl=http://images.shophq.com/is/image/ShopHQ/622-343?DefaultImage=1&$120x120_jpg$', 'entity.message=INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS QUARTZ CHRONO BRACELET', 'entity.value=645.0000', '']", 'eBay Price': '', 'Total Retail': '', 'sku': '1132', 'Division': 'Watches', 'Margin $': '', 'title': 'INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS LMT ED QUARTZ CHRONO WATCH RED MENS', 'manifested': 'X', 'Brand': 'Invicta', 'Margin %': '', 'model_number': '', 'jNumber': 'J431184', 'Qty': '1', 'listerInitials': u'JM', 'itemSelectedImages': {'key': ''}, 'condition': '2', 'condition_notes': '', 'date_listed': '', 'palletNumber': u'Watches4', 'upc': '', 'retailer_code': '1', 'msrp': '$645.00', 'Total Cost': '$645.00'} onScanNumberText
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
+onScanNumberText currentItemInfo: {'retailer_code:1': '', 'box': '', 'description': '\r\n                \r\n                <p><strong>Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case</strong></p>\r\n\r\n<p><strong>Choices: </strong>Red or Yellow dial accent</p>\r\n\r\n<p> Ingenious architecture and design blends with formidable capabilities on this Invicta Reserve Jason Taylor Excursion! </p>\r\n                Take a stylish step forward with the round black stainless steel case. Measuring 50mm wide, the case presents its imposing stature with two black pedal-style function pushers on either side of a texture edged screw down crown. A black bezel tops the case with Arabic numerals etched at five minute increments and four white arrow accents at the cardinal points. \xe2\x80\x9cLimited Edition\xe2\x80\x9d appears on the case back with your number out of 999 while \xe2\x80\x9cJT\xe2\x80\x9d caps the crown. This Excursion expertly executes the time on a Swiss Made Ronda 5040.D Quartz Chronograph movement. </p>\r\n\r\n<p> A Flame Fusion crystal hovers above the round black carbon fiber dial and its standout accents in red or yellow. A 60-seconds subdial sits near 2:00, a date window finds its place near 4:00, a 1/10th-seconds subdial resides above 6:00 and a 30-minute subdial lands near 10:00. The red accented dial features round luminous Tritnite index markers with red trim at all hour positions except 12:00, Tritnite and red trim hour and minute hands and solid red subdial and chronograph hands. The yellow accented dial boasts Tritnite index markers and hour and minute hands with yellow trim and solid yellow subdial and chronograph hands. \xe2\x80\x9cJT\xe2\x80\x9d and \xe2\x80\x9cInvicta Reserve\xe2\x80\x9d share the space below 12:00 for the final detail. </p>\r\n\r\n<p> Cool black links come together for the stainless steel bracelet. The three link design secures with a deployant clasp and a safety catch etched \xe2\x80\x9cJT\xe2\x80\x9d. A timepiece uniquely styled with you in mind, make this Invicta Reserve Jason Taylor Excursion the newest addition to your timepiece collection today! </p> \r\n\r\n<p><li><strong>Bracelet: </strong>Stainless Steel\r\n<li><strong>Movement: </strong>Swiss Made Ronda 5040.D Quartz Chronograph \r\n<li><strong>Crystal: </strong>Flame Fusion\r\n<li><strong>Crown: </strong>Screw Down w/ Function Pushers\r\n<li><strong>Clasp: </strong>Deployant\r\n<li><strong>Bracelet Measurements: </strong>9 L x 26mm W\r\n<li><strong>Case Measurements: </strong>50mm\r\n<li><strong>Case Thickness: </strong>14mm\r\n<li><strong>Weight: </strong>13 oz.\r\n<li><strong>Water Resistance: </strong>20 ATM - 200 meters - 660 feet\r\n<li><strong>Model Numbers: </strong>\r\n<br>Red: 14452-3WHT \r\n<br>Yellow: 14453-3WHT \r\n\r\n<li><strong>UPC: </strong>\r\n<br>Red: 886678150946 \r\n<br>Yellow: 886678150953 \r\n\r\n<p>', 'repair': '', 'band_size': '7.5', 'image_list': ['622-343?DefaultImage=1&$472x472_jpg$', '622-343_00_swatch?DefaultImage=1&$40x40_jpg$', '622-343_01_swatch?DefaultImage=1&$40x40_jpg$', '622-343?DefaultImage=1&$80x80_jpg$', '622-343_00_detail?DefaultImage=1&$80x80_jpg$', '622-343_01_detail?DefaultImage=1&$80x80_jpg$', '622-343_02_detail?DefaultImage=1&$80x80_jpg$', '622-343_03_detail?DefaultImage=1&$80x80_jpg$', '622-343?DefaultImage=1&$120x120_jpg$', '622-343?DefaultImage=1&$120x120_jpg$'], 'jnumber': 'J431184', 'pallet_number': 'Watches4', 'auction_includes': 'auction_includes|stuff1|stuff2', 'jNumberFolderPath': u'display_image\\jPages\\J431184', 'full_': 'J431184-00005-04168', 'Retail': '', 'specs': "['tt_productRightCol', 'entity.id=622-343', 'entity.categoryId=product', 'entity.name=Invicta Reserve 50mm Jason Taylor Excursion Bracelet Watch w/ Three-Slot Dive Case', 'entity.pageUrl=http://www.shophq.com/product/622-343.aspx?\\\\u0026familyid=J431184', 'entity.thumbnailUrl=http://images.shophq.com/is/image/ShopHQ/622-343?DefaultImage=1&$120x120_jpg$', 'entity.message=INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS QUARTZ CHRONO BRACELET', 'entity.value=645.0000', '']", 'eBay Price': '', 'Total Retail': '', 'sku': '1132', 'Division': 'Watches', 'Margin $': '', 'title': 'INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS LMT ED QUARTZ CHRONO WATCH RED MENS', 'manifested': 'X', 'Brand': 'Invicta', 'Margin %': '', 'model_number': '', 'jNumber': 'J431184', 'Qty': '1', 'listerInitials': u'JM', 'itemSelectedImages': {'key': ''}, 'condition': '2', 'condition_notes': '', 'date_listed': '', 'palletNumber': u'Watches4', 'upc': '', 'retailer_code': '1', 'msrp': '$645.00', 'Total Cost': '$645.00'} onScanNumberText
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
+Trying to open: display_image\jPages\J431184\622-343_00_swatch.JPEG onScanNumberText
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
+Trying to open: display_image\jPages\J431184\622-343_00_swatch.JPEG onScanNumberText
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onDescriptionTextField INFO     
+inside: onDescriptionTextField
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onDescriptionTextField INFO     
+inside: onDescriptionTextField
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onDescriptionTextField INFO     
+inside: onDescriptionTextField
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onDescriptionTextField INFO     
+inside: onDescriptionTextField
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onUpcNumberText INFO     
+Inside:  onUpcNumberText
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onUpcNumberText INFO     
+Inside:  onUpcNumberText
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onUpcNumberText INFO     
+upc entered, and updated. onUpcNumberText
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onUpcNumberText INFO     
+upc entered, and updated. onUpcNumberText
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
+currentItemInfo['ebay_category']'ebay_category' onScanNumberText
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onScanNumberText INFO     
+currentItemInfo['ebay_category']'ebay_category' onScanNumberText
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtnShopHq INFO     
+Added MainFrame.itemRow to currentItemInfo[['retailer_code:1', 'Division', 'Brand', 'pallet_number', 'full_', 'jnumber', 'model_number', 'title', 'Qty', 'msrp', 'Total Cost', 'Retail', 'Total Retail', 'Margin %', 'Margin $', 'eBay Price', 'sku', 'box', 'condition', 'condition_notes', 'band_size', 'date_listed', 'repair', 'manifested', 'upc', 'auction_includes'], ['', 'Watches', 'Invicta', 'Watches4', 'J431184-00005-04168', 'J431184', '', 'INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS LMT ED QUARTZ CHRONO WATCH RED MENS', '1', '$645.00', '$645.00', '', '', '', '', '', '1132', '', '2', '', '7.5', '', '', 'X', '', 'auction_includes|stuff1|stuff2']] onLookUpBySkuBtnShopHq
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onLookUpBySkuBtnShopHq INFO     
+Added MainFrame.itemRow to currentItemInfo[['retailer_code:1', 'Division', 'Brand', 'pallet_number', 'full_', 'jnumber', 'model_number', 'title', 'Qty', 'msrp', 'Total Cost', 'Retail', 'Total Retail', 'Margin %', 'Margin $', 'eBay Price', 'sku', 'box', 'condition', 'condition_notes', 'band_size', 'date_listed', 'repair', 'manifested', 'upc', 'auction_includes'], ['', 'Watches', 'Invicta', 'Watches4', 'J431184-00005-04168', 'J431184', '', 'INVICTA RESERVE MENS JASON TAYLOR EXCURSION SWISS LMT ED QUARTZ CHRONO WATCH RED MENS', '1', '$645.00', '$645.00', '', '', '', '', '', '1132', '', '2', '', '7.5', '', '', 'X', '', 'auction_includes|stuff1|stuff2']] onLookUpBySkuBtnShopHq
+
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentConditionText INFO     
 Inside:  onCurrentConditionText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentConditionText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentConditionText INFO     
 Inside:  onCurrentConditionText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentConditionText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentConditionText INFO     
 Calling Save(self.MainFrame) onCurrentConditionText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentConditionText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentConditionText INFO     
 Calling Save(self.MainFrame) onCurrentConditionText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onPalletNumberText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onPalletNumberText INFO     
 Inside:  onPalletNumberText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onPalletNumberText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onPalletNumberText INFO     
 Inside:  onPalletNumberText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onPalletNumberText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onPalletNumberText INFO     
 
 # PhotoCtrlEventHandler.onPalletNumberText(): # onPalletNumberText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onPalletNumberText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onPalletNumberText INFO     
 
 # PhotoCtrlEventHandler.onPalletNumberText(): # onPalletNumberText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onDateListedText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onDateListedText INFO     
 inside:  onDateListedText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onDateListedText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onDateListedText INFO     
 inside:  onDateListedText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onDateListedText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onDateListedText INFO     
 date listed things onDateListedText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onDateListedText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onDateListedText INFO     
 date listed things onDateListedText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onDateListedText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onDateListedText INFO     
 inside:  onDateListedText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onDateListedText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onDateListedText INFO     
 inside:  onDateListedText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onDateListedText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onDateListedText INFO     
 date listed things onDateListedText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onDateListedText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onDateListedText INFO     
 date listed things onDateListedText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentTitleText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentTitleText INFO     
 Inside:  onCurrentTitleText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentTitleText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentTitleText INFO     
 Inside:  onCurrentTitleText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentTitleText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentTitleText INFO     
 Inside:  onCurrentTitleText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentTitleText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onCurrentTitleText INFO     
 Inside:  onCurrentTitleText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onEbayCategoryIdText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onEbayCategoryIdText INFO     
 Inside:  onEbayCategoryIdText
 
---06-23 15:05:46 log_info display_image.EventsHandlers.MainFrameEventHandler.onEbayCategoryIdText INFO     
+--06-23 15:56:58 log_info display_image.EventsHandlers.MainFrameEventHandler.onEbayCategoryIdText INFO     
 Inside:  onEbayCategoryIdText
 
---06-23 15:05:46 log_debug display_image.EventsHandlers.MainFrameEventHandler.onEbayCategoryIdText DEBUG    31387 onEbayCategoryIdText
+--06-23 15:56:58 log_debug display_image.EventsHandlers.MainFrameEventHandler.onEbayCategoryIdText DEBUG    31387 onEbayCategoryIdText
 ARGS_KWARGS_STR:
 {'ARGS': ()
 , 'KWARGS': {}}
 call_fn: C:\Users\User\SGIS_CLONE\master-6-20\display_image\EventsHandlers\MainFrameEventHandler.py
-call_ln: 300
+call_ln: 301
 call_func: onLookUpBySkuBtnShopHq
 caller: ["        self.MainFrame.ebayCategoryIdText.SetValue('31387')\n"]
 Exception:

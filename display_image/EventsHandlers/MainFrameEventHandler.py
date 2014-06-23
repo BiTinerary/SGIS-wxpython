@@ -209,10 +209,10 @@ class MainFrameEventHandler(object):
                 self.MainFrame.currentItemInfo.update({key:self.MainFrame.itemRow[1][index]})        
             jnumber_column_index = self.MainFrame.itemRow[0].index('jnumber')
             jnumber = self.MainFrame.itemRow[1][jnumber_column_index]
-            box_column_index = self.MainFrame.itemRow[0].index('box')
             pallet_number_index  = self.MainFrame.itemRow[0].index('pallet_number')
             pallet_number = self.MainFrame.itemRow[1][pallet_number_index]
-            box = self.MainFrame.itemRow[1][box_column_index]
+            auction_includes_index = self.MainFrame.itemRow[0].index('auction_includes')
+            auction_includes = self.MainFrame.itemRow[1][auction_includes_index]
             condition_column_index = self.MainFrame.itemRow[0].index('condition')
             condition = self.MainFrame.itemRow[1][condition_column_index]
             condition_notes_column_index = self.MainFrame.itemRow[0].index('condition_notes')
@@ -263,6 +263,7 @@ class MainFrameEventHandler(object):
         self.MainFrame.currentConditionText.SetValue(condition)
         self.MainFrame.currentConditionNotesText.Clear()
         self.MainFrame.palletNumberText.SetValue(pallet_number)
+        self.MainFrame.currentAuctionIncludesText.SetValue(auction_includes)
         self.MainFrame.currentConditionNotesText.AppendText(condition_notes)
         self.MainFrame.currentDateListedText.SetValue(date_listed)
         self.MainFrame.rSizer.Show(self.MainFrame.rSizerCurrentItemSizer)
