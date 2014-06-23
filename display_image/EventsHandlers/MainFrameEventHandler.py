@@ -237,8 +237,12 @@ class MainFrameEventHandler(object):
         self.MainFrame.palletNumberText.SetValue(pallet_number)
         #----------------------------------------
         #   V E R Y   M Y S T E R I O U S 
-        #   used during manifesting, is being edited while its hidden
-        #
+        #   used during manifesting as well, 
+        #   Variables that are visible while manifesting are
+        #   hidden  at this point in the programs 
+        #   and are being edited while hidden
+        #   onScanNumberText checks retailer jnumber type and updates self.MainFrame
+        #   displaying the current item info. Whether from json, or as a first item
         #----------------------------------------
         self.onScanNumberText(self)
         # update MainFrame.currentItemInfo with itemRow information ... msrp, type, etc
