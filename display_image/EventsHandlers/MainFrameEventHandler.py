@@ -14,6 +14,8 @@ from display_image.PreFetcher import PreFetcher
 from display_image.Dialogs.ListingPreferencesDialog import ListingPreferencesDialog
 import time
 
+# dumb stuff
+import random
 class MainFrameEventHandler(object):
     '''
     Use these to seperate controls and logic?
@@ -75,7 +77,12 @@ class MainFrameEventHandler(object):
         '''
         self.infoLogger("Inside: ")
         self.MainFrame.currentItemInfo['title'] = self.MainFrame.currentTitleText.GetValue().rstrip(' ')
-        
+        currentTitleLength = len(self.MainFrame.currentItemInfo['title'])
+        self.MainFrame.currentTitleLbl.SetLabel('Title (' + str(currentTitleLength) + ')')
+        if currentTitleLength > 80:
+            self.MainFrame.currentTitleLbl.SetForegroundColour((255,0,0))
+        else:
+            self.MainFrame.currentTitleLbl.SetForegroundColour((0,0,0))
         return
     def onListerInitialsText(self, event):
         '''
@@ -260,6 +267,35 @@ class MainFrameEventHandler(object):
         self.MainFrame.currentDateListedText.SetValue(date_listed)
         self.MainFrame.rSizer.Show(self.MainFrame.rSizerCurrentItemSizer)
         self.MainFrame.currentTitleText.Clear()
+        # first letter should be capital 
+        blacklist = ['Geniune ',    
+                    'Band ',    
+                    'Bracelet ',    
+                    'Swiss ',    
+                    'Alligator ',    
+                    'Strap ',    
+                    'Swarovski ',    
+                    'Elements ',    
+                    'Multi ',    
+                    'Case ',    
+                    'W/ ',    
+                    'Box ',    
+                    'Limited ',    
+                    'Edition ',    
+                    '3Dc ',    
+                    '5Dc ', 
+                    '6Dc ',    
+                    '12Dc ',
+                    'Lmt ',
+                    'Ed ',
+                    'Leather ',
+                    'Stainless ',
+                    'Steel ',
+                    'Extra ',
+                    'Pu ',
+                    '& ']
+        for word in blacklist:
+            title = title.replace(word, '')
         self.MainFrame.currentTitleText.AppendText(title)
         self.MainFrame.ebayCategoryIdText.SetValue('31387')
         self.MainFrame.mainSizer.Fit(self.MainFrame)
