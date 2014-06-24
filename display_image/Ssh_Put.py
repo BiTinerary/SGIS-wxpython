@@ -104,6 +104,7 @@ class Ssh(object):
         final_destination = posixpath.join(destinationFolder,'verify_'+listingSku+'.csv')
         source_path = os.path.join(cwd,self.MainFrame.ebayCsvFp)
         print('putting: '+str(final_destination))
+        print('url: ' + str(final_destination.replace('/var/www',self.MainFrame.defaults['serverLocation'])))
         try:
             self.sftp.put(source_path, final_destination)
         except Exception, e:
