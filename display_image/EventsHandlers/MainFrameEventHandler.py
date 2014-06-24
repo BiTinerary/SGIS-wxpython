@@ -173,7 +173,11 @@ class MainFrameEventHandler(object):
         ''' 
         update self.MainFrame.currentItemInfo['auction_includes']
         '''
+        self.infoLogger('Inside: ')
         self.MainFrame.currentItemInfo['auction_includes'] = self.MainFrame.currentAuctionIncludesText.GetValue()
+        self.infoLogger('self.MainFrame.currentItemInfo[\'auction_includes\']'+str(self.MainFrame.currentItemInfo['auction_includes']))
+        self.MainFrame.statusbar.SetStatusText('auction_includes updated: '+self.MainFrame.currentItemInfo['auction_includes'])
+        
         return
         
         

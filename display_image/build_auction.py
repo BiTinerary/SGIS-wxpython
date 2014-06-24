@@ -72,6 +72,7 @@ class BuildAuction(object):
             self.infoLogger('inside trying auction includes attempt list whatever pizza bab')
             auction_includes_tags = '<div align=\"left\"><p><b><u>Auction Includes:</b></u><br><br><ul> '
             auction_includes_list = self.MainFrame.currentItemInfo['auction_includes'].split('|')
+            self.infoLogger('auction_includes: ' + str(auction_includes_list))
             for item in auction_includes_list:
                 auction_includes_tags += str('<li>' + item + '</li>')
             auction_includes_tags += '</ul></p></div>'
