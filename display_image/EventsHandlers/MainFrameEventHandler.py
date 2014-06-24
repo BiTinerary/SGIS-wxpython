@@ -14,8 +14,6 @@ from display_image.PreFetcher import PreFetcher
 from display_image.Dialogs.ListingPreferencesDialog import ListingPreferencesDialog
 import time
 
-# dumb stuff
-import random
 class MainFrameEventHandler(object):
     '''
     Use these to seperate controls and logic?
@@ -171,7 +169,12 @@ class MainFrameEventHandler(object):
         return
         
         
-        
+    def onCurrentAuctionIncludesText(self, event):
+        ''' 
+        update self.MainFrame.currentItemInfo['auction_includes']
+        '''
+        self.MainFrame.currentItemInfo['auction_includes'] = self.MainFrame.currentAuctionIncludesText.GetValue()
+        return
         
         
         
