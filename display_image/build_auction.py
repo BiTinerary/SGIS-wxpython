@@ -46,16 +46,36 @@ class BuildAuction(object):
         title_tags = "<center><h1>"+self.currentItemInfo['title']+"</h1></center>"
         images_tags = ""
         images_tags += "<div align=\"center\"><br>"
-        #import pdb;pdb.set_trace()
+        
+        
+        #-------------------------------------------------------
+        #Based off of image names, order a dictionary set into a list
+        #
+        #-------------------------------------------------------
+        filePathList = []
+        self.infoLogger('/n####################IMAGE DEBUGGING#######################/n')
+        self.infoLogger(self.currentItemInfo['image_sources'])
         for image in self.currentItemInfo['image_sources']:
-            if 'True' in image: # images were selected
+            self.infoLogger(image)
+            if 'True' in self.currentItemInfo['image_sources'][image]: 
+                # images were selected
+                filePathList.append(image)
+                self.infoLogger('appending the filePathList image sources' + str(filePathList))
+                self.infoLogger(self.currentItemInfo['image_sources'])
                 continue
             else:
                 filename = os.path.split(image)[-1]
+                filePathList.append(filename)
+        #set images in order
+        filePathList.sort()
+        for image in filePathList:
+            filename = os.path.split(image)[-1]
             destinationFolder = self.listingSku
             destination = "http://"+self.MainFrame.defaults['extIP']
             final_path = posixpath.join(destination,destinationFolder)
             self.final_destination = posixpath.join(final_path, filename)
+            #take first photo and have it set to gallery image
+            self.picUrl = posixpath.join(final_path, os.path.split(filePathList[0])[-1])
             self.infoLogger('starting image resizing')
             try:
                 im = Image.open(image)
@@ -66,21 +86,15 @@ class BuildAuction(object):
                     width = str(im.size[0])
                     height = str(im.size[1])
                 # images less than 500 on either side need to be resized for ebay
-
                 if (im.size[0] < 500) or (im.size[1] < 500):
                     #find the coeffecient to scale image to 550
-                    
                     width = 550 / float(im.size[0])
                     height = 550 / float(im.size[1])            
-                    
                     ratio = max(width, height)
-                    
                     width = int(float(im.size[0]) * ratio)
                     height = int(float(im.size[1]) * ratio)
-                    
-                    
-                    
                     self.infoLogger('image height/width ' + str(height) + ' ' + str(width))
+                    #NEAREST for upsizing, antialias for downsizing
                     resized_image = im.resize((width, height), Image.NEAREST)
                     resized_image.save(filename, format='JPEG')
                     self.infoLogger('filepath  ' + str(filename))
@@ -89,7 +103,7 @@ class BuildAuction(object):
                 print(e)
                 print(traceback.format_exc())
                 continue
-            images_tags += "<a href=\""+self.final_destination+"\"><img src=\""+self.final_destination+"\" height=\"" + str(height) + "\" width=\"" + str(width) + "\" ></a></br>"
+            images_tags += "<a href=\""+self.final_destination+"\" target=\"_blank\"><img src=\""+self.final_destination+"\" height=\"" + str(height) + "\" width=\"" + str(width) + "\"  ></a></br>"
         msrp_tags = "<div align=\"left\"><h4>Item normally retails for: "+self.currentItemInfo['msrp']+"</h4></div>"
         self.currentItemInfo['description'] = self.currentItemInfo['description'].split('<div class=\"panelDetail\" id=\"prod_description\">')[-1].split('<strong>Warranty:')[0].split('<p><strong>Additional Features:')[0].split('<!--googleoff: all-->')[0].split('<li><strong>Additional Information:')[0].split('</table>')[-1]
         
@@ -255,7 +269,7 @@ class BuildAuction(object):
                     '*Category':self.currentItemInfo['*Category'],
                     '*Duration':listingDict['*Duration'],
                     '*StartPrice':listingDict['*StartPrice'],
-                    '*PicURL':self.final_destination,
+                    '*PicURL':self.picUrl,
                     '*ConditionID':self.currentItemInfo['*ConditionID'],
                     'Subtitle':'',
                     '*Description':self.returnHtmlStringForListing(),

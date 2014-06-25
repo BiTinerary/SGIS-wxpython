@@ -811,6 +811,7 @@ class MainFrameEventHandler(object):
         if dialog.ShowModal() == wx.ID_OK:
             self.infoLogger(('. ' + str(self.MainFrame.__dict__.keys())))
             self.imgPaths = dialog.GetPaths()
+            self.imgPaths.sort()
             self.infoLogger('. type(paths):'+str( type(self.imgPaths)))
             self.MainFrame.browseText.SetValue("\""+'\"; \"'.join(self.imgPaths)+"\"")
             for item in self.imgPaths:
