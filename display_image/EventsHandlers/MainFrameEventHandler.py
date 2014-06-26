@@ -705,6 +705,7 @@ class MainFrameEventHandler(object):
         self.MainFrame.imageCtrl.SetBitmap(wx.BitmapFromImage(img))
         self.MainFrame.browseText.SetValue("")
         self.MainFrame.currentItemInfo['itemSelectedImages'] = {}
+        self.MainFrame.currentAuctionIncludesText.Clear()
         self.MainFrame.descriptionTextField.Clear()
         self.MainFrame.scanNumberText.SetValue("")
         self.MainFrame.jNumber = self.MainFrame.defaultJNumber
