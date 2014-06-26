@@ -602,6 +602,7 @@ class MainFrameEventHandler(object):
             results = tmp_dialog.ShowModal()
             tmp_dialog.Destroy()
             return
+            
         sources = self.MainFrame.currentItemInfo['itemSelectedImages']
         self.debugLogger('Assign pictures to ebay auction: ', sources)
         self.MainFrame.currentItemInfo['image_sources'] = None
@@ -619,6 +620,16 @@ class MainFrameEventHandler(object):
         # if the catefory number is found
         # it will return a list
         # returns [item_category, item_specifics]
+        #
+        #--------------------------------------------------
+        # DOES this also CLEAR 'image_sources'?????
+        # I think this is here because it gets reset somewhere?
+        # this is bad....
+        #---------------------------------------------------
+        #
+        # V E R Y M Y S T E R I O U S
+        #
+        #0----------------------
         self.MainFrame.itemSpecifics = self.MainFrame.itemSpecificsFetcher.returnItemSpecifics(self.MainFrame.scanNumberText.GetValue())
         self.infoLogger('# self.MainFrame.itemSpecifics onBuildEbayAuction(): ' +str(self.MainFrame.itemSpecifics))
         self.MainFrame.ebayCategoryIdLbl.Show()
@@ -682,7 +693,10 @@ class MainFrameEventHandler(object):
             results = tmp_dialog.ShowModal()
             tmp_dialog.Destroy()
             return
-        # begin ssh dialog
+        #--------------------------------------------------
+        #   BEGIN THE SSH DIALOG
+        #
+        #-------------------------------------------------
         if self.MainFrame.ssh_pass is None:
             tmp_dialog = wx.PasswordEntryDialog(self.MainFrame, 'SSH Transfer: Please enter the server password ', 'Password', style=wx.OK)
             tmp_dialog.ShowModal()
@@ -693,6 +707,14 @@ class MainFrameEventHandler(object):
                 results = tmp_dialog.ShowModal()
                 tmp_dialog.Destroy()
                 return
+        #--------------------------------------------------
+        #
+        #   BEGIN PUTTING THE FILES
+        #
+        #--------------------------------------------------
+        self.infoLogger('sources before put:'+str(sources))
+        self.infoLogger('sources from self.MainFrame.currentItemInfo[\'image_sources\']'+str(self.MainFrame.currentItemInfo['image_sources']))
+        sources = self.MainFrame.currentItemInfo['image_sources'] # sources needs to be updated again since buildAuction changes it?
         results = self.MainFrame.ssh.putFiles(sources, self.MainFrame.listingSku, self.MainFrame.ebayListingHtml, self.MainFrame.currentItemInfo)
         if results is True:
              self.MainFrame.statusbar.SetStatusText('Transfer Successful.')

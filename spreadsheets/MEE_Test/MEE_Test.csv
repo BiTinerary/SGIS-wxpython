@@ -3,3 +3,5 @@ retailer_code:0,pallet_number,category,jnumber,title,quantity,msrp,condition,con
 ,0,Housewares,4PK4260000010,Super Chef 9pc Cast Iron Cookware Set,1,$89.99,5,New in original packaging.,..,..,..,..
 ,0,Housewares,4PK4260000010,Super Chef 9pc Cast Iron Cookware Set,1,$89.99,5,New in original packaging.,..,..,,
 ,0,Housewares,4PK4260000010,Super Chef 9pc Cast Iron Cookware Set,1,$89.99,5,New in original packaging.,..,..,,
+
+retailer_code:0,pallet_number,category,4PK4260000010,Super Chef 9pc Cast Iron Cookware Set,quantity,msrp,condition,condition_notes,1111,EXTRA,date_listed,upc

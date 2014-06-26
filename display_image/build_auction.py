@@ -46,38 +46,53 @@ class BuildAuction(object):
         title_tags = "<center><h1>"+self.currentItemInfo['title']+"</h1></center>"
         images_tags = ""
         images_tags += "<div align=\"center\"><br>"
-        
-        
-        #-------------------------------------------------------
-        #Based off of image names, order a dictionary set into a list
+        #--------------------------------------------------
         #
-        #-------------------------------------------------------
+        # filePathList takes a dicitonary self.currentItemInfo['image_sources']
+        # { '/file/path/to/image':'True', '/file/path/to/different_image':'False'...}
+        # and adds the 'True' items to filePathList
+        #
+        #--------------------------------------------------
         filePathList = []
         self.infoLogger('/n####################IMAGE DEBUGGING#######################/n')
         self.infoLogger(self.currentItemInfo['image_sources'])
         for image in self.currentItemInfo['image_sources']:
-            self.infoLogger(image)
+            self.infoLogger('Checking image:' + str(image))
             if 'True' in self.currentItemInfo['image_sources'][image]: 
                 # images were selected
                 filePathList.append(image)
-                self.infoLogger('appending the filePathList image sources' + str(filePathList))
+                self.infoLogger('filePathList updated: ' + str(filePathList))
                 self.infoLogger(self.currentItemInfo['image_sources'])
+                continue
+            # self.currentItemInfo['image_sources'] is {'key':''} by default
+            elif 'key' in image:
+                self.infoLogger('Image not selected using currentImgPath: ' + str(self.MainFrame.currentImgPath))
+                filename = self.MainFrame.currentImgPath
+                filePathList.append(filename)
+                self.MainFrame.currentItemInfo['image_sources'] = {}
+                self.MainFrame.currentItemInfo['image_sources'] = {filename:'True'}
                 continue
             else:
                 filename = os.path.split(image)[-1]
                 filePathList.append(filename)
-        #set images in order
+        #Based off of image sources dictionary create an ordered list
         filePathList.sort()
+        #-------------------------------------------------------
+        # And create the <img srcs> for the auction
+        # from the ordered filePathList
+        #-------------------------------------------------------
+        self.infoLogger('Generating <img src> tags from filePathList:' )
         for image in filePathList:
             filename = os.path.split(image)[-1]
             destinationFolder = self.listingSku
             destination = "http://"+self.MainFrame.defaults['extIP']
             final_path = posixpath.join(destination,destinationFolder)
             self.final_destination = posixpath.join(final_path, filename)
-            #take first photo and have it set to gallery image
+            # set 1st pic to Gallery image. filePathList[0]
             self.picUrl = posixpath.join(final_path, os.path.split(filePathList[0])[-1])
-            self.infoLogger('starting image resizing')
+            self.infoLogger('starting image resizing: final_destination: '+str(self.final_destination))
             try:
+                self.infoLogger('Trying image resize')
                 im = Image.open(image)
                 if im.size[0] > 800:
                     width = str(int(float(im.size[0]) * .4))
@@ -87,35 +102,35 @@ class BuildAuction(object):
                     height = str(im.size[1])
                 # images less than 500 on either side need to be resized for ebay
                 if (im.size[0] < 500) or (im.size[1] < 500):
-                    #find the coeffecient to scale image to 550
+                    self.infoLogger('One side of image is less than 500')
+                    #find the coeffecient to scale smallest edge to 550
                     width = 550 / float(im.size[0])
                     height = 550 / float(im.size[1])            
                     ratio = max(width, height)
                     width = int(float(im.size[0]) * ratio)
                     height = int(float(im.size[1]) * ratio)
-                    self.infoLogger('image height/width ' + str(height) + ' ' + str(width))
+                    self.infoLogger('Adjusting image height/width ' + str(height) + ' ' + str(width))
                     #NEAREST for upsizing, antialias for downsizing
                     resized_image = im.resize((width, height), Image.NEAREST)
                     resized_image.save(filename, format='JPEG')
                     self.infoLogger('filepath  ' + str(filename))
+                # Create the img source tag here
+                images_tags += "<a href=\""+self.final_destination+"\" target=\"_blank\"><img src=\""+self.final_destination+"\" height=\"" + str(height) + "\" width=\"" + str(width) + "\"  ></a></br>"
             except Exception, e:
                 import traceback
-                print(e)
-                print(traceback.format_exc())
+                self.infoLogger('Image Resize Failed'+str(e))
+                t = traceback.format_exc()
+                print(t)
+                self.infoLogger(str(t))
                 continue
-            images_tags += "<a href=\""+self.final_destination+"\" target=\"_blank\"><img src=\""+self.final_destination+"\" height=\"" + str(height) + "\" width=\"" + str(width) + "\"  ></a></br>"
         msrp_tags = "<div align=\"left\"><h4>Item normally retails for: "+self.currentItemInfo['msrp']+"</h4></div>"
         self.currentItemInfo['description'] = self.currentItemInfo['description'].split('<div class=\"panelDetail\" id=\"prod_description\">')[-1].split('<strong>Warranty:')[0].split('<p><strong>Additional Features:')[0].split('<!--googleoff: all-->')[0].split('<li><strong>Additional Information:')[0].split('</table>')[-1]
-        
         # resolves issue with UnicodeDecodeError: 'ascii' codec can't decode byte 0xe2 in position 699: ordinal not in range(128)
         # issue #16
         try:
             description_tags = '<div align=\"left\"<p>'+self.currentItemInfo['description'].replace('"','').replace('\t','').replace(',','').replace('\r','').replace('\n','').encode("ascii", 'ignore')+'</p></div>'
         except Exception, e:
             description_tags = '<div align=\"left\"<p>'+self.currentItemInfo['description'].replace('"','').replace('\t','').replace(',','').replace('\r','').replace('\n','')+'</p></div>'
-        
-        
-        
         try:
             self.infoLogger('inside trying auction includes attempt list whatever pizza bab')
             auction_includes_tags = '<div align=\"left\"><p><b><u>Auction Includes:</b></u><br><br><ul> '
@@ -129,16 +144,6 @@ class BuildAuction(object):
             self.infoLogger('try in auction_includes_list' + str(e))
             print(e)
             pass
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         listing_sku_tags = '<p><span style="color:#a9a9a9;">SKU: '+ self.listingSku + '</span></p>'
         footer_tags = "<div align=\"center\"><br>_________________________________________________________________________________<br></div><div align=\"left\"><b><u><br><br><br>SHIPPING :</u></b><ul><li>Items are shipped out Monday - Friday excluding Holidays.&nbsp; <br></li><li>Please expect up to 1 business day processing time for item to ship out.</li><li><b>Combined Shipping: </b>Please contact us before checkout for a revised invoice.</li><li>We DO NOT ship on the weekends.</li><li>We DO NOT ship outside of the US. and its territories</li></ul><b><u>CONTACT :</u></b>Point One Premiums welcomes you to contact us with any questions or concerns during our business hours.<br>(M-F 9am - 5pm CST) Any messages received outside of business hours will be processed the following business day.<br><br>Please use eBay's message system.<b><u><br></u></b><br><u><b>Return policy. </b></u><br><br>We offer a 14 day return policy. &nbsp;If you have any problems with the product please contact us right away to work out an exchange or refund.<br><br><b><u>Warranty Policy :</u></b><i><b><u><br><br></u></b></i><i style=\"font-weight: bold;\"></i>While some of our items are in New or Manufacturer Refurbished condition, <u>None</u> are implied to include a warranty. &nbsp;Some include a Manufacturer Warranty Card and it is between you and Manufacturer if that warranty is still valid. &nbsp;PointOnePremiums offers no warranties or&nbsp;guarantees&nbsp;of a warranty.<br><br><u><b>CANCELING TRANSACTIONS :</b></u><br><br>Due to a large number of bidders not following through on auctions we no longer cancel transactions.<br>All cancelled transactions charged a 15% restocking fee. <br><br><u><b>Unpaid Bidder Policy :</b></u><br><br>A case is opened for all auctions with unpaid bidders.<br>If you do not see something in the photos or detailed in the description as being included, do not assume it is included.&nbsp; <br><u><b><br>AS-IS and FOR PARTS/REPAIR :</b></u><br><br>Items listed AS-IS or FOR PARTS/REPAIR are non returnable and are not covered by our return policy.<br>We encourage buyers to contact us with any issues before opening a case with eBay.&nbsp; We will be happy to work with you to come to a satisfactory resolution.<br></div>    <div><br>    </div>    <div><br>    </div><br><div align=\"center\">___________________________________________________________________________<br></div></body></html>"
         html_for_listing = str(str(header_tags)+str(title_tags)+str(images_tags)+str(msrp_tags)+str(description_tags)+str(auction_includes_tags)+str(listing_sku_tags)+str(footer_tags))
