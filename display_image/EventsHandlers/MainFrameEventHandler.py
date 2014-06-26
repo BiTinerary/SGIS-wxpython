@@ -368,7 +368,7 @@ class MainFrameEventHandler(object):
         self.MainFrame.currentTitleText.Clear()
         self.MainFrame.currentTitleText.AppendText(title)
         self.MainFrame.rSizer.Show(self.MainFrame.rSizerCurrentItemSizer)
-        self.MainFrame.ebayCategoryIdText.SetValue('')
+        self.MainFrame.ebayCategoryIdText.SetValue(self.MainFrame.currentItemInfo['ebay_category'])
         self.infoLogger('Found item row, and set values onLookUpBySkuBtn')
         self.MainFrame.palletNumberText.SetValue(pallet_number)
         # redraw frame
@@ -442,12 +442,6 @@ class MainFrameEventHandler(object):
         self.MainFrame.currentItemInfo['ebay_category'] = self.MainFrame.ebayCategoryIdText.GetValue()
         self.MainFrame.currentItemInfo['*Category'] = self.MainFrame.currentItemInfo['ebay_category']
         self.debugLogger(str(self.MainFrame.currentItemInfo['ebay_category']))
-        cat_len = len(self.MainFrame.currentItemInfo['ebay_category']) 
-        # if cat_len is not 0:
-            # self.infoLogger("Entering Save(self.MainFrame)")
-            # Save(self.MainFrame)
-        # else:
-            # self.infoLogger('Not Saving'+str(cat_len))
         return
         
     def onCurrentSkuText(self, event):
@@ -683,6 +677,7 @@ class MainFrameEventHandler(object):
                 self.infoLogger('. Item Specifics:'+str(self.currentItemSpecificsDict))
         self.MainFrame.listingSku = '-'.join([str(sku), str(palletNumber), str(beginShelfNumber), str(initials)])
         self.infoLogger("Starting BuildAuction")
+        Save(self.MainFrame)
         buildAuction = BuildAuction(self.MainFrame.currentItemInfo, self.MainFrame.listingSku, self.currentItemSpecificsDict, self.MainFrame.ebayAuctionHeaders, self.MainFrame.listingPreferencesResults, self.MainFrame)
         self.infoLogger("Trying to returnHtmlStringForListing")
         self.MainFrame.ebayListingHtml = buildAuction.returnHtmlStringForListing()
@@ -812,6 +807,8 @@ class MainFrameEventHandler(object):
         self.MainFrame.upcNumberText.Hide()
         self.MainFrame.scanNumberLbl.Show()
         self.MainFrame.scanNumberText.Show()
+        self.MainFrame.palletNumberLbl.Show()
+        self.MainFrame.palletNumberText.Show()
         self.MainFrame.newItemButton.Show()
         self.MainFrame.mainSizer.Fit(self.MainFrame)
         self.MainFrame.mainPanel.Layout()
@@ -1000,7 +997,7 @@ class MainFrameEventHandler(object):
                 exit()
             self.MainFrame.currentImgPath = os.path.join(self.MainFrame.jNumberFolderPath,self.img_name)
             self.MainFrame.currentImgPath = self.MainFrame.currentImgPath
-            #Save(self.MainFrame)
+           
             return
             
     def onScanNumberText(self, event):
