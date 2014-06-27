@@ -165,7 +165,6 @@ class MainFrameEventHandler(object):
             self.MainFrame.saveDescriptionTextBtn.SetBackgroundColour((255,0,0))
         else:
             self.MainFrame.saveDescriptionTextBtn.SetBackgroundColour((255,255,255))
-            
         return
         
         

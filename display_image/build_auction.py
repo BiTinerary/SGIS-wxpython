@@ -187,8 +187,12 @@ class BuildAuction(object):
             self.infoLogger(e)
             pass
         try:
+            #article matching issue 
             if len(self.MainFrame.currentItemInfo['band_size']) != 0:
-                introduction += 'Watch fits a '
+                if '8' in str(self.MainFrame.currentItemInfo['band_size'])[0]:
+                    introduction += 'Watch fits an '
+                else:
+                    introduction += 'Watch fits a '
                 introduction += self.MainFrame.currentItemInfo['band_size'] 
                 introduction += ' inch wrist'
         except Exception, e:
