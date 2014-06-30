@@ -313,7 +313,12 @@ class ManifestWriter(object):
         '''
         Over writes filepath with new information
         '''
+        
         try:
+            if len(csv_file) == 0:
+                raise('OH DEAR CSV_FILE IS len 0 in writeCsvFile')
+            if len(csv_file) == 0:
+                exit()
             with open(self.filepath, 'wb') as f:
                 f.write(csv_file)
                 return "Success"
@@ -352,32 +357,51 @@ class ManifestWriter(object):
                 pass
         return column_list
 
-    def returnRow(self, row_index):
-        '''returns a row given an index'''
-        return
+    def returnRowBySku(self, sku):
+        '''
+        returns a row list by sku number
+        '''
+        self.tmp = self.orig.replace('\r','')
+        lines = self.tmp.split('\n')
+        self.headers = self.returnTitleHeaders()
+        sku_column_index = self.headers.index('sku')
+        row_index = 0
+        for line in lines:
+            line = line.split(',')
+            try:
+                if sku in line[sku_column_index]:
+                    return [self.headers,line]
+            except IndexError, e:
+                self.infoLogger(e)
+                self.infoLogger(line)
+                self.infoLogger(traceback.format_exc())
+                pass
+            row_index += 1
 
 
-    def writeToCell(self, cell_input, row_index, column_index):
+    def writeToCell(self,sku, header_name, cell_input):
         '''
         Creates a copy of a file and writes to a cell
         '''
         line_list = self.orig.replace('\r','').split('\n')
-        self.infoLogger('cell_input: '+cell_input+' row_index: '+str(row_index)+' column_index: '+str(column_index))
         self.infoLogger(type(cell_input),type(row_index),type(column_index))
-        row_count = 0
-
-        for line in line_list:
-            if row_count != row_index:
-                self.appendLine(line+'\n')
-            elif row_count == row_index:
-                current_row = line.split(',')
-                self.infoLogger(current_row)
-                current_row[column_index] = cell_input
-                self.infoLogger(current_row)
-                current_row = ','.join(current_row)+'\n'
-                self.appendLine(current_row)
-            row_count += 1
-
+        results = returnRowBySku(sku) #[[headers],[line]]
+        self.header_index = results[0].index(header_name)
+        results[1][self.header_index] = cell_input
+        self.tmp = self.orig.replace('\r','')
+        lines = self.tmp.split('\n')
+        insert_line = ','.join(results[1][self.header_index])
+        
+        final_list = []
+        for line in lines:
+            if insert_line in line:
+                final_list.append(insert_line)
+            else:
+                final_list.append(line)
+        if len(final_list) is 0:
+            print(traceback.format_exc())
+            exit()
+        results = self.writeCsvFile('\n'.join(final_list))
         return results
 
     def returnTitlesForJnumber(self, dictionaryManifestResults):
