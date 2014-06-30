@@ -41,6 +41,7 @@ class BuildAuction(object):
         '''
         self.infoLogger("Inside: ")
         self.infoLogger("self.itemCurrentInfo: "+str(self.currentItemInfo))
+        
 
         header_tags = "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\" /></head><body style=\"font-family: Arial, Helvetica, sans-serif;\"><div align=\"center\"><img src=\"http://jamesmunsch.com/skygroup_test/p1p_1_88776_853759.jpg\"></img></div><div align=\"center\"><b>Point One Premiums is Committed to Providing a Positive Experiencefor our Customers<br>______________________________________________________________________<br></b><b></b></div><div align=\"center\"><b><br></b></div><div align=\"center\"><b>Business Hours: M-F 9am - 5pm CST</b></div><p align=\"center\">(Shipments &amp; Questions processed during Business Hours Only. Thanks.)</p><div align=\"center\"><b>____________________________________________________________________________</b></div>"
         title_tags = "<center><h1>"+self.currentItemInfo['title']+"</h1></center>"
@@ -171,6 +172,24 @@ class BuildAuction(object):
             self.infoLogger('Category2 not seen, returning empty string')
             return ''
         
+    def returnStoreCategory(self):
+        '''
+        returns store category based on retailer_code
+        '''
+        if '0' in self.MainFrame.currentItemInfo['retailer_code']:
+            store_category = ''
+        elif '1' in self.MainFrame.currentItemInfo['retailer_code']:
+            store_category = '7116272017'
+        return store_category
+        
+    def returnShippingSurcharge(self):
+        #for setting surcharge on shipping service
+        #USPSPriority does not allow surcharge
+        if 'FedExHomeDelivery' in self.listingDict['ShippingService-1:Option']:
+            shippingSurcharge = '10.00'
+        elif 'USPSPriority' in self.listingDict['ShippingService-1:Option']:
+            shippingSurcharge = ''
+        return shippingSurcharge
         
     def returnConditionDescription(self):
         '''
@@ -217,13 +236,14 @@ class BuildAuction(object):
             C:XXXXXX = for item_specific in currentItemSpecifics:
             '''
         #-------------------------------------------------------
-        # listingDict  returns modified dictionary
+        # self.listingDict  returns modified dictionary
         # from currentItemInfo
         #-------------------------------------------------------
-        listingDict = self.processListingPreferences()
+        self.listingDict = self.processListingPreferences()
         line = []
         for header in self.ebayAuctionHeaders:
             line.append('')
+
 
         defaults = {'*Action(SiteID=US|Country=US|Currency=USD|Version=745)':'VerifyAdd',
                     'ConditionDescription':self.returnConditionDescription(),
@@ -235,7 +255,7 @@ class BuildAuction(object):
                     'PayPalEmailAddress':'sales@skygroupcloseouts.com',
                     'PaymentInstructions':'If you need a revised invoice for combined shipping, please contact us before paying so we can adjust the shipping costs.',
                     'Category2':self.returnCategory2(),
-                    'StoreCategory':'',
+                    'StoreCategory':self.returnStoreCategory(),
                     'ShippingDiscountProfileID':'',
                     'DomesticRateTable':'',
                     'ShippingType':'Flat',
@@ -269,20 +289,20 @@ class BuildAuction(object):
                     'ShiptoRegCountry':'1',
                     'BuyItNowPrice':'',
                     'ReservePrice':'',
-                    'ShippingService-1:Option':'FedExHomeDelivery',
-                    'ShippingService-1:Cost':listingDict['ShippingService-1:Cost'],
+                    'ShippingService-1:Option':self.listingDict['ShippingService-1:Option'],
+                    'ShippingService-1:Cost':self.listingDict['ShippingService-1:Cost'],
                     'ShippingService-1:Priority':'1',
-                    'ShippingService-1:ShippingSurcharge':'10.00',
+                    'ShippingService-1:ShippingSurcharge':self.returnShippingSurcharge(),
                     'DispatchTimeMax':'1',
                     '*Title':self.currentItemInfo['title'],
                     '*Category':self.currentItemInfo['*Category'],
-                    '*Duration':listingDict['*Duration'],
-                    '*StartPrice':listingDict['*StartPrice'],
+                    '*Duration':self.listingDict['*Duration'],
+                    '*StartPrice':self.listingDict['*StartPrice'],
                     '*PicURL':self.picUrl,
                     '*ConditionID':self.currentItemInfo['*ConditionID'],
                     'Subtitle':'',
                     '*Description':self.returnHtmlStringForListing(),
-                    '*Format':listingDict['*Format'],
+                    '*Format':self.listingDict['*Format'],
                     '*CustomLabel':self.listingSku
                     }
         #-------------------------------------------------------
