@@ -100,11 +100,13 @@ class ManifestReader(object):
         '''
         returns a row list by sku number
         '''
+        self.infoLogger('inside: ')
         self.tmp = self.orig.replace('\r','')
         lines = self.tmp.split('\n')
         self.headers = self.returnTitleHeaders()
         sku_column_index = self.headers.index('sku')
         row_index = 0
+        self.debugLogger(self.headers, lines, self.tmp, row_index, sku_column_index)
         for line in lines:
             line = line.split(',')
             try:
@@ -313,7 +315,7 @@ class ManifestWriter(object):
         '''
         Over writes filepath with new information
         '''
-        
+        self.infoLogger('inside: ')
         try:
             if len(csv_file) == 0:
                 raise('OH DEAR CSV_FILE IS len 0 in writeCsvFile')
@@ -383,18 +385,30 @@ class ManifestWriter(object):
         '''
         Creates a copy of a file and writes to a cell
         '''
+        import pdb;pdb.set_trace()
         line_list = self.orig.replace('\r','').split('\n')
-        self.infoLogger(type(cell_input),type(row_index),type(column_index))
-        results = returnRowBySku(sku) #[[headers],[line]]
-        self.header_index = results[0].index(header_name)
-        results[1][self.header_index] = cell_input
-        self.tmp = self.orig.replace('\r','')
-        lines = self.tmp.split('\n')
-        insert_line = ','.join(results[1][self.header_index])
-        
+        self.infoLogger('inside: ')
+        self.infoLogger(' '.join(['sku: ',str(sku), 'header_name: ', str(header_name), 'cell_input: ', str(cell_input)]))
+        try:
+            results = self.returnRowBySku(sku) #[[headers],[line]]
+            self.header_index = results[0].index(header_name)
+            #list() to create a new list, not a new pointer
+            insert_line = list(results[1])
+            insert_line[self.header_index] = cell_input
+            self.tmp = self.orig.replace('\r','')
+            lines = self.tmp.split('\n')
+            insert_line = ','.join(insert_line)
+            results[1] = ','.join(results[1])
+            self.infoLogger('insert_line: ' + str(insert_line))
+        except Exception, e:
+            self.infoLogger(e)
+            print(traceback.format_exc())
+            return e 
         final_list = []
         for line in lines:
-            if insert_line in line:
+            self.infoLogger('inside line in lines: ')
+            if results[1] in line:
+                self.infoLogger('inside insert_line :')
                 final_list.append(insert_line)
             else:
                 final_list.append(line)

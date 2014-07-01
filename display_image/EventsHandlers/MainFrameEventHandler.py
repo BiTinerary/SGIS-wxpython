@@ -687,6 +687,16 @@ class MainFrameEventHandler(object):
             results = tmp_dialog.ShowModal()
             tmp_dialog.Destroy()
             return
+        #-----
+        # write date listed to cell
+        #-----
+        currentSku = str(self.MainFrame.currentSkuText.GetValue())
+        currentHeader = 'date_listed'
+        currentDate = time.strftime("%m/%d")
+        results = self.MainFrame.csvTextWriter.writeToCell(currentSku, currentHeader, currentDate)
+        if isinstance(results, Exception):
+            self.infoLogger('in writeToCell: ')
+            self.infoLogger(results)
         #--------------------------------------------------
         #   BEGIN THE SSH DIALOG
         #
@@ -752,6 +762,7 @@ class MainFrameEventHandler(object):
         self.MainFrame.statusbar.SetStatusText('Opening: ' + str(filename[0]))
         self.MainFrame.startingSkuLbl.SetLabel('Lookup Sku')
         self.MainFrame.csvTextReader = self.MainFrame.sky_manifest.ManifestReader(filename[0],self.MainFrame)
+        self.MainFrame.csvTextWriter = self.MainFrame.sky_manifest.ManifestWriter(filename[0],self.MainFrame)
         self.MainFrame.statusbar.SetStatusText('Opened: ' + str(filename[0]))
         self.MainFrame.lookUpBySkuBtn.Show()
         self.MainFrame.lookUpBySkuSizer.Layout()
