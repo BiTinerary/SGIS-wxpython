@@ -601,83 +601,16 @@ class MainFrameEventHandler(object):
         self.MainFrame.currentItemInfo['image_sources'] = None
         self.MainFrame.currentItemInfo.update({'image_sources':sources})
         self.infoLogger(sources)
-        #-------------------------------------------------------
-        # with ebay archive open return item specifics for jnumber
-        # returns item_category, item_specifics from sky_manifest.returnItemSpecifics()
-        #
-        #  item_specifics = item_row[ErrorMessageIndex].split('Please provide the required item specifics.|')[-1].split('|')[0].split('#comma# ')
-        #
-        #-------------------------------------------------------
-        # Item specifics fetcher  Searches through
-        # ebay Verification_Results by category number
-        # if the catefory number is found
-        # it will return a list
-        # returns [item_category, item_specifics]
-        #
-        #--------------------------------------------------
-        # DOES this also CLEAR 'image_sources'?????
-        # I think this is here because it gets reset somewhere?
-        # this is bad....
-        #---------------------------------------------------
-        #
-        # V E R Y M Y S T E R I O U S
-        #
-        #0----------------------
-        self.MainFrame.itemSpecifics = self.MainFrame.itemSpecificsFetcher.returnItemSpecifics(self.MainFrame.scanNumberText.GetValue())
-        self.infoLogger('# self.MainFrame.itemSpecifics onBuildEbayAuction(): ' +str(self.MainFrame.itemSpecifics))
+
         self.MainFrame.ebayCategoryIdLbl.Show()
         self.MainFrame.ebayCategoryIdText.Show()
         self.MainFrame.mainPanel.Fit()
         self.MainFrame.mainPanel.Layout()
-        # if item is not in ebay archive itemSpecifics 'ValueError' will be in item
-        try:
-            int_ebay_category = int(self.MainFrame.ebayCategoryIdText.GetValue())
-        except:
-            pass
-        if 'ValueError' in self.MainFrame.itemSpecifics:
-            # ebayCategoryIdText is empty notify user and set self.MainFrame.itemSpecifics to '#REQUIRED'
-            # build auction pressed and ebay category is empty
-            if len(self.MainFrame.ebayCategoryIdText.GetValue()) is 0:
-                tmp_dialog = wx.MessageDialog(self.MainFrame, 'Item not seen before.\n\nUnable to determine category number, or item_specifics', 'ValueError', style=wx.OK)
-                results = tmp_dialog.ShowModal()
-                tmp_dialog.Destroy()
-                self.MainFrame.itemSpecifics = '#REQUIRED'
-                self.MainFrame.ebayCategoryIdText.SetValue(self.MainFrame.itemSpecifics)
-                return
-            # build auction was pressed but ebay category was not filled in
-            elif '#REQUIRED' in self.MainFrame.ebayCategoryIdText.GetValue():
-                tmp_dialog = wx.MessageDialog(self.MainFrame, 'Please fill in currentEbayCategoryId', 'ValueError', style=wx.OK)
-                results = tmp_dialog.ShowModal()
-                tmp_dialog.Destroy()
-                return
-            # ValueError, but category number has been entered
-            elif isinstance(int_ebay_category, int):
-                tmp_dialog = wx.MessageDialog(self.MainFrame, 'Item not seen before.\n\nUnable to determine category number, or item_specifics. Building without specifics.', 'ValueError', style=wx.OK)
-                results = tmp_dialog.ShowModal()
-                tmp_dialog.Destroy()
-                results = ['']
-                self.currentItemSpecificsDict = results # [item_category, [item_specifics]] sky_manifest.returnItemSpecifcs()
-                self.MainFrame.currentItemSpecificsDict = self.currentItemSpecificsDict
-            else:
-                self.infoLogger('item specifics issue')
-                tmp_dialog = wx.MessageDialog(self.MainFrame, 'Item not seen before.\n\nUnable to determine category number, or item_specifics', 'ValueError', style=wx.OK)
-                results = tmp_dialog.ShowModal()
-                tmp_dialog.Destroy()
-                return
-        # if item in archive retrieve it and get title
-        if 'ValueError' not in self.MainFrame.itemSpecifics:
-            # ebay category is a number and is filled in.
-            if isinstance(int_ebay_category, int):
-                results = ItemSpecificsDialog(None, -1,title='Please Fill In The Item Specifics')
-                if results.ShowModal() == wx.ID_OK:
-                    self.currentItemSpecificsDict = results.currentItemSpecificsDict # [item_category, [item_specifics]]
-                    self.MainFrame.currentItemSpecificsDict = self.currentItemSpecificsDict
-                    results.Destroy()
-                self.infoLogger('. Item Specifics:'+str(self.currentItemSpecificsDict))
+        
         self.MainFrame.listingSku = '-'.join([str(sku), str(palletNumber), str(beginShelfNumber), str(initials)])
         self.infoLogger("Starting BuildAuction")
         Save(self.MainFrame)
-        buildAuction = BuildAuction(self.MainFrame.currentItemInfo, self.MainFrame.listingSku, self.currentItemSpecificsDict, self.MainFrame.ebayAuctionHeaders, self.MainFrame.listingPreferencesResults, self.MainFrame)
+        buildAuction = BuildAuction(self.MainFrame.currentItemInfo, self.MainFrame.listingSku, self.MainFrame.ebayAuctionHeaders, self.MainFrame.listingPreferencesResults, self.MainFrame)
         self.infoLogger("Trying to returnHtmlStringForListing")
         self.MainFrame.ebayListingHtml = buildAuction.returnHtmlStringForListing()
         self.infoLogger("Trying to generateEbayListingCsvLine")
@@ -740,6 +673,7 @@ class MainFrameEventHandler(object):
         self.MainFrame.imageCountLbl.SetLabel('Images Selected: '+str(len(self.MainFrame.currentItemInfo['itemSelectedImages'])))
         self.MainFrame.currentSkuText.SetValue("")
         self.MainFrame.ebayCategoryIdText.SetValue("")
+        self.MainFrame.upcNumberText.SetValue("")
         self.MainFrame.statusbar.SetStatusText('Ready.                                   Last Uploaded:'+str(self.MainFrame.prevListingSku))
         self.MainFrame.currentSkuText.SetFocus()
         try:

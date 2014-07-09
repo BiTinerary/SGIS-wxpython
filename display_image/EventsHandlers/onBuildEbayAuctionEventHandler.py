@@ -41,62 +41,10 @@
         MainFrame.currentItemInfo['image_sources'].update(sources)
         print(sources)
 
-        # with ebay archive open return item specifics for jnumber
-        # returns item_category, item_specifics from sky_manifest.returnItemSpecifics()
-        #
-        MainFrame.itemSpecifics = MainFrame.itemSpecificsFetcher.returnItemSpecifics(MainFrame.scanNumberText.GetValue())
-        print('# MainFrame.itemSpecifics onBuildEbayAuction(): ' +str(MainFrame.itemSpecifics))
         MainFrame.ebayCategoryIdLbl.Show()
         MainFrame.ebayCategoryIdText.Show()
         MainFrame.mainPanel.Fit()
         MainFrame.mainPanel.Layout()
-        # if item is not in ebay archive itemSpecifics 'ValueError' will be in item
-        try:
-            int_ebay_category = int(MainFrame.ebayCategoryIdText.GetValue())
-        except:
-            pass
-        if 'ValueError' in MainFrame.itemSpecifics:
-            # ebayCategoryIdText is empty notify user and set MainFrame.itemSpecifics to '#REQUIRED'
-            # build auction pressed and ebay category is empty
-            if len(MainFrame.ebayCategoryIdText.GetValue()) is 0:
-                tmp_dialog = wx.MessageDialog(MainFrame, 'Item not seen before.\n\nUnable to determine category number, or item_specifics', 'ValueError', style=wx.OK)
-                results = tmp_dialog.ShowModal()
-                tmp_dialog.Destroy()
-                MainFrame.itemSpecifics = '#REQUIRED'
-                MainFrame.ebayCategoryIdText.SetValue(MainFrame.itemSpecifics)
-                return
-            # build auction was pressed but ebay category was not filled in
-            elif '#REQUIRED' in MainFrame.ebayCategoryIdText.GetValue():
-                tmp_dialog = wx.MessageDialog(MainFrame, 'Please fill in currentEbayCategoryId', 'ValueError', style=wx.OK)
-                results = tmp_dialog.ShowModal()
-                tmp_dialog.Destroy()
-                return
-            # ValueError, but category number has been entered
-            elif isinstance(int_ebay_category, int):
-                tmp_dialog = wx.MessageDialog(MainFrame, 'Item not seen before.\n\nUnable to determine category number, or item_specifics. Building without specifics.', 'ValueError', style=wx.OK)
-                results = tmp_dialog.ShowModal()
-                tmp_dialog.Destroy()
-                results = ['']
-                self.currentItemSpecificsDict = results # [item_category, [item_specifics]] sky_manifest.returnItemSpecifcs()
-                MainFrame.currentItemSpecificsDict = self.currentItemSpecificsDict
-            else:
-                print('item specifics issue')
-                tmp_dialog = wx.MessageDialog(MainFrame, 'Item not seen before.\n\nUnable to determine category number, or item_specifics', 'ValueError', style=wx.OK)
-                results = tmp_dialog.ShowModal()
-                tmp_dialog.Destroy()
-                import pdb; pdb.set_trace()
-                return
-        # if item in archive retrieve it and get title
-        if 'ValueError' not in MainFrame.itemSpecifics:
-            # ebay category is a number and is filled in.
-            if isinstance(int_ebay_category, int):
-                results = ItemSpecificsDialog(None, -1,title='Please Fill In The Item Specifics')
-                if results.ShowModal() == wx.ID_OK:
-                    self.currentItemSpecificsDict = results.currentItemSpecificsDict # [item_category, [item_specifics]]
-                    MainFrame.currentItemSpecificsDict = self.currentItemSpecificsDict
-                    results.Destroy()
-                print('. Item Specifics:'+str(self.currentItemSpecificsDict))
-
 
         MainFrame.listingSku = '-'.join([str(sku), str(palletNumber), str(beginShelfNumber), str(initials)])
         buildAuction = BuildAuction(MainFrame.currentItemInfo, MainFrame.listingSku, self.currentItemSpecificsDict, MainFrame.ebayAuctionHeaders, MainFrame.listingPreferencesResults)

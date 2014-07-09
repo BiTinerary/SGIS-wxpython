@@ -131,85 +131,6 @@ def returnErrors():
     return header, failed_item_specifics, successful_items, unhandled_errors
 
 
-def appendToEbayItemSpecificsArchive():
-    '''
-    appends to ebay item specifics archive
-    also writes a success list
-    '''
-    refNumber = returnRefNumber()
-    print('refNumber: '+str(refNumber))
-    pair = returnResponseRequestPair(refNumber)
-    print('pair: '+str(pair))
-    if len(pair) < 2:
-        print('Not all files downloaded.')
-        exit()
-    if len(pair) > 2:
-        print('Mutiple copies downloaded. Or files are open.')
-        exit()
-    for fp in pair:
-        if '~lock' in fp:
-            print('CLOSE THE FILE.')
-            exit()
-        if 'Request' in fp:
-            request_lines = readFile(fp)
-        if 'Response' in fp:
-            response_lines = readFile(fp)
-    print('Request Lines Len: '+str(len(request_lines)))
-    print('Response Lines Len: '+str(len(response_lines)))
-    pair_dict = {'request_lines':request_lines, 'response_lines':response_lines}
-    combined_pair = combinePair(pair_dict)
-    lists = returnErrors()
-    header = lists[0]
-    failed_item_specifics = lists[1]
-    successful_items = lists[2]
-    unhandled_errors = lists[3]
-
-    if len(failed_item_specifics) is not 0:
-        print('Failed Item Specifics')
-        print(len(failed_item_specifics))
-        fn = 'Reverify_'+str(refNumber)+'.csv'
-        print('Creating: '+fn)
-        with open(fn, 'wb') as f:
-            writer = csv.writer(f)
-            for item in failed_item_specifics:
-                writer.writerow(item)
-        print('Appending failed_item_specifics to unique_category_4number_sku.csv')
-        with open('dependencies/unique_category_4numbeer_sku.csv', 'a+') as f:
-            for item in failed_item_specifics:
-                for cell_count in xrange(0,len(item)):
-                    if 'missing required item specific' in item[cell_count]:
-                        item[cell_count] = item[cell_count].replace('\"','#quote#').replace(',','#comma#')
-                f.write('\n'+','.join(item))
-    else:
-        print('Failed item specifics is zero length.')
-    if len(unhandled_errors) is not 0:
-        fn = 'Unhandled_Errors_'+str(refNumber)+'.csv'
-        print('Creating: '+fn)
-        with open(fn,'wb') as f:
-            writer = csv.writer(f)
-            for item in unhandled_errors:
-                writer.writerow(item)
-    else:
-       print('unhandled_errors is zero length.')
-
-    if len(successful_items) is not 0:
-        fn = 'Ready_To_List_' + str(refNumber) + '.csv'
-        print('Creating: '+fn)
-        if len(successful_items) is not 0:
-            with open(fn, 'wb') as f:
-                writer = csv.writer(f)
-                for item in successful_items:
-                    index = header.index('*Action(SiteID=US|Country=US|Currency=USD|Version=745)')
-                    item = item[index:]
-                    # quotes? uh necessary?
-                    #for cell_count in xrange(0,len(item)):
-                    #    if '<html>' in item[cell_count]:
-                    #        item[cell_count] = item[cell_count]
-                    writer.writerow(item)
-    else:
-        print('successful_items is zero length.')
-
-
 def returnJnumberFromListing(fullSku):
 
     jnumber_url = 'http://192.168.0.170/'+fullSku+'/jnumber.txt'
@@ -232,7 +153,3 @@ def returnJnumberFromListing(fullSku):
         print(e)
         print(traceback.format_exc())
     return data
-
-
-
-appendToEbayItemSpecificsArchive()

@@ -7,12 +7,11 @@ from PIL import Image
 
 class BuildAuction(object):
 
-    def __init__(self, currentItemInfo, listingSku, currentItemSpecificsDict, ebayAuctionHeaders, listingPreferences, MainFrame):
+    def __init__(self, currentItemInfo, listingSku, ebayAuctionHeaders, listingPreferences, MainFrame):
         super(BuildAuction, self).__init__()
         self.currentItemInfo = currentItemInfo
         self.listingSku = listingSku
         self.MainFrame = MainFrame
-        self.currentItemSpecificsDict = currentItemSpecificsDict
         self.ebayAuctionHeaders = ebayAuctionHeaders
         self.listingPreferences = listingPreferences
         self.itemModifiedListingPreferencesDict = {}
@@ -96,6 +95,7 @@ class BuildAuction(object):
                 self.infoLogger('Trying image resize')
                 im = Image.open(image)
                 if im.size[0] > 800:
+                    self.infoLogger('Image size > 800')
                     width = str(int(float(im.size[0]) * .4))
                     height = str(int(float(im.size[1]) * .4))
                 else:
@@ -113,8 +113,10 @@ class BuildAuction(object):
                     self.infoLogger('Adjusting image height/width ' + str(height) + ' ' + str(width))
                     #NEAREST for upsizing, antialias for downsizing
                     resized_image = im.resize((width, height), Image.NEAREST)
-                    resized_image.save(filename, format='JPEG')
-                    self.infoLogger('filepath  ' + str(filename))
+                    resized_image.save(image, format='JPEG')
+                    self.infoLogger('filepath  ' + str(image))
+                else:
+                    self.infoLogger('Both sides greater than 500(w,h): '+str(str(im.size[0])+','+str(im.size[1])))
                 # Create the img source tag here
                 images_tags += "<a href=\""+self.final_destination+"\" target=\"_blank\"><img src=\""+self.final_destination+"\" height=\"" + str(height) + "\" width=\"" + str(width) + "\"  ></a></br>"
             except Exception, e:
@@ -133,7 +135,7 @@ class BuildAuction(object):
         except Exception, e:
             description_tags = '<div align=\"left\"<p>'+self.currentItemInfo['description'].replace('"','').replace('\t','').replace(',','').replace('\r','').replace('\n','')+'</p></div>'
         try:
-            self.infoLogger('inside trying auction includes attempt list whatever pizza bab')
+            self.infoLogger('trying auction_includes')
             auction_includes_tags = '<div align=\"left\"><p><b><u>Auction Includes:</b></u><br><br><ul> '
             auction_includes_list = self.MainFrame.currentItemInfo['auction_includes'].split('|')
             self.infoLogger('auction_includes: ' + str(auction_includes_list))
@@ -233,7 +235,7 @@ class BuildAuction(object):
             *Duration = (3,5,7,10,30)
             *StartPrice = (.99, int*msrp)
             ShippingService-1:Option = (FedExHomeDelivery, USPS?)
-            C:XXXXXX = for item_specific in currentItemSpecifics:
+            
             '''
         #-------------------------------------------------------
         # self.listingDict  returns modified dictionary
@@ -311,16 +313,6 @@ class BuildAuction(object):
         for key in defaults.keys():
             index = self.returnEbayAuctionHeaderColumnIndex(key)
             line[index] = defaults[key]
-        #-------------------------------------------------------
-        # Fill item specs
-        # [ item_category, ['item_specs', 'item_specs']]
-        #-------------------------------------------------------
-        for key in self.currentItemSpecificsDict:
-            if key is '':
-                continue
-            else:
-                index = self.returnEbayAuctionHeaderColumnIndex(key)
-                line[index] = self.currentItemSpecificsDict[key]
 
         fp = os.path.join(self.currentItemInfo['jNumberFolderPath'],self.listingSku+'.csv')
         self.line = line
@@ -437,7 +429,7 @@ def unit_test():
                         '*ConditionID':'1000'
                         }
     listingSku = '1000-load-H11-JM'
-    currentItemSpecificsDict = {'C:Brand':'Brand Here','C:Style':'Regular'}
+
     import sky_manifest
     from ListingPreferencesDialog import ListingPreferencesDialog
     from ListingPreferencesDialog import CheckListingPreferences as CheckListingPreferences
@@ -446,7 +438,7 @@ def unit_test():
     listingPreferences = listingPreferences.check()
     self.infoLogger(listingPreferences)
     ebayAuctionHeaders = sky_manifest.ManifestReader(os.path.join('dependencies','ebay_auction_headers.csv')).returnTitleHeaders()
-    results = BuildAuction(currentItemInfo, listingSku, currentItemSpecificsDict, ebayAuctionHeaders, listingPreferences)
+    results = BuildAuction(currentItemInfo, listingSku, ebayAuctionHeaders, listingPreferences)
     line_list_fp = results.generateEbayListingCsvLine()
     results.processListingPreferences()
     self.infoLogger(line_list_fp)

@@ -119,52 +119,52 @@ class ManifestReader(object):
                 pass
             row_index += 1
 
-    def returnItemSpecifics(self, jnumber):
-        '''
-        Given the jnumber find the item specifics in self.MainFrame.lookUpTable
-        If unable to find jnumber
-        return 'ValueError:'+str(e)
-        else return [item_category, [item_specifics]]
-        '''
-        import csv
-        import StringIO
+    # def returnItemSpecifics(self, jnumber):
+        # '''
+        # Given the jnumber find the item specifics in self.MainFrame.lookUpTable
+        # If unable to find jnumber
+        # return 'ValueError:'+str(e)
+        # else return [item_category, [item_specifics]]
+        # '''
+        # import csv
+        # import StringIO
 
-        headers = self.returnTitleHeaders()
-        StatusIndex = headers.index('Status')
+        # headers = self.returnTitleHeaders()
+        # StatusIndex = headers.index('Status')
 
-        ErrorMessageIndex = headers.index('ErrorMessage')
-        EbayCategoryIndex = headers.index('*Category')
-        # 4number/jnumber
-        CustomLabelIndex = headers.index('CustomLabel')
-        CustomLabelColumn = self.returnColumn(CustomLabelIndex)
-        try:
-            EbayCategoryRowNumber = CustomLabelColumn.index(jnumber)
-        # will return to caller if a column label is missing
-        except ValueError, e:
-            self.debugLogger("Missing Column:",e)
-            return str('ValueError:'+str(e))
+        # ErrorMessageIndex = headers.index('ErrorMessage')
+        # EbayCategoryIndex = headers.index('*Category')
+        # # 4number/jnumber
+        # CustomLabelIndex = headers.index('CustomLabel')
+        # CustomLabelColumn = self.returnColumn(CustomLabelIndex)
+        # try:
+            # EbayCategoryRowNumber = CustomLabelColumn.index(jnumber)
+        # # will return to caller if a column label is missing
+        # except ValueError, e:
+            # self.debugLogger("Missing Column:",e)
+            # return str('ValueError:'+str(e))
 
-        self.tmp = csv.reader(StringIO.StringIO(self.returnRow(EbayCategoryRowNumber)))
-        for line in self.tmp:
-            item_row = line
-        if 'Failure' not in item_row[StatusIndex]:
-            return 'ValueError: Item may not have item specifics or has not been listed before.'
-        else:
+        # self.tmp = csv.reader(StringIO.StringIO(self.returnRow(EbayCategoryRowNumber)))
+        # for line in self.tmp:
+            # item_row = line
+        # if 'Failure' not in item_row[StatusIndex]:
+            # return 'ValueError: Item may not have item specifics or has not been listed before.'
+        # else:
 
-            try:
-                # Split the ErrorMessage column in the unique_category_4number_sku.csv and return category number on jnumber
-                # or return False when not found
-                item_category = item_row[EbayCategoryIndex]
-                # unable to figure out commas in csv :( replacing commas with '#comma#' and splitting
-                # replacing all quotes with #quote#
-                item_specifics = item_row[ErrorMessageIndex].split('Please provide the required item specifics.|')[-1].split('|')[0].split('#comma# ')
-            except Exception, e:
-                self.infoLogger(traceback.format_exc())
-            except ValueError, e:
-                self.infoLogger(traceback.format_exc())
-                print e
-                return 'Item may not have item specifics or has not been listed before.'
-        return item_category, item_specifics
+            # try:
+                # # Split the ErrorMessage column in the unique_category_4number_sku.csv and return category number on jnumber
+                # # or return False when not found
+                # item_category = item_row[EbayCategoryIndex]
+                # # unable to figure out commas in csv :( replacing commas with '#comma#' and splitting
+                # # replacing all quotes with #quote#
+                # item_specifics = item_row[ErrorMessageIndex].split('Please provide the required item specifics.|')[-1].split('|')[0].split('#comma# ')
+            # except Exception, e:
+                # self.infoLogger(traceback.format_exc())
+            # except ValueError, e:
+                # self.infoLogger(traceback.format_exc())
+                # print e
+                # return 'Item may not have item specifics or has not been listed before.'
+        # return item_category, item_specifics
 
 
     def checkRetailerAndJnumber(self, scanNumber, retailerCodeHeader):
@@ -385,7 +385,6 @@ class ManifestWriter(object):
         '''
         Creates a copy of a file and writes to a cell
         '''
-        import pdb;pdb.set_trace()
         line_list = self.orig.replace('\r','').split('\n')
         self.infoLogger('inside: ')
         self.infoLogger(' '.join(['sku: ',str(sku), 'header_name: ', str(header_name), 'cell_input: ', str(cell_input)]))

@@ -49,7 +49,6 @@ class MainFrame(wx.Frame):
         self.currentImgPath = self.defaultImgPath
         self.archivedDataFolderPath = os.path.join(self.defaults['displayImageFolder'], self.defaults['archivedData'])
         self.uniqueCategoryArchive = os.path.join(self.archivedDataFolderPath, self.defaults['lookUpTable'])
-        self.itemSpecificsFetcher = sky_manifest.ManifestReader(self.uniqueCategoryArchive, self)
         self.ebayHeadersFile = os.path.join(self.archivedDataFolderPath, self.defaults['ebayHeaderFile'])
         self.ebayAuctionHeaders = sky_manifest.ManifestReader(self.ebayHeadersFile, self).returnTitleHeaders()
         self.scanNumberTextValue = None

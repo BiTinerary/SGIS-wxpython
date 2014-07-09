@@ -80,7 +80,7 @@ serverLocation: '192.168.0.170'
 port: 22
 username: 'root'
 ssh_pass: ~
-fileDestination: '/var/www'
+fileDestination: '/var/www/html'
 
 extIP: '50.244.213.181'
 
