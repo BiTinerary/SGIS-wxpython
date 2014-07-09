@@ -854,7 +854,10 @@ class MainFrameEventHandler(object):
         # return True
         # else return False
         #-------------------------------------------------------
-        json_exists = check.loadMainFrameJson() # updates currentItemInfo if True
+        if retailer_code is 1: # shophq
+            json_exists = False # do not pull from saved json
+        else:
+            json_exists = check.loadMainFrameJson() # updates currentItemInfo if True
         self.infoLogger('Post json_exists: '+str(self.MainFrame.currentItemInfo) )
         print('json_exists:',json_exists)
         if json_exists is True:
