@@ -199,8 +199,11 @@ class BuildAuction(object):
         '''
         #make sure the spreadsheet makes sense, these could change column names or something
         #i am a scrub
-        
-        introduction = 'Works like new. '
+        if '2' not in self.MainFrame.currentItemInfo['condition']:
+            self.infoLogger('category2 in build auction')
+            introduction = 'Being sold as-is for parts or repair. '
+        elif '2' in self.MainFrame.currentItemInfo['condition']:
+            introduction = 'Works like new. '
         try:
             introduction += self.MainFrame.currentItemInfo['condition_notes'].lower().capitalize() 
             introduction += '. '

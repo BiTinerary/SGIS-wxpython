@@ -955,7 +955,7 @@ class MainFrameEventHandler(object):
         self.infoLogger("Inside: ")
         self.infoLogger('\n# PhotoCtrlEventHandler.scanNumberText() #')
         self.MainFrame.palletNumber = self.MainFrame.palletNumberText.GetValue()
-        self.MainFrame.scanNumberTextValue = self.MainFrame.scanNumberText.GetValue().upper()
+        self.MainFrame.scanNumberTextValue = self.MainFrame.scanNumberText.GetValue().upper().split('-')[0]
         if len(self.MainFrame.palletNumber) is 0:
             tmp_dialog = wx.MessageDialog(self.MainFrame, 'palletNumber is empty.\n\nFill it in.', 'UserError', style=wx.OK)
             results = tmp_dialog.ShowModal()
@@ -964,13 +964,13 @@ class MainFrameEventHandler(object):
         #---------------------------------------------
         # Check if the wrong retailerRadio
         #---------------------------------------------
-        if (( '4' not in self.MainFrame.scanNumberTextValue[0]) or ( 'J' not in self.MainFrame.scanNumberTextValue[0])) is False :
+        if (( '4' in self.MainFrame.scanNumberTextValue[0]) or ( 'J' in self.MainFrame.scanNumberTextValue[0]) or ( 'V' in self.MainFrame.scanNumberTextValue[0])) is False:
             self.MainFrame.statusbar.SetStatusText('I dont understand:' + self.MainFrame.currentItemInfo['jNumber'] + ' Maybe it should start with a J or a 4?')
             tmp_dialog = wx.MessageDialog(self.MainFrame, 'ERROR: Please enter a Jnumber or a 4number.\n\nEntered:' + str(self.MainFrame.jNumber)+'\n\nexamples. J123456 or 4NK420000001', 'UserError', wx.OK)
             results = tmp_dialog.ShowModal()
             tmp_dialog.Destroy()
             return
-        if 'J' in self.MainFrame.scanNumberTextValue[0]:
+        if ('J' in self.MainFrame.scanNumberTextValue[0]) or ('V' in self.MainFrame.scanNumberTextValue[0]):
             self.MainFrame.statusbar.SetStatusText('I see a Jnumber')
             if self.MainFrame.fingerRadio.GetValue() is True:
                     tmp_dialog = wx.MessageDialog(self.MainFrame, 'ERROR: Please select ShopHQ Radio button for: ' + str(self.MainFrame.scanNumberTextValue) + '\n\nCurrent selection: FingerHut', 'UserError', wx.OK)
@@ -984,6 +984,8 @@ class MainFrameEventHandler(object):
                     results = tmp_dialog.ShowModal()
                     tmp_dialog.Destroy()
                     return
+
+
         #---------------------------------------------
         # Check if action selected
         #---------------------------------------------

@@ -1,8 +1,8 @@
 #---------------------------------------
 # Perhaps I should pull all the auction settings to a file like this?
 #---------------------------------------
-listerInitials: 'JM'
-defaultShelf: 'XXX'
+listerInitials: 'MD'
+defaultShelf: 'Z23'
 
 
 #---------------------------------------

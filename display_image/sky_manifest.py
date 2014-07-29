@@ -174,7 +174,7 @@ class ManifestReader(object):
         retailer_code = retailerCodeHeader.split(':')[-1]
         print(retailer_code)
         print(scanNumber)
-        if 'J' in scanNumber[0]:
+        if ('J' in scanNumber[0]) or ('V' in scanNumber[0]):
             if '1' in retailer_code:
                 return [True, retailer_code]
         if '4' in scanNumber[0]:
