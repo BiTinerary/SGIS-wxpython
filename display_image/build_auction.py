@@ -199,10 +199,10 @@ class BuildAuction(object):
         '''
         #make sure the spreadsheet makes sense, these could change column names or something
         #i am a scrub
-        if '2' not in self.MainFrame.currentItemInfo['condition']:
+        if '3000' not in self.MainFrame.currentItemInfo['*ConditionID']:
             self.infoLogger('category2 in build auction')
             introduction = 'Being sold as-is for parts or repair. '
-        elif '2' in self.MainFrame.currentItemInfo['condition']:
+        elif '3000' in self.MainFrame.currentItemInfo['*ConditionID']:
             introduction = 'Works like new. '
         try:
             introduction += self.MainFrame.currentItemInfo['condition_notes'].lower().capitalize() 
@@ -248,7 +248,17 @@ class BuildAuction(object):
         line = []
         for header in self.ebayAuctionHeaders:
             line.append('')
-
+        
+        # hack for msrp watches
+        reservePrice = ''
+        if '1' in self.MainFrame.currentItemInfo['retailer_code']:
+            msrp = self.currentItemInfo['msrp']
+            if '$' in msrp:
+                msrp = msrp.split('$')[-1]
+            if float(msrp) >= 300:
+                reservePrice = str(int(float(msrp) * .252))
+                
+        
 
         defaults = {'*Action(SiteID=US|Country=US|Currency=USD|Version=745)':'VerifyAdd',
                     'ConditionDescription':self.returnConditionDescription(),
@@ -293,7 +303,7 @@ class BuildAuction(object):
                     'MinimumFeebackScore':'-1',
                     'ShiptoRegCountry':'1',
                     'BuyItNowPrice':'',
-                    'ReservePrice':'',
+                    'ReservePrice':reservePrice,
                     'ShippingService-1:Option':self.listingDict['ShippingService-1:Option'],
                     'ShippingService-1:Cost':self.listingDict['ShippingService-1:Cost'],
                     'ShippingService-1:Priority':'1',

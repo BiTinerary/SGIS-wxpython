@@ -247,6 +247,7 @@ class MainFrame(wx.Frame):
         self.currentAuctionIncludesText.Bind(wx.EVT_TEXT, self.eventsHandler.onCurrentAuctionIncludesText)
         self.currentConditionNotesLbl = wx.StaticText(self.mainPanel, label='Condition Notes')
         self.currentConditionNotesText = wx.TextCtrl(self.mainPanel, size=(120,40), style=wx.TE_MULTILINE)
+        self.currentConditionNotesText.Bind(wx.EVT_TEXT, self.eventsHandler.onCurrentConditionNotesText)
         self.currentDateListedLbl = wx.StaticText(self.mainPanel, label='Date Listed')
         self.currentDateListedText = wx.TextCtrl(self.mainPanel, size=(60,-1))
         self.currentDateListedText.Bind(wx.EVT_TEXT, self.eventsHandler.onDateListedText)

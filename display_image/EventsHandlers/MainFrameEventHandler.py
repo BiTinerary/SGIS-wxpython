@@ -179,7 +179,14 @@ class MainFrameEventHandler(object):
         
         return
         
-        
+    def onCurrentConditionNotesText(self, event):
+        '''
+        update condition notes
+        '''
+        self.infoLogger('Inside: ')
+        self.MainFrame.currentItemInfo['condition_notes'] = self.MainFrame.currentConditionNotesText.GetValue()
+        self.MainFrame.statusbar.SetStatusText('condition_notes updated: '+self.MainFrame.currentItemInfo['condition_notes'])
+        return
         
     def onCurrentConditionText(self, event):
         '''
