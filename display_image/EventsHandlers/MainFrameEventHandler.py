@@ -953,7 +953,24 @@ class MainFrameEventHandler(object):
             self.MainFrame.currentImgPath = self.MainFrame.currentImgPath
            
             return
-            
+    def onScanNumberTextKey(self, event):
+        self.infoLogger("Inside: ")
+        code = event.GetKeyCode()
+        if code == wx.WXK_UP:
+            self.MainFrame.historyIndex -= 1
+            self.infoLogger('up arrow pressed',self.MainFrame.historyIndex)
+            self.MainFrame.scanNumberText.SetValue(self.MainFrame.history[self.MainFrame.historyIndex])
+            return
+        elif code == wx.WXK_DOWN:
+            self.infoLogger('DOWN arrow pressed',self.MainFrame.historyIndex)
+            self.MainFrame.historyIndex += 1
+            self.MainFrame.scanNumberText.SetValue(self.MainFrame.history[self.MainFrame.historyIndex])
+            return
+        else:
+            # passes event so textctrl will be updated with text
+            event.Skip()
+        return
+        
     def onScanNumberText(self, event):
         '''
         onScanNumberText checks retailer jnumber type and updates self.MainFrame
@@ -963,6 +980,9 @@ class MainFrameEventHandler(object):
         self.infoLogger('\n# PhotoCtrlEventHandler.scanNumberText() #')
         self.MainFrame.palletNumber = self.MainFrame.palletNumberText.GetValue()
         self.MainFrame.scanNumberTextValue = self.MainFrame.scanNumberText.GetValue().upper().split('-')[0]
+        # history stored in list
+        self.MainFrame.history.append(self.MainFrame.scanNumberTextValue)
+        self.MainFrame.historyIndex = -1
         if len(self.MainFrame.palletNumber) is 0:
             tmp_dialog = wx.MessageDialog(self.MainFrame, 'palletNumber is empty.\n\nFill it in.', 'UserError', style=wx.OK)
             results = tmp_dialog.ShowModal()
