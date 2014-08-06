@@ -6,8 +6,8 @@ import sys
 from PIL import Image 
 
 class BuildAuction(object):
-
     def __init__(self, currentItemInfo, listingSku, ebayAuctionHeaders, listingPreferences, MainFrame):
+
         super(BuildAuction, self).__init__()
         self.currentItemInfo = currentItemInfo
         self.listingSku = listingSku
@@ -27,6 +27,7 @@ class BuildAuction(object):
         this_function_name = sys._getframe().f_back.f_code.co_name
         self.logger.log_debug(this_function_name,str(msg)+" "+this_function_name,debug_info)
         return
+            
     def returnHtmlStringForListing(self):
         '''
         Returns the listing html for an item
@@ -40,9 +41,25 @@ class BuildAuction(object):
         '''
         self.infoLogger("Inside: ")
         self.infoLogger("self.itemCurrentInfo: "+str(self.currentItemInfo))
-        
-
-        header_tags = "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\" /></head><body style=\"font-family: Arial, Helvetica, sans-serif;\"><div align=\"center\"><img src=\"http://jamesmunsch.com/skygroup_test/p1p_1_88776_853759.jpg\"></img></div><div align=\"center\"><b>Point One Premiums is Committed to Providing a Positive Experiencefor our Customers<br>______________________________________________________________________<br></b><b></b></div><div align=\"center\"><b><br></b></div><div align=\"center\"><b>Business Hours: M-F 9am - 5pm CST</b></div><p align=\"center\">(Shipments &amp; Questions processed during Business Hours Only. Thanks.)</p><div align=\"center\"><b>____________________________________________________________________________</b></div>"
+        #------------------------------
+        # store_key used to choose which html headers/footers should be used
+        # set in listingPreferencesDialog
+        # 'Stores':{'P1P':False,'MM':False,'BHD':False}
+        #----------------------------
+        if 'True' in str(self.listingPreferences['Store']):
+            for key in self.listingPreferences['Store']:
+                if 'True' in str(self.listingPreferences['Store'][key]):
+                    store_key = str(key)
+        else:
+            store_key = 'P1P'
+        store_headers = {"P1P":"<html><head><meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\" /></head><body style=\"font-family: Arial, Helvetica, sans-serif;\"><div align=\"center\"><img src=\"http://jamesmunsch.com/skygroup_test/p1p_1_88776_853759.jpg\"></img></div><div align=\"center\"><b>Point One Premiums is Committed to Providing a Positive Experiencefor our Customers<br>______________________________________________________________________<br></b><b></b></div><div align=\"center\"><b><br></b></div><div align=\"center\"><b>Business Hours: M-F 9am - 5pm CST</b></div><p align=\"center\">(Shipments &amp; Questions processed during Business Hours Only. Thanks.)</p><div align=\"center\"><b>____________________________________________________________________________</b></div>",
+                             "BHD":"big hairy deals html goes here",
+                             "MM":"mad matts html goes here"}
+        header_tags = store_headers[store_key]
+        store_footers = {"P1P":"<div align=\"center\"><br>_________________________________________________________________________________<br></div><div align=\"left\"><b><u><br><br><br>SHIPPING :</u></b><ul><li>Items are shipped out Monday - Friday excluding Holidays.&nbsp; <br></li><li>Please expect up to 1 business day processing time for item to ship out.</li><li><b>Combined Shipping: </b>Please contact us before checkout for a revised invoice.</li><li>We DO NOT ship on the weekends.</li><li>We DO NOT ship outside of the US. and its territories</li></ul><b><u>CONTACT :</u></b>Point One Premiums welcomes you to contact us with any questions or concerns during our business hours.<br>(M-F 9am - 5pm CST) Any messages received outside of business hours will be processed the following business day.<br><br>Please use eBay's message system.<b><u><br></u></b><br><u><b>Return policy. </b></u><br><br>We offer a 14 day return policy. &nbsp;If you have any problems with the product please contact us right away to work out an exchange or refund.<br><br><b><u>Warranty Policy :</u></b><i><b><u><br><br></u></b></i><i style=\"font-weight: bold;\"></i>While some of our items are in New or Manufacturer Refurbished condition, <u>None</u> are implied to include a warranty. &nbsp;Some include a Manufacturer Warranty Card and it is between you and Manufacturer if that warranty is still valid. &nbsp;PointOnePremiums offers no warranties or&nbsp;guarantees&nbsp;of a warranty.<br><br><u><b>CANCELING TRANSACTIONS :</b></u><br><br>Due to a large number of bidders not following through on auctions we no longer cancel transactions.<br>All cancelled transactions charged a 15% restocking fee. <br><br><u><b>Unpaid Bidder Policy :</b></u><br><br>A case is opened for all auctions with unpaid bidders.<br>If you do not see something in the photos or detailed in the description as being included, do not assume it is included.&nbsp; <br><u><b><br>AS-IS and FOR PARTS/REPAIR :</b></u><br><br>Items listed AS-IS or FOR PARTS/REPAIR are non returnable and are not covered by our return policy.<br>We encourage buyers to contact us with any issues before opening a case with eBay.&nbsp; We will be happy to work with you to come to a satisfactory resolution.<br></div>    <div><br>    </div>    <div><br>    </div><br><div align=\"center\">___________________________________________________________________________<br></div></body></html>",
+                                "MM":"html foots here",
+                                "BHD":"html foots here"}
+        footer_tags = store_footers[store_key]
         title_tags = "<center><h1>"+self.currentItemInfo['title']+"</h1></center>"
         images_tags = ""
         images_tags += "<div align=\"center\"><br>"
@@ -137,6 +154,7 @@ class BuildAuction(object):
         try:
             self.infoLogger('trying auction_includes')
             auction_includes_tags = '<div align=\"left\"><p><b><u>Auction Includes:</b></u><br><br><ul> '
+            # items in auction_includes column must be seperated by |
             auction_includes_list = self.MainFrame.currentItemInfo['auction_includes'].split('|')
             self.infoLogger('auction_includes: ' + str(auction_includes_list))
             for item in auction_includes_list:
@@ -148,7 +166,7 @@ class BuildAuction(object):
             print(e)
             pass
         listing_sku_tags = '<p><span style="color:#a9a9a9;">SKU: '+ self.listingSku + '</span></p>'
-        footer_tags = "<div align=\"center\"><br>_________________________________________________________________________________<br></div><div align=\"left\"><b><u><br><br><br>SHIPPING :</u></b><ul><li>Items are shipped out Monday - Friday excluding Holidays.&nbsp; <br></li><li>Please expect up to 1 business day processing time for item to ship out.</li><li><b>Combined Shipping: </b>Please contact us before checkout for a revised invoice.</li><li>We DO NOT ship on the weekends.</li><li>We DO NOT ship outside of the US. and its territories</li></ul><b><u>CONTACT :</u></b>Point One Premiums welcomes you to contact us with any questions or concerns during our business hours.<br>(M-F 9am - 5pm CST) Any messages received outside of business hours will be processed the following business day.<br><br>Please use eBay's message system.<b><u><br></u></b><br><u><b>Return policy. </b></u><br><br>We offer a 14 day return policy. &nbsp;If you have any problems with the product please contact us right away to work out an exchange or refund.<br><br><b><u>Warranty Policy :</u></b><i><b><u><br><br></u></b></i><i style=\"font-weight: bold;\"></i>While some of our items are in New or Manufacturer Refurbished condition, <u>None</u> are implied to include a warranty. &nbsp;Some include a Manufacturer Warranty Card and it is between you and Manufacturer if that warranty is still valid. &nbsp;PointOnePremiums offers no warranties or&nbsp;guarantees&nbsp;of a warranty.<br><br><u><b>CANCELING TRANSACTIONS :</b></u><br><br>Due to a large number of bidders not following through on auctions we no longer cancel transactions.<br>All cancelled transactions charged a 15% restocking fee. <br><br><u><b>Unpaid Bidder Policy :</b></u><br><br>A case is opened for all auctions with unpaid bidders.<br>If you do not see something in the photos or detailed in the description as being included, do not assume it is included.&nbsp; <br><u><b><br>AS-IS and FOR PARTS/REPAIR :</b></u><br><br>Items listed AS-IS or FOR PARTS/REPAIR are non returnable and are not covered by our return policy.<br>We encourage buyers to contact us with any issues before opening a case with eBay.&nbsp; We will be happy to work with you to come to a satisfactory resolution.<br></div>    <div><br>    </div>    <div><br>    </div><br><div align=\"center\">___________________________________________________________________________<br></div></body></html>"
+                            
         html_for_listing = str(str(header_tags)+str(title_tags)+str(images_tags)+str(msrp_tags)+str(description_tags)+str(auction_includes_tags)+str(listing_sku_tags)+str(footer_tags))
         return html_for_listing
 
@@ -167,12 +185,12 @@ class BuildAuction(object):
         only relevant for broken watches
         returns second category for broken watches
         '''
-        if '2' not in self.MainFrame.currentItemInfo['condition']:
-            self.infoLogger('category2 in build auction')
-            return '165144'
-        else:
-            self.infoLogger('Category2 not seen, returning empty string')
+        if '0' in self.MainFrame.currentItemInfo['retailer_code']: # FH
             return ''
+        elif '1' in self.MainFrame.currentItemInfo['retailer_code']: #WATCHES
+            if '2' not in self.MainFrame.currentItemInfo['condition']:
+                self.infoLogger('category2 in build auction')
+                return '165144'
         
     def returnStoreCategory(self):
         '''
@@ -198,30 +216,40 @@ class BuildAuction(object):
         gather the description
         '''
         #make sure the spreadsheet makes sense, these could change column names or something
-        #i am a scrub
-        if '3000' not in self.MainFrame.currentItemInfo['*ConditionID']:
-            self.infoLogger('category2 in build auction')
-            introduction = 'Being sold as-is for parts or repair. '
-        elif '3000' in self.MainFrame.currentItemInfo['*ConditionID']:
-            introduction = 'Works like new. '
-        try:
-            introduction += self.MainFrame.currentItemInfo['condition_notes'].lower().capitalize() 
-            introduction += '. '
-        except Exception, e:
-            self.infoLogger(e)
-            pass
-        try:
-            #article matching issue 
-            if len(self.MainFrame.currentItemInfo['band_size']) != 0:
-                if '8' in str(self.MainFrame.currentItemInfo['band_size'])[0]:
-                    introduction += 'Watch fits an '
-                else:
-                    introduction += 'Watch fits a '
-                introduction += self.MainFrame.currentItemInfo['band_size'] 
-                introduction += ' inch wrist'
-        except Exception, e:
-            self.infoLogger(e)
-            pass
+        #
+        #  FH
+        #
+        if '0' in self.MainFrame.currentItemInfo['retailer_code']:  
+            introduction = ''
+        #
+        # Watches
+        #
+        elif '1' in self.MainFrame.currentItemInfo['retailer_code']: 
+        
+            if '3000' not in self.MainFrame.currentItemInfo['condition']:
+                self.infoLogger('category2 in build auction')
+                introduction = 'Being sold as-is for parts or repair. '
+            elif '3000' in self.MainFrame.currentItemInfo['condition']:
+                introduction = 'Works like new. '
+            # create rest of condition description or condition_notes
+            try:
+                introduction += self.MainFrame.currentItemInfo['condition_notes'].lower().capitalize() 
+                introduction += '. '
+            except Exception, e:
+                self.infoLogger(e)
+                pass
+            try:
+                #article matching issue 
+                if len(self.MainFrame.currentItemInfo['band_size']) != 0:
+                    if '8' in str(self.MainFrame.currentItemInfo['band_size'])[0]:
+                        introduction += 'Watch fits an '
+                    else:
+                        introduction += 'Watch fits a '
+                    introduction += self.MainFrame.currentItemInfo['band_size'] 
+                    introduction += ' inch wrist'
+            except Exception, e:
+                self.infoLogger(e)
+                pass
             
         return introduction
         
@@ -241,7 +269,8 @@ class BuildAuction(object):
             
             '''
         #-------------------------------------------------------
-        # self.listingDict  returns modified dictionary
+        # self.listingDict  is modified dictionary
+        #  self.processListingPreferences() returns modified dictionary
         # from currentItemInfo
         #-------------------------------------------------------
         self.listingDict = self.processListingPreferences()
@@ -249,14 +278,7 @@ class BuildAuction(object):
         for header in self.ebayAuctionHeaders:
             line.append('')
         
-        # hack for msrp watches
-        reservePrice = ''
-        if '1' in self.MainFrame.currentItemInfo['retailer_code']:
-            msrp = self.currentItemInfo['msrp']
-            if '$' in msrp:
-                msrp = msrp.split('$')[-1]
-            if float(msrp) >= 300:
-                reservePrice = str(int(float(msrp) * .252))
+
                 
         
 
@@ -303,7 +325,7 @@ class BuildAuction(object):
                     'MinimumFeebackScore':'-1',
                     'ShiptoRegCountry':'1',
                     'BuyItNowPrice':'',
-                    'ReservePrice':reservePrice,
+                    'ReservePrice':self.listingPreferences['ReservePrice']['percent of MSRP'],
                     'ShippingService-1:Option':self.listingDict['ShippingService-1:Option'],
                     'ShippingService-1:Cost':self.listingDict['ShippingService-1:Cost'],
                     'ShippingService-1:Priority':'1',
@@ -358,6 +380,14 @@ class BuildAuction(object):
         # strip $ character from msrp
         if '$' in msrp:
             msrp = msrp.split('$')[-1]
+
+        if '0' in self.MainFrame.currentItemInfo['retailer_code']:
+            pass
+        elif '1' in self.MainFrame.currentItemInfo['retailer_code']:
+            if float(msrp) >= 300:
+                self.listingPreferences['ReservePrice']['percent of MSRP'] = str(int(float(msrp) * float(self.listingPreferences['ReservePrice']['percent of MSRP'])))
+
+                
         self.itemModifiedListingPreferencesDict['msrp'] = msrp
         self.itemModifiedListingPreferencesDict['ShippingService-1:Option'] = ""
         self.itemModifiedListingPreferencesDict['ShippingService-1:Cost'] = ""
@@ -381,12 +411,16 @@ class BuildAuction(object):
         float_check_list = ['percent of MSRP', 'Amount']
         # import pdb;pdb.set_trace()
         for header_key in self.listingPreferences:
-            for setting_dict_key in self.listingPreferences[header_key]:
-                self.infoLogger(' : '.join(['header',header_key,'setting_dict_key',setting_dict_key,'s_value',str(self.listingPreferences[header_key][setting_dict_key])]))
-                if 'False' not in str(self.listingPreferences[header_key][setting_dict_key]): # tests for integers or True
-                    if setting_dict_key in float_check_list:
-                        setting_dict_key = self.listingPreferences[header_key][setting_dict_key]
-                    self.itemModifiedListingPreferencesDict[header_key] = setting_dict_key
+            try:
+                for setting_dict_key in self.listingPreferences[header_key]:
+                    self.infoLogger(' : '.join(['header',header_key,'setting_dict_key',setting_dict_key,'s_value',str(self.listingPreferences[header_key][setting_dict_key])]))
+                    if 'False' not in str(self.listingPreferences[header_key][setting_dict_key]): # tests for integers or True
+                        if setting_dict_key in float_check_list:
+                            setting_dict_key = self.listingPreferences[header_key][setting_dict_key]
+                        self.itemModifiedListingPreferencesDict[header_key] = setting_dict_key
+            except Exception, e:
+                import traceback
+                print('header_key:',header_key,'setting_dict_key',setting_dict_key,traceback.format_exc())
         self.infoLogger(str(self.itemModifiedListingPreferencesDict.keys()))
         #----------------------------------------------
         # update *StartPrice, ReservePrice, BuyItNowPrice
@@ -397,11 +431,11 @@ class BuildAuction(object):
             for modifier_key in self.listingPreferences[key]:
                 modifier_value = str(self.listingPreferences[key][modifier_key])
                 self.infoLogger('Checking floats: '+
-                ' '.join([key,str(self.listingPreferences[key]),
-                '\nself.itemModifiedListingPreferencesDict[key]: '+
-                str(self.itemModifiedListingPreferencesDict[key]),
-                '\nmodifer_key: ',str(modifier_key),
-                '\nmodifer_value: ',modifier_value]))
+                                    ' '.join([key,str(self.listingPreferences[key]),
+                                    '\nself.itemModifiedListingPreferencesDict[key]: '+
+                                    str(self.itemModifiedListingPreferencesDict[key]),
+                                    '\nmodifer_key: ',str(modifier_key),
+                                    '\nmodifer_value: ',modifier_value]))
                 
                 if 'False' not in modifier_value:
                     if '.99' in modifier_key: # if *StartPrice .99 has been selected
@@ -424,14 +458,15 @@ class BuildAuction(object):
         return self.itemModifiedListingPreferencesDict
 
 def unit_test():
-    import wx
+    import wx, os
+    from logs.logger_example import log_this
     app = wx.App(False)
     app.MainLoop()
     cwd = os.getcwd()
     l = [cwd,'display_image/jPages','QZ468','4QZ4680000010_VA_999']
     item_folder = os.path.join('display_image/jPages','QZ468')
     item_path = os.path.join(*l)
-    self.infoLogger(item_path)
+
     image_sources = {item_path:'True'}
     currentItemInfo = {'description':'This is a description',
                         'title':'Title Here',
@@ -444,8 +479,8 @@ def unit_test():
     listingSku = '1000-load-H11-JM'
 
     import sky_manifest
-    from ListingPreferencesDialog import ListingPreferencesDialog
-    from ListingPreferencesDialog import CheckListingPreferences as CheckListingPreferences
+    from Dialogs.ListingPreferencesDialog import ListingPreferencesDialog
+    from Dialogs.ListingPreferencesDialog import CheckListingPreferences as CheckListingPreferences
     results = ListingPreferencesDialog(None, -1,title='Listing Preferences')
     listingPreferences = CheckListingPreferences()
     listingPreferences = listingPreferences.check()
@@ -460,5 +495,7 @@ def unit_test():
         writer = csv.writer(f)
         writer.writerow(results.line)
 
-if __name__ == '__main__':
+if __name__ == '__main__' and __package__ is None:
+    from os import sys, path
+    sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
     unit_test()

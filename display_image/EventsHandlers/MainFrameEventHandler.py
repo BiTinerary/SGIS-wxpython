@@ -196,15 +196,19 @@ class MainFrameEventHandler(object):
         value = self.MainFrame.currentConditionText.GetValue()
         if '5' in value:
             self.MainFrame.currentItemInfo['*ConditionID'] = '1000'
-        if '4' in value:
+        elif '4' in value:
             self.MainFrame.currentItemInfo['*ConditionID'] = '1500'
-        if '3' in value:
+        elif '3' in value:
             self.MainFrame.currentItemInfo['*ConditionID'] = '1750'
-        if '2' in value:
+        elif '2' in value:
             self.MainFrame.currentItemInfo['*ConditionID'] = '3000'
-        if 'New' in value:
+        elif 'New' in value:
             self.MainFrame.currentItemInfo['*ConditionID'] = '1000'
-        self.infoLogger('Calling Save(self.MainFrame)')
+        # if condition is not filled in the spreadsheet, or conditionText is not filled
+        # an error will occur when trying to assign to a Non existent Variable.
+        elif len(value) is 0:
+            self.MainFrame.currentItemInfo['*ConditionID'] = None
+        #self.infoLogger('Calling Save(self.MainFrame)')
         # Save(self.MainFrame)
         return
     def onLookUpBySkuBtnShopHq(self):
