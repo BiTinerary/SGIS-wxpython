@@ -41,10 +41,7 @@ class ListingPreferencesDialog(wx.Dialog):
         # ebayHeaders.csv 
         # also the check_list.... further down the code
         #----------------------------------------------------
-        self.settings_dict = {'Store':{'P1P':False,
-                                                'MM':False,
-                                                'BHD':False},
-                            '*Format':{'Auction':False,
+        self.settings_dict = {'*Format':{'Auction':False,
                                         'FixedPrice':False},
                             '*Duration':{'3':False,
                                          '5':False,

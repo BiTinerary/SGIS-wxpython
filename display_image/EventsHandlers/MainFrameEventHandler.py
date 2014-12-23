@@ -192,23 +192,21 @@ class MainFrameEventHandler(object):
         '''
         Updates self.MainFrame.currentItemInfo['*ConditionID']
         '''
+        self.MainFrame.currentItemInfo['condition'] = self.MainFrame.currentConditionText.GetValue()
         self.infoLogger("Inside: ")
         value = self.MainFrame.currentConditionText.GetValue()
         if '5' in value:
             self.MainFrame.currentItemInfo['*ConditionID'] = '1000'
-        elif '4' in value:
+        if '4' in value:
             self.MainFrame.currentItemInfo['*ConditionID'] = '1500'
-        elif '3' in value:
-            self.MainFrame.currentItemInfo['*ConditionID'] = '1750'
-        elif '2' in value:
+        if '3' in value:
             self.MainFrame.currentItemInfo['*ConditionID'] = '3000'
-        elif 'New' in value:
+        if '2' in value:
+            self.MainFrame.currentItemInfo['*ConditionID'] = '3000'
+        if 'New' in value:
             self.MainFrame.currentItemInfo['*ConditionID'] = '1000'
-        # if condition is not filled in the spreadsheet, or conditionText is not filled
-        # an error will occur when trying to assign to a Non existent Variable.
-        elif len(value) is 0:
-            self.MainFrame.currentItemInfo['*ConditionID'] = None
-        #self.infoLogger('Calling Save(self.MainFrame)')
+        self.infoLogger('Calling Save(self.MainFrame)')
+        self.MainFrame.statusbar.SetStatusText('condition_text updated: '+self.MainFrame.currentItemInfo['condition'])
         # Save(self.MainFrame)
         return
     def onLookUpBySkuBtnShopHq(self):
@@ -957,24 +955,7 @@ class MainFrameEventHandler(object):
             self.MainFrame.currentImgPath = self.MainFrame.currentImgPath
            
             return
-    def onScanNumberTextKey(self, event):
-        self.infoLogger("Inside: ")
-        code = event.GetKeyCode()
-        if code == wx.WXK_UP:
-            self.MainFrame.historyIndex -= 1
-            self.infoLogger('up arrow pressed',self.MainFrame.historyIndex)
-            self.MainFrame.scanNumberText.SetValue(self.MainFrame.history[self.MainFrame.historyIndex])
-            return
-        elif code == wx.WXK_DOWN:
-            self.infoLogger('DOWN arrow pressed',self.MainFrame.historyIndex)
-            self.MainFrame.historyIndex += 1
-            self.MainFrame.scanNumberText.SetValue(self.MainFrame.history[self.MainFrame.historyIndex])
-            return
-        else:
-            # passes event so textctrl will be updated with text
-            event.Skip()
-        return
-        
+            
     def onScanNumberText(self, event):
         '''
         onScanNumberText checks retailer jnumber type and updates self.MainFrame
@@ -984,9 +965,6 @@ class MainFrameEventHandler(object):
         self.infoLogger('\n# PhotoCtrlEventHandler.scanNumberText() #')
         self.MainFrame.palletNumber = self.MainFrame.palletNumberText.GetValue()
         self.MainFrame.scanNumberTextValue = self.MainFrame.scanNumberText.GetValue().upper().split('-')[0]
-        # history stored in list
-        self.MainFrame.history.append(self.MainFrame.scanNumberTextValue)
-        self.MainFrame.historyIndex = -1
         if len(self.MainFrame.palletNumber) is 0:
             tmp_dialog = wx.MessageDialog(self.MainFrame, 'palletNumber is empty.\n\nFill it in.', 'UserError', style=wx.OK)
             results = tmp_dialog.ShowModal()

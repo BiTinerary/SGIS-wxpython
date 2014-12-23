@@ -222,7 +222,7 @@ class Check():
                     self.MainFrame.jNumber = uts_number
                     self.debugLogger('downloadImages: uts_number: ',uts_number)
                     self.debugLogger("img_name: ",img_name)
-                    url_ = img_name + '?'
+                    url_ = img_name + '?scl=1'
                     self.debugLogger('downloadImages(): self.MainFrame.itemFolder: ', self.MainFrame.jNumberFolderPath)
                     mkdir(self.MainFrame.jNumberFolderPath)
                     imgName = img_name+'.JPEG'

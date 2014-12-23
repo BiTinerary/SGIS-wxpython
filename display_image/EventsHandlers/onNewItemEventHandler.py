@@ -4,7 +4,7 @@
         '''
         #import pdb; pdb.set_trace()
         if MainFrame.starterImagePath in MainFrame.currentImagePath:
-            tmp_dialog = wx.MessageDialog(MainFrame, 'No Item was loaded? Pizza?', 'ValueError', wx.OK)
+            tmp_dialog = wx.MessageDialog(MainFrame, 'No Item was loaded?', 'ValueError', wx.OK)
             results = tmp_dialog.ShowModal()
             tmp_dialog.Destroy()
             return
@@ -19,7 +19,7 @@
             results = int_dialog.ShowModal()
             int_dialog.Destroy()
             MainFrame.startingSkuLbl.SetLabel('Current Sku')
-            MainFrame.currentSkuText.SetValue('HALP!')
+            MainFrame.currentSkuText.SetValue('REQUIRED!')
             return
         # check which action needs to be taken
         if MainFrame.lookupManifestedRadio.GetValue() is True:

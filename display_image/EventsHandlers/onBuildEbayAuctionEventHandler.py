@@ -52,7 +52,7 @@
 
         MainFrame.ebayCsvFp = buildAuction.generateEbayListingCsvLine()
         if 'IOError' in MainFrame.ebayCsvFp:
-            tmp_dialog = wx.MessageDialog(MainFrame, 'Is the file open bro?', 'UserError', style=wx.OK)
+            tmp_dialog = wx.MessageDialog(MainFrame, 'Is the file open?', 'UserError', style=wx.OK)
             results = tmp_dialog.ShowModal()
             tmp_dialog.Destroy()
             return

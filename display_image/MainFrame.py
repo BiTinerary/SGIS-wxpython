@@ -37,8 +37,6 @@ class MainFrame(wx.Frame):
         self.descriptionTextFieldInitialized = False
         with open('config.yaml','r') as f:
             self.defaults = yaml.load(f)
-        self.history = []
-        self.historyIndex = 0
         self.currentItemInfo = self.defaults['currentItemInfo']
         self.defaultJNumber = self.defaults['defaultJNumber']
         self.defaultJNumberInfo = self.defaults['defaultJNumberInfo']
@@ -118,7 +116,6 @@ class MainFrame(wx.Frame):
         self.scanNumberLbl = wx.StaticText(self.mainPanel, label='Scan Number (Press Enter to Load)')
         self.scanNumberText = wx.TextCtrl(self.mainPanel, size=(120, -1), style=wx.TE_PROCESS_ENTER)
         self.scanNumberText.Bind(wx.EVT_TEXT_ENTER, self.eventsHandler.onScanNumberText)
-        self.scanNumberText.Bind(wx.EVT_KEY_DOWN, self.eventsHandler.onScanNumberTextKey)
         self.scanNumberSeperator = wx.StaticLine(self.mainPanel, wx.ID_ANY, style=wx.LI_HORIZONTAL)
         self.startingSkuLbl = wx.StaticText(self.mainPanel, label='Enter the starting Sku# (i.e. 0001)')
         self.currentSkuText = wx.TextCtrl(self.mainPanel, size=(60,-1))
