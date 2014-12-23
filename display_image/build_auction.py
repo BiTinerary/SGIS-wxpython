@@ -78,10 +78,16 @@ class BuildAuction(object):
         # This is after selecting an image:
         #   u'image_sources': {'display_image/jPages/J178163/603-256.JPEG': 'True'}
         #################################################################################
+        # for item in self.currentItemInfo['image_sources']:
+        #     print(item)
+        # for item in self.MainFrame.currentItemInfo['itemSelectedImages']:
+        #     print(item)
+        # import pdb;pdb.set_trace()
+        
         for image in self.currentItemInfo['image_sources']:
             self.infoLogger('Checking image:' + str(image))
             # 
-            if isinstance(image, unicode):
+            if 'key' in image:
                 self.infoLogger('Image not selected using currentImgPath: ' + str(self.MainFrame.currentImgPath))
                 filename = self.MainFrame.currentImgPath
                 filePathList.append(filename)

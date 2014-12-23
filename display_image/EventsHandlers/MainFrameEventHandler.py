@@ -604,8 +604,12 @@ class MainFrameEventHandler(object):
             results = tmp_dialog.ShowModal()
             tmp_dialog.Destroy()
             return
-            
-        sources = self.MainFrame.currentItemInfo['itemSelectedImages']
+        try:
+            sources = self.MainFrame.currentItemInfo['itemSelectedImages']
+        except KeyError:
+            print('No images have been selected')
+            sources = 'key'
+            pass
         self.debugLogger('Assign pictures to ebay auction: ', sources)
         self.MainFrame.currentItemInfo['image_sources'] = None
         self.MainFrame.currentItemInfo.update({'image_sources':sources})
